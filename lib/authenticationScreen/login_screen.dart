@@ -11,6 +11,9 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
+
+  bool showProgressBar = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,6 +141,12 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            showProgressBar == true
+                ? const CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.pink),
+                  )
+                : Container(),
           ],
         ),
       ),
