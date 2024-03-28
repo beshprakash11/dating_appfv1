@@ -1,3 +1,4 @@
+import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -8,6 +9,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController emailTextEditingController = TextEditingController();
+  TextEditingController passwordTextEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +41,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
+
+            //email field
+            CustomTextFieldWidget(
+              editingController: emailTextEditingController,
+              labelText: "Email",
+              iconData: Icons.email_outlined,
+              isObscure: false,
+            )
           ],
         ),
       ),
