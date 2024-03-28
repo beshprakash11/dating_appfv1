@@ -1,3 +1,3 @@
 # Datting app
 ## Package
-- GetX package
+- GetX package: flutter pub add get
