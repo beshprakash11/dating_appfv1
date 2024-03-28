@@ -101,7 +101,31 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-            )
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //create account
+            Row(
+              children: [
+                const Text(
+                  "Don't have an account?",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey,
+                  ),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: const Text("Create here"),
+                ),
+              ],
+            ),
           ],
         ),
       ),
