@@ -1,1 +1,3 @@
-# dattting_appfv1
+# Datting app
+## Package
+- GetX package
