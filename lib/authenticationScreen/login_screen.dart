@@ -13,7 +13,15 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: [Image.asset("images/logo.png")],
+          children: [
+            const SizedBox(
+              height: 120,
+            ),
+            Image.asset(
+              "images/logo.png",
+              width: 300,
+            )
+          ],
         ),
       ),
     );
