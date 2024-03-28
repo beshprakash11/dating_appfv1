@@ -109,6 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             //create account
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
                   "Don't have an account?",
@@ -122,7 +123,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 InkWell(
                   onTap: () {},
-                  child: const Text("Create here"),
+                  child: const Text(
+                    "Create here",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ],
             ),
