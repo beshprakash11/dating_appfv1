@@ -62,11 +62,15 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             //password field
-            CustomTextFieldWidget(
-              editingController: passwordTextEditingController,
-              labelText: "Password",
-              iconData: Icons.lock_outline,
-              isObscure: true,
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: passwordTextEditingController,
+                labelText: "Password",
+                iconData: Icons.lock_outline,
+                isObscure: true,
+              ),
             )
           ],
         ),
