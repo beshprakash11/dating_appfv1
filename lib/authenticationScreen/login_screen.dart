@@ -20,7 +20,24 @@ class _LoginScreenState extends State<LoginScreen> {
             Image.asset(
               "images/logo.png",
               width: 300,
-            )
+            ),
+            const Text(
+              "Welcome",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "Login now to find your best Match!",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),
