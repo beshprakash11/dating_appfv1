@@ -46,11 +46,15 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             //email field
-            CustomTextFieldWidget(
-              editingController: emailTextEditingController,
-              labelText: "Email",
-              iconData: Icons.email_outlined,
-              isObscure: false,
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: emailTextEditingController,
+                labelText: "Email",
+                iconData: Icons.email_outlined,
+                isObscure: false,
+              ),
             ),
 
             const SizedBox(
