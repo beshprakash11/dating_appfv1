@@ -38,7 +38,14 @@ class CustomTextFieldWidget extends StatelessWidget {
             color: Colors.grey,
           ),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(6),
+          borderSide: const BorderSide(
+            color: Colors.grey,
+          ),
+        ),
       ),
+      obscureText: isObscure!,
     );
   }
 }
