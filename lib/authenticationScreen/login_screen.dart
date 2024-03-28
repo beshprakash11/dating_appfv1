@@ -16,6 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(
               height: 120,
@@ -58,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             const SizedBox(
-              height: 10,
+              height: 24,
             ),
 
             //password field
@@ -70,6 +71,35 @@ class _LoginScreenState extends State<LoginScreen> {
                 labelText: "Password",
                 iconData: Icons.lock_outline,
                 isObscure: true,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //login button
+            Container(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              child: InkWell(
+                onTap: () {},
+                child: const Center(
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ),
             )
           ],
