@@ -26,6 +26,23 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   TextEditingController weightTextEditingController = TextEditingController();
   TextEditingController bodyTypeTextEditingController = TextEditingController();
 
+  //Life style
+  TextEditingController drinkingTextEditingController = TextEditingController();
+  TextEditingController smokeTextEditingController = TextEditingController();
+  TextEditingController noOfChildrenTextEditingController =
+      TextEditingController();
+  TextEditingController professionTextEditingController =
+      TextEditingController();
+  TextEditingController employmentStatusTextEditingController =
+      TextEditingController();
+  TextEditingController incomeTextEditingController = TextEditingController();
+  TextEditingController livingSituationTextEditingController =
+      TextEditingController();
+  TextEditingController willingToRelocateTextEditingController =
+      TextEditingController();
+  TextEditingController relationshipYouAreLookingForTextEditingController =
+      TextEditingController();
+
   bool showProgressBar = false;
   @override
   Widget build(BuildContext context) {
