@@ -84,6 +84,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 16,
             ),
+
+            //choose image avata
             GestureDetector(
               onTap: () {},
               child: const CircleAvatar(
