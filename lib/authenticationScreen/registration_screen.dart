@@ -18,6 +18,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   TextEditingController countryTextEditingController = TextEditingController();
   TextEditingController profileHeadingTextEditingController =
       TextEditingController();
+  TextEditingController lookingForInaPartnerTextEditingController =
+      TextEditingController();
 
   bool showProgressBar = false;
   @override
