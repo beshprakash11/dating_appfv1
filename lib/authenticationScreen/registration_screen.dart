@@ -69,6 +69,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 color: Colors.grey,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "to get Started Now.",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             )
           ],
         ),
