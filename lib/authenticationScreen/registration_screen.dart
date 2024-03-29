@@ -43,6 +43,15 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   TextEditingController relationshipYouAreLookingForTextEditingController =
       TextEditingController();
 
+  //Background - cultural values
+  TextEditingController nationalityTextEditingController =
+      TextEditingController();
+  TextEditingController educationTextEditingController =
+      TextEditingController();
+  TextEditingController religionTextEditingController = TextEditingController();
+  TextEditingController ethnicityTextEditingController =
+      TextEditingController();
+
   bool showProgressBar = false;
   @override
   Widget build(BuildContext context) {
