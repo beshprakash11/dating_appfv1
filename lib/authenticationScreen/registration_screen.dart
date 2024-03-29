@@ -58,6 +58,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(
               height: 100,
