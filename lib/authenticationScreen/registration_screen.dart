@@ -1,3 +1,4 @@
+import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -93,7 +94,44 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 backgroundImage: AssetImage("images/profile_avatar.jpg"),
                 backgroundColor: Colors.black,
               ),
-            )
+            ),
+
+            //input information
+            const SizedBox(
+              height: 10,
+            ),
+
+            /**Personal info for app user*/
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: emailTextEditingController,
+                labelText: "Email",
+                iconData: Icons.email_outlined,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //password field
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: passwordTextEditingController,
+                labelText: "Password",
+                iconData: Icons.lock_outline,
+                isObscure: true,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
