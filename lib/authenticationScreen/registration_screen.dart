@@ -79,6 +79,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            GestureDetector(
+              onTap: () {},
+              child: const CircleAvatar(
+                radius: 80,
+                backgroundImage: AssetImage("images/profile_avatar.jpg"),
+                backgroundColor: Colors.black,
+              ),
             )
           ],
         ),
