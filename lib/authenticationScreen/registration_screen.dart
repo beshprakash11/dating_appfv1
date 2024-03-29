@@ -21,6 +21,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   TextEditingController lookingForInaPartnerTextEditingController =
       TextEditingController();
 
+  //Appearance
+  TextEditingController heightTextEditingController = TextEditingController();
+  TextEditingController weightTextEditingController = TextEditingController();
+  TextEditingController bodyTypeTextEditingController = TextEditingController();
+
   bool showProgressBar = false;
   @override
   Widget build(BuildContext context) {
