@@ -55,6 +55,24 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   bool showProgressBar = false;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 100,
+            ),
+            const Text(
+              "Create Account",
+              style: TextStyle(
+                fontSize: 22,
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
