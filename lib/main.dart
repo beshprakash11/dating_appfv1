@@ -1,4 +1,4 @@
-import 'package:dating_appfv1/authenticationScreen/registration_screen.dart';
+import 'package:dating_appfv1/authenticationScreen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Datting app',
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.black),
       debugShowCheckedModeBanner: false,
-      home: const RegistrationScreen(),
+      home: const LoginScreen(),
     );
   }
 }
