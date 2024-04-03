@@ -150,6 +150,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            //age
+
+            //phoneNo
+
+            //city
+
+            //Country
+
+            //profileHeading
+
+            //lookingForInaPartner
           ],
         ),
       ),
