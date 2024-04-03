@@ -1,5 +1,7 @@
+import 'package:dating_appfv1/authenticationScreen/registration_screen.dart';
 import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -125,7 +127,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: 10,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(const RegistrationScreen());
+                  },
                   child: const Text(
                     "Create here",
                     style: TextStyle(
