@@ -529,6 +529,26 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+
+            const SizedBox(
+              height: 12,
+            ),
+
+            //nationality
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: nationalityTextEditingController,
+                labelText: "Nationality",
+                iconData: Icons.flag_circle_outlined,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
