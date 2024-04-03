@@ -99,8 +99,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 30,
             ),
+            /**
+             * Personal information field
+             */
 
-            /**user name app*/
+            //user name
             SizedBox(
               width: MediaQuery.of(context).size.width - 36,
               height: 55,
@@ -116,7 +119,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 24,
             ),
 
-            /**email app*/
+            //email field
             SizedBox(
               width: MediaQuery.of(context).size.width - 36,
               height: 55,
