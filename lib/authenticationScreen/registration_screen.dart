@@ -264,7 +264,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
              * Appearance information field
              */
             const Text(
-              "Appearance Info:",
+              "Appearance:",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 22,
