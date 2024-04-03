@@ -33,6 +33,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   TextEditingController smokeTextEditingController = TextEditingController();
   TextEditingController martilStatusTextEditingController =
       TextEditingController();
+  TextEditingController haveChildrenTextEditingController =
+      TextEditingController();
   TextEditingController noOfChildrenTextEditingController =
       TextEditingController();
   TextEditingController professionTextEditingController =
@@ -379,6 +381,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: martilStatusTextEditingController,
                 labelText: "Martial Status",
                 iconData: CupertinoIcons.person_2,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //haveChildren
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: haveChildrenTextEditingController,
+                labelText: "Do you have Children?",
+                iconData: CupertinoIcons.person_3_fill,
                 isObscure: false,
               ),
             ),
