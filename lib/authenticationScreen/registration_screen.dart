@@ -112,6 +112,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
             ),
 
+            const SizedBox(
+              height: 10,
+            ),
+
             //user name
             SizedBox(
               width: MediaQuery.of(context).size.width - 36,
