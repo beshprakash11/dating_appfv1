@@ -184,6 +184,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             //city
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: cityTextEditingController,
+                labelText: "City",
+                iconData: Icons.location_city,
+                isObscure: true,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
 
             //Country
 
