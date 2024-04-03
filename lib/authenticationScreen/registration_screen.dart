@@ -168,6 +168,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             //phoneNo
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: phoneNoTextEditingController,
+                labelText: "Phone",
+                iconData: Icons.phone,
+                isObscure: true,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
 
             //city
 
