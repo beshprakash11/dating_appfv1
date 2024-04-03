@@ -319,6 +319,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            //Life style
+            const Text(
+              "Life style:",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(
+              height: 12,
+            ),
           ],
         ),
       ),
