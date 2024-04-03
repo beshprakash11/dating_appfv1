@@ -500,6 +500,23 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            //relationshipYouAreLookingFor
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController:
+                    relationshipYouAreLookingForTextEditingController,
+                labelText: "What relationship you are looking for?",
+                iconData: CupertinoIcons.person_2,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
