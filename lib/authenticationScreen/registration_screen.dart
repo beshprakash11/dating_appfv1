@@ -351,6 +351,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            //smoke
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: smokeTextEditingController,
+                labelText: "Smoke",
+                iconData: Icons.smoking_rooms,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
