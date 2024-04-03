@@ -216,6 +216,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             //profileHeading
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: profileHeadingTextEditingController,
+                labelText: "Profile Heading",
+                iconData: Icons.text_fields,
+                isObscure: true,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
 
             //lookingForInaPartner
           ],
