@@ -105,7 +105,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               width: MediaQuery.of(context).size.width - 36,
               height: 55,
               child: CustomTextFieldWidget(
-                editingController: emailTextEditingController,
+                editingController: nameTextEditingController,
                 labelText: "Name",
                 iconData: Icons.person_outline,
                 isObscure: false,
