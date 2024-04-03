@@ -200,6 +200,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             //Country
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: countryTextEditingController,
+                labelText: "Country",
+                iconData: Icons.location_city,
+                isObscure: true,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
 
             //profileHeading
 
