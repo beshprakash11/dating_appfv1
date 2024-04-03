@@ -97,10 +97,26 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             const SizedBox(
-              height: 10,
+              height: 30,
             ),
 
-            /**Personal info for app user*/
+            /**user name app*/
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: emailTextEditingController,
+                labelText: "Name",
+                iconData: Icons.person_outline,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            /**email app*/
             SizedBox(
               width: MediaQuery.of(context).size.width - 36,
               height: 55,
