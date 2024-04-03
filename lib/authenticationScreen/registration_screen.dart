@@ -1,4 +1,5 @@
 import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -30,6 +31,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   //Life style
   TextEditingController drinkingTextEditingController = TextEditingController();
   TextEditingController smokeTextEditingController = TextEditingController();
+  TextEditingController martilStatusTextEditingController =
+      TextEditingController();
   TextEditingController noOfChildrenTextEditingController =
       TextEditingController();
   TextEditingController professionTextEditingController =
@@ -360,6 +363,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: smokeTextEditingController,
                 labelText: "Smoke",
                 iconData: Icons.smoking_rooms,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //martialStatus
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: martilStatusTextEditingController,
+                labelText: "Martial Status",
+                iconData: CupertinoIcons.person_2,
                 isObscure: false,
               ),
             ),
