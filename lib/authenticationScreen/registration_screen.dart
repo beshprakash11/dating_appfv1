@@ -103,6 +103,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             /**
              * Personal information field
              */
+            const Text(
+              "Personal Info:",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
 
             //user name
             SizedBox(
