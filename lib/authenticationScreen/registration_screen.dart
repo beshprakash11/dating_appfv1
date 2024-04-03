@@ -335,6 +335,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 12,
             ),
+
+            //drink
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: drinkingTextEditingController,
+                labelText: "Drink",
+                iconData: Icons.local_drink_outlined,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
