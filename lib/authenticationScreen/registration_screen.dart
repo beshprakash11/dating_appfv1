@@ -272,8 +272,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
             ),
 
+            //height
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: heightTextEditingController,
+                labelText: "Height",
+                iconData: Icons.insert_chart,
+                isObscure: false,
+              ),
+            ),
+
             const SizedBox(
-              height: 10,
+              height: 24,
             ),
           ],
         ),
