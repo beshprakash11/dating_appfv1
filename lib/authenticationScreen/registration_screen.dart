@@ -320,12 +320,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 24,
             ),
 
-            //Life style
+            /**
+             * Life style field
+             */
             const Text(
-              "Life style:",
+              "Life Style:",
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 20,
+                fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
             ),
