@@ -404,6 +404,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            //noOfChildren
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: noOfChildrenTextEditingController,
+                labelText: "Number of Children",
+                iconData: CupertinoIcons.person_3_fill,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
