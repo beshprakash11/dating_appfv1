@@ -250,7 +250,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 55,
               child: CustomTextFieldWidget(
                 editingController: lookingForInaPartnerTextEditingController,
-                labelText: "Whar are you for in a Partner?",
+                labelText: "Whar are you looking for in a Partner?",
                 iconData: Icons.face,
                 isObscure: true,
               ),
@@ -258,6 +258,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
             const SizedBox(
               height: 24,
+            ),
+
+            /**
+             * Appearance information field
+             */
+            const Text(
+              "Appearance Info:",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(
+              height: 10,
             ),
           ],
         ),
