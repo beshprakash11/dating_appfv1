@@ -96,7 +96,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
             ),
 
-            //input information
             const SizedBox(
               height: 10,
             ),
