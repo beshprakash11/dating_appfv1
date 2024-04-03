@@ -232,6 +232,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             //lookingForInaPartner
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: lookingForInaPartnerTextEditingController,
+                labelText: "Whar are you for in a Partner?",
+                iconData: Icons.face,
+                isObscure: true,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
