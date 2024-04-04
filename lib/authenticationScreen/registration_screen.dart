@@ -643,6 +643,36 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 16,
             ),
+            //already have an account login here button
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Already have an account? ",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey,
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: const Text(
+                    "Login Here",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(
+              height: 16,
+            ),
           ],
         ),
       ),
