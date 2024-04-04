@@ -583,6 +583,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            //religion
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: religionTextEditingController,
+                labelText: "Religion",
+                iconData: CupertinoIcons.checkmark_seal_fill,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
