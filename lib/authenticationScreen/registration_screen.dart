@@ -599,6 +599,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            //ethnicity
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: ethnicityTextEditingController,
+                labelText: "Ethnicity",
+                iconData: CupertinoIcons.eye,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 30,
+            ),
           ],
         ),
       ),
