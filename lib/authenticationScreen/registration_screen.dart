@@ -54,6 +54,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       TextEditingController();
   TextEditingController educationTextEditingController =
       TextEditingController();
+  TextEditingController languageSpokenTextEditingController =
+      TextEditingController();
   TextEditingController religionTextEditingController = TextEditingController();
   TextEditingController ethnicityTextEditingController =
       TextEditingController();
@@ -558,6 +560,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: educationTextEditingController,
                 labelText: "Education",
                 iconData: Icons.history_edu,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //languageSpoken
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: languageSpokenTextEditingController,
+                labelText: "Language Spoken",
+                iconData: CupertinoIcons.person_badge_plus_fill,
                 isObscure: false,
               ),
             ),
