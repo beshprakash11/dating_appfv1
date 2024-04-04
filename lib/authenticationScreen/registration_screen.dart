@@ -1,6 +1,7 @@
 import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -672,6 +673,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
             const SizedBox(
               height: 16,
+            ),
+
+            showProgressBar == true
+                ? const CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.pink),
+                  )
+                : Container(),
+
+            const SizedBox(
+              height: 30,
             ),
           ],
         ),
