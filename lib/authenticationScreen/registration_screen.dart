@@ -615,6 +615,34 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 30,
             ),
+
+            //create account button
+            Container(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 50,
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  )),
+              child: InkWell(
+                onTap: () {},
+                child: const Center(
+                  child: Text(
+                    "Create Account",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            const SizedBox(
+              height: 16,
+            ),
           ],
         ),
       ),
