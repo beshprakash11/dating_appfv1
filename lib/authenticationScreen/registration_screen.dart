@@ -100,15 +100,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             //choose image avatar
-            GestureDetector(
-              onTap: () {
-                authController.captureImageFromPhoneCamera();
-              },
-              child: const CircleAvatar(
-                radius: 80,
-                backgroundImage: AssetImage("images/profile_avatar.jpg"),
-                backgroundColor: Colors.black,
-              ),
+            const CircleAvatar(
+              radius: 80,
+              backgroundImage: AssetImage("images/profile_avatar.jpg"),
+              backgroundColor: Colors.black,
             ),
 
             const SizedBox(
