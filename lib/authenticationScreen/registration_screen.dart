@@ -132,7 +132,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             /**
              * Personal information field
