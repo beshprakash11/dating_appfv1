@@ -1,3 +1,4 @@
+import 'package:dating_appfv1/controllers/authentication_controller.dart';
 import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -62,6 +63,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       TextEditingController();
 
   bool showProgressBar = false;
+
+  // auth controller
+  var authController = AuthenticationController.authController;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
