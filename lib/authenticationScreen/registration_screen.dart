@@ -112,6 +112,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
             //control button
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
                   onPressed: () {},
