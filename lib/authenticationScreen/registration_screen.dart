@@ -120,6 +120,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     color: Colors.grey,
                   ),
                 ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.camera_outlined,
+                    color: Colors.grey,
+                  ),
+                ),
               ],
             ),
 
