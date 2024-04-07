@@ -9,6 +9,7 @@ class AuthenticationController extends GetxController {
   File? get profileImage => pickedFile.value;
 
   pickImageFileFormGallery() async {
-    await ImagePicker().pickImage(source: ImageSource.gallery);
+    final imageFile =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
   }
 }
