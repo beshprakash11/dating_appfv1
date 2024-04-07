@@ -112,7 +112,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
             //control button
             Row(
-              children: [],
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.image_outlined))
+              ],
             ),
 
             const SizedBox(
