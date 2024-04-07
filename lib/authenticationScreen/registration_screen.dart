@@ -65,7 +65,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   bool showProgressBar = false;
 
   // auth controller
-  //var authController = AuthenticationController.authController;
+  var authController = AuthenticationController.authController;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
