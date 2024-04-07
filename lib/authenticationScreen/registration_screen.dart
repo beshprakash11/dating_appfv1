@@ -113,7 +113,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             //control button
             Row(
               children: [
-                IconButton(onPressed: () {}, icon: Icon(Icons.image_outlined))
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.image_outlined,
+                    color: Colors.grey,
+                  ),
+                ),
               ],
             ),
 
