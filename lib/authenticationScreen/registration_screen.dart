@@ -99,9 +99,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 16,
             ),
 
-            //choose image avata
+            //choose image avatar
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                authController.captureImageFromPhoneCamera();
+              },
               child: const CircleAvatar(
                 radius: 80,
                 backgroundImage: AssetImage("images/profile_avatar.jpg"),
