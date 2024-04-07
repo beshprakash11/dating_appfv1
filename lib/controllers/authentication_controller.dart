@@ -17,4 +17,13 @@ class AuthenticationController extends GetxController {
     }
     pickedFile = Rx<File?>(File(imageFile!.path));
   }
+
+  captureImageFromPhoneCamera() async {
+    final imageFile = await ImagePicker().pickImage(source: ImageSource.camera);
+    if (imageFile != null) {
+      Get.snackbar(
+          "Profile Image", "You have successfully capture your profile image.");
+    }
+    pickedFile = Rx<File?>(File(imageFile!.path));
+  }
 }
