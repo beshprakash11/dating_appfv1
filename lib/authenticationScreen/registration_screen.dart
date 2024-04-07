@@ -65,7 +65,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   bool showProgressBar = false;
 
   // auth controller
-  var authController = AuthenticationController.authController;
+  //var authController = AuthenticationController.authController;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,6 +104,15 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               radius: 80,
               backgroundImage: AssetImage("images/profile_avatar.jpg"),
               backgroundColor: Colors.black,
+            ),
+
+            const SizedBox(
+              height: 16,
+            ),
+
+            //control button
+            Row(
+              children: [],
             ),
 
             const SizedBox(
