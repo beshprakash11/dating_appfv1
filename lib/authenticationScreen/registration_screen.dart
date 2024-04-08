@@ -119,6 +119,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   icon: const Icon(
                     Icons.image_outlined,
                     color: Colors.grey,
+                    size: 30,
                   ),
                 ),
                 IconButton(
@@ -126,6 +127,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   icon: const Icon(
                     Icons.camera_outlined,
                     color: Colors.grey,
+                    size: 30,
                   ),
                 ),
               ],
