@@ -136,6 +136,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 IconButton(
                   onPressed: () async {
                     await authController.pickImageFileFormGallery();
+                    setState(() {
+                      authController.imageFile;
+                    });
                   },
                   icon: const Icon(
                     Icons.image_outlined,
@@ -146,6 +149,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 IconButton(
                   onPressed: () async {
                     await authController.captureImageFromPhoneCamera();
+                    setState(() {
+                      authController.imageFile;
+                    });
                   },
                   icon: const Icon(
                     Icons.camera_outlined,
