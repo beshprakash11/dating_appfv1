@@ -1,11 +1,16 @@
 import 'package:dating_appfv1/authenticationScreen/login_screen.dart';
 import 'package:dating_appfv1/controllers/authentication_controller.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Get.put(AuthenticationController());
+
+  await Firebase.initializeApp().then((value) {
+    Get.put(AuthenticationController());
+  });
+
   runApp(const MyApp());
 }
 
