@@ -115,7 +115,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    authController.pickImageFileFormGallery();
+                  },
                   icon: const Icon(
                     Icons.image_outlined,
                     color: Colors.grey,
@@ -123,7 +125,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    authController.captureImageFromPhoneCamera();
+                  },
                   icon: const Icon(
                     Icons.camera_outlined,
                     color: Colors.grey,
