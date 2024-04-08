@@ -7,10 +7,10 @@ class AuthenticationController extends GetxController {
   static AuthenticationController authController = Get.find();
   late Rx<File?> pickedFile;
   File? get profileImage => pickedFile.value;
+  XFile? imageFile;
 
   pickImageFileFormGallery() async {
-    final imageFile =
-        await ImagePicker().pickImage(source: ImageSource.gallery);
+    imageFile = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (imageFile != null) {
       Get.snackbar(
           "Profile Image", "You have successfully picked your profile image.");
@@ -19,7 +19,7 @@ class AuthenticationController extends GetxController {
   }
 
   captureImageFromPhoneCamera() async {
-    final imageFile = await ImagePicker().pickImage(source: ImageSource.camera);
+    imageFile = await ImagePicker().pickImage(source: ImageSource.camera);
     if (imageFile != null) {
       Get.snackbar(
           "Profile Image", "You have successfully capture your profile image.");
