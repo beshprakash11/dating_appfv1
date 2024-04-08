@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  /*await Firebase.initializeApp().then((value) {
+  await Firebase.initializeApp().then((value) {
     Get.put(AuthenticationController());
-  });*/
+  });
 
   /* try {
     await Firebase.initializeApp().then((value) {
