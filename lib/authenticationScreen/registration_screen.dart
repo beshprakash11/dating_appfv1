@@ -100,11 +100,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
 
             //choose image avatar
-            const CircleAvatar(
-              radius: 80,
-              backgroundImage: AssetImage("images/profile_avatar.jpg"),
-              backgroundColor: Colors.black,
-            ),
+            authController.imageFile == null
+                ? const CircleAvatar(
+                    radius: 80,
+                    backgroundImage: AssetImage("images/profile_avatar.jpg"),
+                    backgroundColor: Colors.black,
+                  )
+                : Container(),
 
             const SizedBox(
               height: 16,
