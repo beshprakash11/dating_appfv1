@@ -115,8 +115,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  onPressed: () {
-                    authController.pickImageFileFormGallery();
+                  onPressed: () async {
+                    await authController.pickImageFileFormGallery();
                   },
                   icon: const Icon(
                     Icons.image_outlined,
@@ -125,8 +125,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {
-                    authController.captureImageFromPhoneCamera();
+                  onPressed: () async {
+                    await authController.captureImageFromPhoneCamera();
                   },
                   icon: const Icon(
                     Icons.camera_outlined,
