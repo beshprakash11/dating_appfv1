@@ -7,14 +7,9 @@ import 'package:get/get.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  try {
-    await Firebase.initializeApp().then((value) {
-      Get.put(AuthenticationController());
-    });
-  } catch (e) {
-    print("Firebase connection error: $e");
-  }
-
+  await Firebase.initializeApp().then((value) {
+    Get.put(AuthenticationController());
+  });
   runApp(const MyApp());
 }
 
