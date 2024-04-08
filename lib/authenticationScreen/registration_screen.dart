@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dating_appfv1/controllers/authentication_controller.dart';
 import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/cupertino.dart';
@@ -114,7 +116,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       color: Colors.grey,
                       image: DecorationImage(
                         fit: BoxFit.fitHeight,
-                        image: FileImage(file),
+                        image: FileImage(
+                          File(
+                            authController.imageFile!.path,
+                          ),
+                        ),
                       ),
                     ),
                   ),
