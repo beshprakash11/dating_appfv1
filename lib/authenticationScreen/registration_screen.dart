@@ -106,7 +106,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     backgroundImage: AssetImage("images/profile_avatar.jpg"),
                     backgroundColor: Colors.black,
                   )
-                : Container(),
+                : Container(
+                    width: 180,
+                    height: 180,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.grey,
+                      image: DecorationImage(
+                        fit: BoxFit.fitHeight,
+                        image: FileImage(file),
+                      ),
+                    ),
+                  ),
 
             const SizedBox(
               height: 16,
