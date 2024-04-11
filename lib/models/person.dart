@@ -12,4 +12,17 @@ class Person {
   String? height;
   String? weight;
   String? bodyType;
+
+  //Life style
+  String? drink;
+  String? smoke;
+  String? martialStatus;
+  String? haveChildren;
+  String? noOfChildren;
+  String? profession;
+  String? employmentStatus;
+  String? income;
+  String? livingSituatin;
+  String? willingToRelocate;
+  String? relationshipYouAreLookingFor;
 }
