@@ -7,4 +7,9 @@ class Person {
   String? country;
   String? profileHeading;
   String? lookingForInaPartner;
+
+  //Appearance
+  String? height;
+  String? weight;
+  String? bodyType;
 }
