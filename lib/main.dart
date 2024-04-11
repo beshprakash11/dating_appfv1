@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  /*await Firebase.initializeApp();
   if (kIsWeb) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
@@ -16,7 +16,16 @@ Future main() async {
           messagingSenderId: "499981639119",
           appId: "1:499981639119:web:109497be6852a5666146ba"),
     );
-  }
+  }*/
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+        apiKey: "AIzaSyABOs5zw1kF12_LXAQjIsd0nPYDwT0T89M",
+        authDomain: "dating-app-eb8d5.firebaseapp.com",
+        projectId: "dating-app-eb8d5",
+        storageBucket: "dating-app-eb8d5.appspot.com",
+        messagingSenderId: "499981639119",
+        appId: "1:499981639119:web:109497be6852a5666146ba"),
+  );
   runApp(const MyApp());
 }
 
