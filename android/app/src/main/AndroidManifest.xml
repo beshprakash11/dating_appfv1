@@ -2,8 +2,7 @@
     <application
         android:label="dating_appfv1"
         android:name="${applicationName}"
-        android:icon="@mipmap/logo"
-        android:enableOnBackInvokedCallback="true">
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"

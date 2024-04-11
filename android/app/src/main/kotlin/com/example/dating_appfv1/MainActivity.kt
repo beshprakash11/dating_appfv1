@@ -1,4 +1,4 @@
-package com.beshpd.dating_appfv1
+package com.example.dating_appfv1
 
 import io.flutter.embedding.android.FlutterActivity
 
