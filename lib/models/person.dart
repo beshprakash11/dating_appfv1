@@ -34,4 +34,41 @@ class Person {
   String? languageSpoken;
   String? religion;
   String? ethnicity;
+  Person({
+    //Personal info
+    this.imageProfile,
+    this.name,
+    this.age,
+    this.phoneNo,
+    this.city,
+    this.country,
+    this.profileHeading,
+    this.lookingForInaPartner,
+    int? publishedDateTime,
+
+    //Appearance
+    this.height,
+    this.weight,
+    this.bodyType,
+
+    //Life style
+    this.drink,
+    this.smoke,
+    this.martialStatus,
+    this.haveChildren,
+    this.noOfChildren,
+    this.profession,
+    this.employmentStatus,
+    this.income,
+    this.livingSituatin,
+    this.willingToRelocate,
+    this.relationshipYouAreLookingFor,
+
+    //Background - Cultureal values
+    this.nationality,
+    this.education,
+    this.languageSpoken,
+    this.religion,
+    this.ethnicity,
+  });
 }
