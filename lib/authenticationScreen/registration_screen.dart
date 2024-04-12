@@ -686,13 +686,132 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               child: InkWell(
                 onTap: () {
                   if (authController.profileImage != null) {
-                    if(){
+                    if (
+                        //Personal info
+                        emailTextEditingController.text.trim().isNotEmpty &&
+                            passwordTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            nameTextEditingController.text.trim().isNotEmpty &&
+                            ageTextEditingController.text.trim().isNotEmpty &&
+                            phoneNoTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            cityTextEditingController.text.trim().isNotEmpty &&
+                            countryTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            profileHeadingTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            lookingForInaPartnerTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
 
-                    }else{
+                            //Appearance
+                            heightTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            weightTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            bodyTypeTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+
+                            //Life style
+                            drinkingTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            smokeTextEditingController.text.trim().isNotEmpty &&
+                            martilStatusTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            haveChildrenTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            noOfChildrenTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            professionTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            employmentStatusTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            incomeTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            livingSituationTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            willingToRelocateTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            relationshipYouAreLookingForTextEditingController
+                                .text
+                                .trim()
+                                .isNotEmpty &&
+
+                            //Background - cultural values
+                            nationalityTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            educationTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            languageSpokenTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            religionTextEditingController.text
+                                .trim()
+                                .isNotEmpty &&
+                            ethnicityTextEditingController.text
+                                .trim()
+                                .isNotEmpty) {
+                      authController.createNewUserAccount(
+                        authController.profileImage!, //Personal info
+                        emailTextEditingController.text.trim(),
+                        passwordTextEditingController.text.trim(),
+                        nameTextEditingController.text.trim(),
+                        ageTextEditingController.text.trim(),
+                        phoneNoTextEditingController.text.trim(),
+                        cityTextEditingController.text.trim(),
+                        countryTextEditingController.text.trim(),
+                        profileHeadingTextEditingController.text.trim(),
+                        lookingForInaPartnerTextEditingController.text.trim(),
+
+                        //Appearance
+                        heightTextEditingController.text.trim(),
+                        weightTextEditingController.text.trim(),
+                        bodyTypeTextEditingController.text.trim(),
+
+                        //Life style
+                        drinkingTextEditingController.text.trim(),
+                        smokeTextEditingController.text.trim(),
+                        martilStatusTextEditingController.text.trim(),
+                        haveChildrenTextEditingController.text.trim(),
+                        noOfChildrenTextEditingController.text.trim(),
+                        professionTextEditingController.text.trim(),
+                        employmentStatusTextEditingController.text.trim(),
+                        incomeTextEditingController.text.trim(),
+                        livingSituationTextEditingController.text.trim(),
+                        willingToRelocateTextEditingController.text.trim(),
+                        relationshipYouAreLookingForTextEditingController.text
+                            .trim(),
+
+                        //Background - cultural values
+                        nationalityTextEditingController.text.trim(),
+                        educationTextEditingController.text.trim(),
+                        languageSpokenTextEditingController.text.trim(),
+                        religionTextEditingController.text.trim(),
+                        ethnicityTextEditingController.text.trim(),
+                      );
+                    } else {
                       Get.snackbar(
-                      "A field is Empty",
-                      "Please fill out all field in text fields.",
-                    );
+                        "A field is Empty",
+                        "Please fill out all field in text fields.",
+                      );
                     }
                   } else {
                     Get.snackbar(
