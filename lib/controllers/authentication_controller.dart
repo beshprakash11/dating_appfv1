@@ -31,6 +31,10 @@ class AuthenticationController extends GetxController {
     pickedFile = Rx<File?>(File(imageFile!.path));
   }
 
+  Future<String> uploadImageToStorage(File imageFile) async {
+    return "";
+  }
+
   //Create user account
   createNewUserAccount(
     String imageProfile,
@@ -84,6 +88,4 @@ class AuthenticationController extends GetxController {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
   }
-
-  uploadImageToStorage(String imageProfile) {}
 }
