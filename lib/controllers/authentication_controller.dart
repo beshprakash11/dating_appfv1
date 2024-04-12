@@ -138,6 +138,8 @@ class AuthenticationController extends GetxController {
           .collection("users")
           .doc(FirebaseAuth.instance.currentUser!.uid)
           .set(personInstance.toJson());
+      Get.snackbar(
+          "Account Created", "Congratulation, your account has been created");
     } catch (errorMsg) {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
