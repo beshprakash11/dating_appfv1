@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:dating_appfv1/homeScreen/home_screen.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -139,6 +140,8 @@ class AuthenticationController extends GetxController {
           .set(personInstance.toJson());
       Get.snackbar(
           "Account Created", "Congratulation, your account has been created");
+      //Routing to home screen
+      Get.to(() => const HomeScreen());
     } catch (errorMsg) {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
