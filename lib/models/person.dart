@@ -92,9 +92,9 @@ class Person {
         publishedDateTime: dataSnapshot["publishedDateTime"],
 
         //Appearance
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
+        height: dataSnapshot["height"],
+        weight: dataSnapshot["weight"],
+        bodyType: dataSnapshot["bodyType"],
 
 
         //life style
