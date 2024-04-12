@@ -7,6 +7,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import "package:dating_appfv1/models/person.dart" as personModel;
+
 class AuthenticationController extends GetxController {
   static AuthenticationController authController = Get.find();
   late Rx<File?> pickedFile;
@@ -91,6 +93,47 @@ class AuthenticationController extends GetxController {
 
       //2. upload image to storage
       String urlOfDownloadedImage = await uploadImageToStorage(imageProfile);
+
+      //3. save user info to firestore database
+      personModel.Person personInstance = personModel.Person(
+        //Personal info
+        imageProfile: urlOfDownloadedImage,
+        name: name,
+        email: email,
+        password: password,
+        age: age,
+        phoneNo: phoneNo,
+        city: city,
+        country: country,
+        profileHeading: profileHeading,
+        lookingForInaPartner: lookingForInaPartner,
+        publishedDateTime: publishedDateTime,
+
+        //Appearance
+        height: height,
+        weight: weight,
+        bodyType: bodyType,
+
+        //life style
+        drink: drink,
+        smoke: smoke,
+        martialStatus: martialStatus,
+        haveChildren: haveChildren,
+        noOfChildren: noOfChildren,
+        profession: profession,
+        employmentStatus: employmentStatus,
+        income: income,
+        livingSituatin: livingSituatin,
+        willingToRelocate: willingToRelocate,
+        relationshipYouAreLookingFor: relationshipYouAreLookingFor,
+
+        //Background values
+        nationality: nationality,
+        education: education,
+        languageSpoken: languageSpoken,
+        religion: religion,
+        ethnicity: ethnicity,
+      );
     } catch (errorMsg) {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
