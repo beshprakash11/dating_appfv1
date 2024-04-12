@@ -63,5 +63,9 @@ class AuthenticationController extends GetxController {
     String languageSpoken,
     String religion,
     String ethnicity,
-  ) {}
+  ) async {
+    try {} catch (errorMsg) {
+      Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
+    }
+  }
 }
