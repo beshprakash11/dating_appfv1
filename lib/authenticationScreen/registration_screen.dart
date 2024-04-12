@@ -237,7 +237,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: ageTextEditingController,
                 labelText: "Age",
                 iconData: Icons.numbers,
-                isObscure: true,
+                isObscure: false,
               ),
             ),
 
@@ -253,7 +253,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: phoneNoTextEditingController,
                 labelText: "Phone",
                 iconData: Icons.phone,
-                isObscure: true,
+                isObscure: false,
               ),
             ),
 
@@ -269,7 +269,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: cityTextEditingController,
                 labelText: "City",
                 iconData: Icons.location_city,
-                isObscure: true,
+                isObscure: false,
               ),
             ),
 
@@ -285,7 +285,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: countryTextEditingController,
                 labelText: "Country",
                 iconData: Icons.location_city,
-                isObscure: true,
+                isObscure: false,
               ),
             ),
 
@@ -301,7 +301,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: profileHeadingTextEditingController,
                 labelText: "Profile Heading",
                 iconData: Icons.text_fields,
-                isObscure: true,
+                isObscure: false,
               ),
             ),
 
@@ -317,7 +317,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 editingController: lookingForInaPartnerTextEditingController,
                 labelText: "Whar are you looking for in a Partner?",
                 iconData: Icons.face,
-                isObscure: true,
+                isObscure: false,
               ),
             ),
 
@@ -769,7 +769,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             ethnicityTextEditingController.text
                                 .trim()
                                 .isNotEmpty) {
-                      showProgressBar = true;
+                      setState(() {
+                        showProgressBar = true;
+                      });
                       await authController.createNewUserAccount(
                         //Personal info
                         authController.profileImage!,
