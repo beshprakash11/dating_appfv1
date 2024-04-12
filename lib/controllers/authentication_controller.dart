@@ -32,7 +32,14 @@ class AuthenticationController extends GetxController {
   }
 
   Future<String> uploadImageToStorage(File imageFile) async {
-    return "";
+    Reference referenceStorage = FirebaseStorage.instance
+        .ref()
+        .child("Profile Images")
+        .child(FirebaseAuth.instance.currentUser!.uid);
+    UploadTask task = referenceStorage.putFile(imageFile);
+    TaskSnapshot snapshot = await task;
+    String downloadUrlOfImage = await snapshot.ref.getDownloadURL();
+    return downloadUrlOfImage;
   }
 
   //Create user account
