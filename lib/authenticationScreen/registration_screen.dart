@@ -684,7 +684,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     Radius.circular(12),
                   )),
               child: InkWell(
-                onTap: () {
+                onTap: () async {
                   if (authController.profileImage != null) {
                     if (
                         //Personal info
@@ -769,7 +769,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             ethnicityTextEditingController.text
                                 .trim()
                                 .isNotEmpty) {
-                      authController.createNewUserAccount(
+                      await authController.createNewUserAccount(
                         //Personal info
                         authController.profileImage!,
                         emailTextEditingController.text.trim(),
@@ -808,6 +808,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         religionTextEditingController.text.trim(),
                         ethnicityTextEditingController.text.trim(),
                       );
+                      setState(() {
+                        showProgressBar = false;
+                      });
                     } else {
                       Get.snackbar(
                         "A field is Empty",
