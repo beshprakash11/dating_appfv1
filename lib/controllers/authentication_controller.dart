@@ -107,7 +107,7 @@ class AuthenticationController extends GetxController {
         country: country,
         profileHeading: profileHeading,
         lookingForInaPartner: lookingForInaPartner,
-        publishedDateTime: publishedDateTime,
+        publishedDateTime: DateTime.now().microsecondsSinceEpoch,
 
         //Appearance
         height: height,
