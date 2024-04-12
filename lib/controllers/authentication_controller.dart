@@ -30,6 +30,8 @@ class AuthenticationController extends GetxController {
   //Create user account
   createNewUserAccount(
     String imageProfile,
+    String email,
+    String password,
     String name,
     String age,
     String phoneNo,
