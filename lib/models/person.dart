@@ -80,45 +80,42 @@ class Person {
     var dataSnapshot = snapshot.data() as Map<String, dynamic>;
 
     return Person(
-        //Personal info
-        name: dataSnapshot["name"],
-        imageProfile: dataSnapshot["imageProfile"],
-        age: dataSnapshot["age"],
-        phoneNo: dataSnapshot["phoneNo"],
-        city: dataSnapshot["city"],
-        country: dataSnapshot["country"],
-        profileHeading: dataSnapshot["profileHeading"],
-        lookingForInaPartner: dataSnapshot["lookingForInaPartner"],
-        publishedDateTime: dataSnapshot["publishedDateTime"],
+      //Personal info
+      name: dataSnapshot["name"],
+      imageProfile: dataSnapshot["imageProfile"],
+      age: dataSnapshot["age"],
+      phoneNo: dataSnapshot["phoneNo"],
+      city: dataSnapshot["city"],
+      country: dataSnapshot["country"],
+      profileHeading: dataSnapshot["profileHeading"],
+      lookingForInaPartner: dataSnapshot["lookingForInaPartner"],
+      publishedDateTime: dataSnapshot["publishedDateTime"],
 
-        //Appearance
-        height: dataSnapshot["height"],
-        weight: dataSnapshot["weight"],
-        bodyType: dataSnapshot["bodyType"],
+      //Appearance
+      height: dataSnapshot["height"],
+      weight: dataSnapshot["weight"],
+      bodyType: dataSnapshot["bodyType"],
 
+      //life style
+      drink: dataSnapshot["drink"],
+      smoke: dataSnapshot["smoke"],
+      martialStatus: dataSnapshot["martialStatus"],
+      haveChildren: dataSnapshot["haveChildren"],
+      noOfChildren: dataSnapshot["noOfChildren"],
+      profession: dataSnapshot["profession"],
+      employmentStatus: dataSnapshot["employmentStatus"],
+      income: dataSnapshot["income"],
+      livingSituatin: dataSnapshot["livingSituatin"],
+      willingToRelocate: dataSnapshot["willingToRelocate"],
+      relationshipYouAreLookingFor:
+          dataSnapshot["relationshipYouAreLookingFor"],
 
-        //life style
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-
-        //Background values
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-        _data_: dataSnapshot["_data_"],
-
-
-
+      //Background values
+      nationality: dataSnapshot["nationality"],
+      education: dataSnapshot["education"],
+      languageSpoken: dataSnapshot["languageSpoken"],
+      religion: dataSnapshot["religion"],
+      ethnicity: dataSnapshot["ethnicity"],
+    );
   }
 }
