@@ -1,5 +1,6 @@
 class Person {
   //Personal info
+  String? imageProfile;
   String? name;
   String? age;
   String? phoneNo;
