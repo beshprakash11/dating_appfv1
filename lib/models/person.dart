@@ -8,6 +8,7 @@ class Person {
   String? country;
   String? profileHeading;
   String? lookingForInaPartner;
+  int? publishedDateTime;
 
   //Appearance
   String? height;
