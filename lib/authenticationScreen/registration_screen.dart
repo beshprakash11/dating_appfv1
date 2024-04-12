@@ -686,6 +686,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               child: InkWell(
                 onTap: () {
                   if (authController.profileImage != null) {
+                    if(){
+
+                    }else{
+                      Get.snackbar(
+                      "A field is Empty",
+                      "Please fill out all field in text fields.",
+                    );
+                    }
                   } else {
                     Get.snackbar(
                       "Image File Missing",
