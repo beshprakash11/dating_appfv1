@@ -684,7 +684,15 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     Radius.circular(12),
                   )),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  if (authController.profileImage != null) {
+                  } else {
+                    Get.snackbar(
+                      "Image File Missing",
+                      "Please pick image form gallery or capture with Camera",
+                    );
+                  }
+                },
                 child: const Center(
                   child: Text(
                     "Create Account",
