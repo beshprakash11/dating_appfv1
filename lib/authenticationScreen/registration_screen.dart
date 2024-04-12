@@ -769,6 +769,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             ethnicityTextEditingController.text
                                 .trim()
                                 .isNotEmpty) {
+                      showProgressBar = true;
                       await authController.createNewUserAccount(
                         //Personal info
                         authController.profileImage!,
