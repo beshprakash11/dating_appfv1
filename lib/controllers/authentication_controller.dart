@@ -134,6 +134,10 @@ class AuthenticationController extends GetxController {
         religion: religion,
         ethnicity: ethnicity,
       );
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .set(personInstance.toJson());
     } catch (errorMsg) {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
