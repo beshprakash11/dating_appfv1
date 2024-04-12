@@ -79,6 +79,46 @@ class Person {
   static Person formDataSnapshot(DocumentSnapshot snapshot) {
     var dataSnapshot = snapshot.data() as Map<String, dynamic>;
 
-    return Person();
+    return Person(
+        //Personal info
+        name: dataSnapshot["name"],
+        imageProfile: dataSnapshot["imageProfile"],
+        age: dataSnapshot["age"],
+        phoneNo: dataSnapshot["phoneNo"],
+        city: dataSnapshot["city"],
+        country: dataSnapshot["country"],
+        profileHeading: dataSnapshot["profileHeading"],
+        lookingForInaPartner: dataSnapshot["lookingForInaPartner"],
+        publishedDateTime: dataSnapshot["publishedDateTime"],
+
+        //Appearance
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+
+
+        //life style
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+
+        //Background values
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+        _data_: dataSnapshot["_data_"],
+
+
+
   }
 }
