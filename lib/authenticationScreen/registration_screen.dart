@@ -770,7 +770,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 .trim()
                                 .isNotEmpty) {
                       authController.createNewUserAccount(
-                        authController.profileImage!, //Personal info
+                        //Personal info
+                        authController.profileImage!,
                         emailTextEditingController.text.trim(),
                         passwordTextEditingController.text.trim(),
                         nameTextEditingController.text.trim(),
