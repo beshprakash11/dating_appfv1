@@ -25,4 +25,11 @@ class Person {
   String? livingSituatin;
   String? willingToRelocate;
   String? relationshipYouAreLookingFor;
+
+  //Background - Cultureal values
+  String? nationality;
+  String? education;
+  String? languageSpoken;
+  String? religion;
+  String? ethnicity;
 }
