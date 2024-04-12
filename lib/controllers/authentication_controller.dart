@@ -3,6 +3,10 @@ import 'dart:io';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class AuthenticationController extends GetxController {
   static AuthenticationController authController = Get.find();
   late Rx<File?> pickedFile;
@@ -66,7 +70,14 @@ class AuthenticationController extends GetxController {
     String religion,
     String ethnicity,
   ) async {
-    try {} catch (errorMsg) {
+    try {
+      //1. authenticate user and create User with Email and Password
+      UserCredential credential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+    } catch (errorMsg) {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
   }
