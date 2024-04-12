@@ -44,7 +44,7 @@ class AuthenticationController extends GetxController {
 
   //Create user account
   createNewUserAccount(
-    String imageProfile,
+    File imageProfile,
     String email,
     String password,
     String name,
@@ -90,7 +90,7 @@ class AuthenticationController extends GetxController {
       );
 
       //2. upload image to storage
-      await uploadImageToStorage(imageProfile);
+      String urlOfDownloadedImage = await uploadImageToStorage(imageProfile);
     } catch (errorMsg) {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
