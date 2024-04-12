@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class Person {
   //Personal info
   String? imageProfile;
@@ -34,6 +36,8 @@ class Person {
   String? languageSpoken;
   String? religion;
   String? ethnicity;
+
+  //Constructor
   Person({
     //Personal info
     this.imageProfile,
@@ -71,4 +75,10 @@ class Person {
     this.religion,
     this.ethnicity,
   });
+
+  static Person formDataSnapshot(DocumentSnapshot snapshot) {
+    var dataSnapshot = snapshot.data() as Map<String, dynamic>;
+
+    return Person();
+  }
 }
