@@ -3,6 +3,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class Person {
   //Personal info
   String? imageProfile;
+  String? email;
+  String? password;
   String? name;
   String? age;
   String? phoneNo;
@@ -41,6 +43,8 @@ class Person {
   Person({
     //Personal info
     this.imageProfile,
+    this.email,
+    this.password,
     this.name,
     this.age,
     this.phoneNo,
@@ -83,6 +87,8 @@ class Person {
       //Personal info
       name: dataSnapshot["name"],
       imageProfile: dataSnapshot["imageProfile"],
+      email: dataSnapshot["email"],
+      password: dataSnapshot["password"],
       age: dataSnapshot["age"],
       phoneNo: dataSnapshot["phoneNo"],
       city: dataSnapshot["city"],
@@ -123,6 +129,8 @@ class Person {
         //Personal info
         "name": name,
         "imageProfile": imageProfile,
+        "email": email,
+        "password": password,
         "age": age,
         "phoneNo": phoneNo,
         "city": city,
