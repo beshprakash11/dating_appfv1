@@ -77,8 +77,13 @@ class AuthenticationController extends GetxController {
         email: email,
         password: password,
       );
+
+      //2. upload image to storage
+      await uploadImageToStorage(imageProfile);
     } catch (errorMsg) {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
   }
+
+  uploadImageToStorage(String imageProfile) {}
 }
