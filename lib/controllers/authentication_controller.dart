@@ -147,5 +147,12 @@ class AuthenticationController extends GetxController {
     }
   }
 
-  loginUser(String emailUser, String passwordUser) async {}
+  loginUser(String emailUser, String passwordUser) async {
+    try {} catch (errorMsg) {
+      Get.snackbar(
+        "Login Unsuccessful",
+        "Error occured during sigin authentication.",
+      );
+    }
+  }
 }
