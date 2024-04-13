@@ -148,7 +148,18 @@ class AuthenticationController extends GetxController {
   }
 
   loginUser(String emailUser, String passwordUser) async {
-    try {} catch (errorMsg) {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailUser,
+        password: passwordUser,
+      );
+      Get.snackbar(
+        "Logged-in Successful",
+        "You're logged-in successfully.",
+      );
+
+      Get.to(() => HomeScreen());
+    } catch (errorMsg) {
       Get.snackbar(
         "Login Unsuccessful",
         "Error occured : $errorMsg",
