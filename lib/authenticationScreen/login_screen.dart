@@ -1,4 +1,5 @@
 import 'package:dating_appfv1/authenticationScreen/registration_screen.dart';
+import 'package:dating_appfv1/controllers/authentication_controller.dart';
 import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,6 +16,8 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController passwordTextEditingController = TextEditingController();
 
   bool showProgressBar = false;
+
+  var authController = AuthenticationController.authController;
 
   @override
   Widget build(BuildContext context) {
@@ -94,9 +97,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               child: InkWell(
-                onTap: () {
+                onTap: () async {
                   if (emailTextEditingController.text.trim().isNotEmpty &&
                       passwordTextEditingController.text.trim().isNotEmpty) {
+                    await authController.loginUser(
+                      emailTextEditingController.text.trim(),
+                      passwordTextEditingController.text.trim(),
+                    );
                   } else {
                     Get.snackbar(
                       "Email or Password Missing",
