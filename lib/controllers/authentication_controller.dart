@@ -158,7 +158,7 @@ class AuthenticationController extends GetxController {
         "You're logged-in successfully.",
       );
 
-      Get.to(() => HomeScreen());
+      Get.to(() => const HomeScreen());
     } catch (errorMsg) {
       Get.snackbar(
         "Login Unsuccessful",
