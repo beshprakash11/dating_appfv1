@@ -146,4 +146,6 @@ class AuthenticationController extends GetxController {
       Get.snackbar("Account Creation Unsuccessful", "Error occured: $errorMsg");
     }
   }
+
+  loginUser(String emailUser, String passwordUser) async {}
 }
