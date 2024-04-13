@@ -151,7 +151,7 @@ class AuthenticationController extends GetxController {
     try {} catch (errorMsg) {
       Get.snackbar(
         "Login Unsuccessful",
-        "Error occured during sigin authentication.",
+        "Error occured : $errorMsg",
       );
     }
   }
