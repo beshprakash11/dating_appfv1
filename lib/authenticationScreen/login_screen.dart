@@ -100,10 +100,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 onTap: () async {
                   if (emailTextEditingController.text.trim().isNotEmpty &&
                       passwordTextEditingController.text.trim().isNotEmpty) {
+                    setState(() {
+                      showProgressBar = true;
+                    });
                     await authController.loginUser(
                       emailTextEditingController.text.trim(),
                       passwordTextEditingController.text.trim(),
                     );
+                    setState(() {
+                      showProgressBar = false;
+                    });
                   } else {
                     Get.snackbar(
                       "Email or Password Missing",
