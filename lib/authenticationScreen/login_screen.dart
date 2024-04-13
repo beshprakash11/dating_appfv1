@@ -94,7 +94,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  if (emailTextEditingController.text.trim().isNotEmpty &&
+                      passwordTextEditingController.text.trim().isNotEmpty) {
+                  } else {
+                    Get.snackbar(
+                      "Email or Password Missing",
+                      "Email and pssword filed should not be empty.",
+                    );
+                  }
+                },
                 child: const Center(
                   child: Text(
                     "Login",
