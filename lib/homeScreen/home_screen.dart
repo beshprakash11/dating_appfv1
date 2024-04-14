@@ -46,6 +46,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             label: "",
           ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.star,
+              size: 30,
+            ),
+            label: "",
+          ),
         ],
       ),
       body: const Center(
