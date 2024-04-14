@@ -11,6 +11,16 @@ class LikeSentLikeRecivedScreen extends StatefulWidget {
 class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          "Like Sent Like Recived",
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 20,
+          ),
+        ),
+      ),
+    );
   }
 }
