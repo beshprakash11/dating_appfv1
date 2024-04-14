@@ -184,5 +184,7 @@ class AuthenticationController extends GetxController {
     super.onReady();
     firebaseCurrentUser = Rx<User?>(FirebaseAuth.instance.currentUser);
     firebaseCurrentUser.bindStream(FirebaseAuth.instance.authStateChanges());
+
+    ever(firebaseCurrentUser, checkIfUserIsLoggedIn);
   }
 }
