@@ -23,8 +23,12 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) {},
+        items: [],
+      ),
+      body: const Center(
         child: Text(
           "Welcome",
           style: TextStyle(
