@@ -166,4 +166,7 @@ class AuthenticationController extends GetxController {
       );
     }
   }
+
+  //user loggedin
+  checkIfUserIsLoggedIn(User? currentUser) {}
 }
