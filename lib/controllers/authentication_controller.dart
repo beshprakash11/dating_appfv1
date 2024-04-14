@@ -13,6 +13,8 @@ import "package:dating_appfv1/models/person.dart" as personModel;
 
 class AuthenticationController extends GetxController {
   static AuthenticationController authController = Get.find();
+
+  late Rx<User?> firebaseCurrentUser;
   late Rx<File?> pickedFile;
   File? get profileImage => pickedFile.value;
   XFile? imageFile;
@@ -175,5 +177,12 @@ class AuthenticationController extends GetxController {
     } else {
       Get.to(() => const HomeScreen());
     }
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
+    firebaseCurrentUser = Rx<User?>(FirebaseAuth.instance.currentUser);
+    firebaseCurrentUser.bindStream(FirebaseAuth.instance.authStateChanges());
   }
 }
