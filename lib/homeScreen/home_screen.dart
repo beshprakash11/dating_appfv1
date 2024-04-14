@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white12,
         currentIndex: screenIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             //swipe screen
             icon: Icon(
@@ -82,15 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: const Center(
-        child: Text(
-          "Welcome",
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 20,
-          ),
-        ),
-      ),
+      body: tabScreensList[screenIndex],
     );
   }
 }
