@@ -33,12 +33,15 @@ class _HomeScreenState extends State<HomeScreen> {
         currentIndex: screenIndex,
         items: [
           BottomNavigationBarItem(
+            //swipe screen
             icon: Icon(
               Icons.home,
               size: 30,
             ),
             label: "",
           ),
+
+          //View sent and received
           BottomNavigationBarItem(
             icon: Icon(
               Icons.remove_red_eye,
@@ -46,6 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             label: "",
           ),
+
+          //favorite sent and recived
           BottomNavigationBarItem(
             icon: Icon(
               Icons.star,
@@ -53,6 +58,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             label: "",
           ),
+
+          //like sent and recived
           BottomNavigationBarItem(
             icon: Icon(
               Icons.favorite,
@@ -60,6 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             label: "",
           ),
+
+          //User details
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
