@@ -10,6 +10,16 @@ class SwippingScreen extends StatefulWidget {
 class _SwippingScreenState extends State<SwippingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          "Swipping Screen",
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 20,
+          ),
+        ),
+      ),
+    );
   }
 }
