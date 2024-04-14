@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:dating_appfv1/authenticationScreen/login_screen.dart';
 import 'package:dating_appfv1/homeScreen/home_screen.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -168,5 +169,11 @@ class AuthenticationController extends GetxController {
   }
 
   //user loggedin
-  checkIfUserIsLoggedIn(User? currentUser) {}
+  checkIfUserIsLoggedIn(User? currentUser) {
+    if (currentUser == null) {
+      Get.to(() => const LoginScreen());
+    } else {
+      Get.to(() => const HomeScreen());
+    }
+  }
 }
