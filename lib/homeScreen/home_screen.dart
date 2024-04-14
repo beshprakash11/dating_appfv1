@@ -26,12 +26,27 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         onTap: (value) {},
-        items: [],
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.black,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white12,
         currentIndex: screenIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              size: 30,
+            ),
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.remove_red_eye,
+              size: 30,
+            ),
+            label: "",
+          ),
+        ],
       ),
       body: const Center(
         child: Text(
