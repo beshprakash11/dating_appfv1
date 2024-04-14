@@ -25,7 +25,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (value) {},
+        onTap: (indexNumber) {
+          setState(() {
+            screenIndex = indexNumber;
+          });
+        },
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.black,
         selectedItemColor: Colors.white,
