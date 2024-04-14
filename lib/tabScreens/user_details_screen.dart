@@ -10,6 +10,16 @@ class UserDetailsScreen extends StatefulWidget {
 class _UserDetailsScreenState extends State<UserDetailsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          "User Details Screen",
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 20,
+          ),
+        ),
+      ),
+    );
   }
 }
