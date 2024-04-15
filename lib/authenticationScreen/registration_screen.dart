@@ -813,6 +813,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       );
                       setState(() {
                         showProgressBar = false;
+                        authController.imageFile = null;
                       });
                     } else {
                       Get.snackbar(
