@@ -179,6 +179,18 @@ class _SwippingScreenState extends State<SwippingScreen> {
                           ],
                         ),
                       ),
+
+                      const SizedBox(
+                        height: 14,
+                      ),
+
+                      //image button - favorite - chat - like
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          //favorite button
+                        ],
+                      )
                     ],
                   ),
                 ),
