@@ -25,6 +25,11 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   String profileHeading = "";
   String lookingForInaPartner = "";
 
+  //Appearance
+  String height = "";
+  String weight = "";
+  String bodyType = "";
+
   retrieveUserInfo() async {
     FirebaseFirestore.instance
         .collection("users")
