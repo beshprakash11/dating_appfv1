@@ -69,15 +69,16 @@ class _SwippingScreenState extends State<SwippingScreen> {
 
                           //Age - city
                           Text(
-                            eachProfileInfo.age.toString() +
-                                " ⦿ " +
-                                eachProfileInfo.city.toString(),
+                            "${eachProfileInfo.age} ⦿ ${eachProfileInfo.city}",
                             style: const TextStyle(
                               color: Colors.white,
-                              fontSize: 24,
+                              fontSize: 14,
                               letterSpacing: 4,
-                              fontWeight: FontWeight.bold,
                             ),
+                          ),
+
+                          const SizedBox(
+                            height: 4,
                           ),
                         ],
                       ),
