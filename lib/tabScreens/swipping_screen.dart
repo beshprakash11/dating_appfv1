@@ -34,6 +34,23 @@ class _SwippingScreenState extends State<SwippingScreen> {
                     fit: BoxFit.cover,
                   ),
                 ),
+                child: Column(
+                  children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.filter_list,
+                            size: 30,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               );
             },
           );
