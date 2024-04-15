@@ -84,6 +84,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
                           //Profession and religion
                           Row(
                             children: [
+                              // profession
                               ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
@@ -92,7 +93,13 @@ class _SwippingScreenState extends State<SwippingScreen> {
                                     borderRadius: BorderRadius.circular(16),
                                   ),
                                 ),
-                                child: Text(""),
+                                child: Text(
+                                  eachProfileInfo.profession.toString(),
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ),
                             ],
                           )
