@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_image_slider/carousel.dart';
 
 class UserDetailsScreen extends StatefulWidget {
   String? userID;
@@ -143,12 +144,55 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           ),
         ],
       ),
-      body: const Center(
-        child: Text(
-          "User Details Screen",
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 20,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(30),
+          child: Column(
+            children: [
+              //image slider
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.4,
+                width: MediaQuery.of(context).size.width,
+                child: Padding(
+                  padding: const EdgeInsets.all(2),
+                  child: Carousel(
+                    indicatorBarColor: Colors.black.withOpacity(0.3),
+                    autoScrollDuration: const Duration(seconds: 2),
+                    animationPageDuration: const Duration(milliseconds: 500),
+                    activateIndicatorColor: Colors.black,
+                    animationPageCurve: Curves.easeIn,
+                    indicatorBarHeight: 30,
+                    indicatorHeight: 10,
+                    indicatorWidth: 10,
+                    unActivatedIndicatorColor: Colors.grey,
+                    stopAtEnd: false,
+                    autoScroll: true,
+                    items: [
+                      Image.network(
+                        urlImage1,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.network(
+                        urlImage2,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.network(
+                        urlImage3,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.network(
+                        urlImage4,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.network(
+                        urlImage4,
+                        fit: BoxFit.cover,
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       ),
