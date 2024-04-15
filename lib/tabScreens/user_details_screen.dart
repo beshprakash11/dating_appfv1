@@ -16,6 +16,15 @@ class UserDetailsScreen extends StatefulWidget {
 }
 
 class _UserDetailsScreenState extends State<UserDetailsScreen> {
+  //personal info
+  String name = "";
+  String age = "";
+  String phoneNo = "";
+  String city = "";
+  String country = "";
+  String profileHeading = "";
+  String lookingForInaPartner = "";
+
   retrieveUserInfo() async {
     FirebaseFirestore.instance
         .collection("users")
