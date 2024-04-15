@@ -83,6 +83,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
 
                           //Profession and religion
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               // profession
                               ElevatedButton(
