@@ -25,157 +25,160 @@ class _SwippingScreenState extends State<SwippingScreen> {
             itemBuilder: (context, index) {
               final eachProfileInfo =
                   profileController.allUsersProfileList[index];
-              return DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      eachProfileInfo.imageProfile.toString(),
+              return SafeArea(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        eachProfileInfo.imageProfile.toString(),
+                      ),
+                      fit: BoxFit.cover,
                     ),
-                    fit: BoxFit.cover,
                   ),
-                ),
-                child: Column(
-                  children: [
-                    //filter icon button
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 8),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.filter_list,
-                            size: 30,
+                  child: Column(
+                    children: [
+                      //filter icon button
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 8),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.filter_list,
+                              size: 30,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
-                    ),
 
-                    //User data
-                    GestureDetector(
-                      onTap: () {},
-                      child: Column(
-                        children: [
-                          //name
-                          Text(
-                            eachProfileInfo.name.toString(),
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              letterSpacing: 4,
-                              fontWeight: FontWeight.bold,
+                      //User data
+                      GestureDetector(
+                        onTap: () {},
+                        child: Column(
+                          children: [
+                            //name
+                            Text(
+                              eachProfileInfo.name.toString(),
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                letterSpacing: 4,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
 
-                          //Age - city
-                          Text(
-                            "${eachProfileInfo.age} ⦿ ${eachProfileInfo.city}",
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              letterSpacing: 4,
+                            //Age - city
+                            Text(
+                              "${eachProfileInfo.age} ⦿ ${eachProfileInfo.city}",
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                letterSpacing: 4,
+                              ),
                             ),
-                          ),
 
-                          const SizedBox(
-                            height: 4,
-                          ),
+                            const SizedBox(
+                              height: 4,
+                            ),
 
-                          //Profession and religion
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // profession
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white30,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(16),
+                            //Profession and religion
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                // profession
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white30,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    eachProfileInfo.profession.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
-                                child: Text(
-                                  eachProfileInfo.profession.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ),
 
-                              const SizedBox(
-                                width: 10,
-                              ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
 
-                              // religion
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white30,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(16),
+                                // religion
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white30,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    eachProfileInfo.religion.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
-                                child: Text(
-                                  eachProfileInfo.religion.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                              ],
+                            ),
 
-                          //country and ethnicity
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // country
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white30,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(16),
+                            //country and ethnicity
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                // country
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white30,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    eachProfileInfo.country.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
-                                child: Text(
-                                  eachProfileInfo.country.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ),
 
-                              const SizedBox(
-                                width: 10,
-                              ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
 
-                              // ethnicity
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white30,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(16),
+                                // ethnicity
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white30,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    eachProfileInfo.ethnicity.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
-                                child: Text(
-                                  eachProfileInfo.ethnicity.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               );
             },
