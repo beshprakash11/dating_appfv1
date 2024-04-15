@@ -189,6 +189,13 @@ class _SwippingScreenState extends State<SwippingScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           //favorite button
+                          GestureDetector(
+                            onTap: () {},
+                            child: Image.asset(
+                              "images/favorite.png",
+                              width: 60,
+                            ),
+                          )
                         ],
                       )
                     ],
