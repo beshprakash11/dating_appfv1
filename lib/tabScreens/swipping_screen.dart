@@ -205,6 +205,15 @@ class _SwippingScreenState extends State<SwippingScreen> {
                               width: 60,
                             ),
                           ),
+
+                          //like button
+                          GestureDetector(
+                            onTap: () {},
+                            child: Image.asset(
+                              "images/like.png",
+                              width: 60,
+                            ),
+                          ),
                         ],
                       ),
                     ],
