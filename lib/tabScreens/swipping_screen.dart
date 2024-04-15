@@ -53,6 +53,8 @@ class _SwippingScreenState extends State<SwippingScreen> {
                         ),
                       ),
 
+                      const Spacer(),
+
                       //User data
                       GestureDetector(
                         onTap: () {},
