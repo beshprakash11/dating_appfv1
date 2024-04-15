@@ -16,21 +16,26 @@ class _SwippingScreenState extends State<SwippingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView.builder(
-        itemCount: profileController.allUsersProfileList.length,
-        controller: PageController(initialPage: 0, viewportFraction: 1),
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          final eachProfileInfo = profileController.allUsersProfileList[index];
-          return DecoratedBox(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(
-                  eachProfileInfo.imageProfile.toString(),
+      body: Obx(
+        () {
+          return PageView.builder(
+            itemCount: profileController.allUsersProfileList.length,
+            controller: PageController(initialPage: 0, viewportFraction: 1),
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              final eachProfileInfo =
+                  profileController.allUsersProfileList[index];
+              return DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      eachProfileInfo.imageProfile.toString(),
+                    ),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                fit: BoxFit.cover,
-              ),
-            ),
+              );
+            },
           );
         },
       ),
