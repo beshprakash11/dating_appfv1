@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class UserDetailsScreen extends StatefulWidget {
-  String userID;
+  String? userID;
   UserDetailsScreen({
     super.key,
     this.userID,
@@ -42,6 +42,13 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   String livingSituatin = "";
   String willingToRelocate = "";
   String relationshipYouAreLookingFor = "";
+
+  //Slider images
+  String urlImage1 = "";
+  String urlImage2 = "";
+  String urlImage3 = "";
+  String urlImage4 = "";
+  String urlImage5 = "";
 
   retrieveUserInfo() async {
     FirebaseFirestore.instance
