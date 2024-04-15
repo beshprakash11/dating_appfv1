@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const ViewSentViewReceivedScreen(),
     const FavoriteSentFavoriteRecievedScreen(),
     const LikeSentLikeRecivedScreen(),
-    const UserDetailsScreen(),
+    UserDetailsScreen(),
   ];
   @override
   Widget build(BuildContext context) {
