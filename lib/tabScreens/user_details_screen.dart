@@ -83,6 +83,20 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           height = snapshot.data()!["height"];
           weight = snapshot.data()!["weight"];
           bodyType = snapshot.data()!["bodyType"];
+
+          //Life style
+          drink = snapshot.data()!["drink"];
+          smoke = snapshot.data()!["smoke"];
+          martialStatus = snapshot.data()!["martialStatus"];
+          haveChildren = snapshot.data()!["haveChildren"];
+          noOfChildren = snapshot.data()!["noOfChildren"];
+          profession = snapshot.data()!["profession"];
+          employmentStatus = snapshot.data()!["employmentStatus"];
+          income = snapshot.data()!["income"];
+          livingSituatin = snapshot.data()!["livingSituatin"];
+          willingToRelocate = snapshot.data()!["willingToRelocate"];
+          relationshipYouAreLookingFor =
+              snapshot.data()!["relationshipYouAreLookingFor"];
         });
       }
     });
