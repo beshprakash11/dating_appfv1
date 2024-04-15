@@ -1,4 +1,7 @@
+import 'package:dating_appfv1/controllers/profile-controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 
 class SwippingScreen extends StatefulWidget {
   const SwippingScreen({Key? key}) : super(key: key);
@@ -8,17 +11,16 @@ class SwippingScreen extends StatefulWidget {
 }
 
 class _SwippingScreenState extends State<SwippingScreen> {
+  ProfileController profileController = Get.put(ProfileController());
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          "Swipping Screen",
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 20,
-          ),
-        ),
+    return Scaffold(
+      body: PageView.builder(
+        itemCount: profileController.allUsersProfileList.length,
+        controller: PageController(initialPage: 0, viewportFraction: 1),
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {},
       ),
     );
   }
