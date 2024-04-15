@@ -22,6 +22,16 @@ class _SwippingScreenState extends State<SwippingScreen> {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           final eachProfileInfo = profileController.allUsersProfileList[index];
+          return DecoratedBox(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(
+                  eachProfileInfo.imageProfile.toString(),
+                ),
+                fit: BoxFit.cover,
+              ),
+            ),
+          );
         },
       ),
     );
