@@ -80,6 +80,22 @@ class _SwippingScreenState extends State<SwippingScreen> {
                           const SizedBox(
                             height: 4,
                           ),
+
+                          //Profession and religion
+                          Row(
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white30,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
+                                child: Text(""),
+                              ),
+                            ],
+                          )
                         ],
                       ),
                     ),
