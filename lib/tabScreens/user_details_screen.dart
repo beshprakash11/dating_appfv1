@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +58,22 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
         .collection("users")
         .doc(widget.userID)
         .get()
-        .then((snapshot) {});
+        .then((snapshot) {
+      if (snapshot.exists) {
+        if (snapshot.data()!["urlImage1"] != null) {
+          setState(() {
+            urlImage1 = snapshot.data()!["urlImage1"];
+            urlImage2 = snapshot.data()!["urlImage2"];
+            urlImage3 = snapshot.data()!["urlImage3"];
+            urlImage4 = snapshot.data()!["urlImage4"];
+            urlImage5 = snapshot.data()!["urlImage5"];
+          });
+        }
+        setState(() {
+          name = snapshot.data()!["name"];
+        });
+      }
+    });
   }
 
   @override
