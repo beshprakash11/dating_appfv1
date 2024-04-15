@@ -44,11 +44,16 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   String relationshipYouAreLookingFor = "";
 
   //Slider images
-  String urlImage1 = "";
-  String urlImage2 = "";
-  String urlImage3 = "";
-  String urlImage4 = "";
-  String urlImage5 = "";
+  String urlImage1 =
+      "https://firebasestorage.googleapis.com/v0/b/dating-app-eb8d5.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=83b4c24a-2204-4e85-ad1c-8d82308c76cc";
+  String urlImage2 =
+      "https://firebasestorage.googleapis.com/v0/b/dating-app-eb8d5.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=83b4c24a-2204-4e85-ad1c-8d82308c76cc";
+  String urlImage3 =
+      "https://firebasestorage.googleapis.com/v0/b/dating-app-eb8d5.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=83b4c24a-2204-4e85-ad1c-8d82308c76cc";
+  String urlImage4 =
+      "https://firebasestorage.googleapis.com/v0/b/dating-app-eb8d5.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=83b4c24a-2204-4e85-ad1c-8d82308c76cc";
+  String urlImage5 =
+      "https://firebasestorage.googleapis.com/v0/b/dating-app-eb8d5.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=83b4c24a-2204-4e85-ad1c-8d82308c76cc";
 
   retrieveUserInfo() async {
     FirebaseFirestore.instance
