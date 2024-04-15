@@ -193,8 +193,12 @@ class _SwippingScreenState extends State<SwippingScreen> {
                             onTap: () {},
                             child: Image.asset(
                               "images/favorite.png",
-                              width: 60,
+                              width: 50,
                             ),
+                          ),
+
+                          const SizedBox(
+                            width: 6,
                           ),
 
                           //chat button
@@ -202,8 +206,12 @@ class _SwippingScreenState extends State<SwippingScreen> {
                             onTap: () {},
                             child: Image.asset(
                               "images/chat.png",
-                              width: 60,
+                              width: 50,
                             ),
+                          ),
+
+                          const SizedBox(
+                            width: 6,
                           ),
 
                           //like button
@@ -211,10 +219,14 @@ class _SwippingScreenState extends State<SwippingScreen> {
                             onTap: () {},
                             child: Image.asset(
                               "images/like.png",
-                              width: 60,
+                              width: 50,
                             ),
                           ),
                         ],
+                      ),
+
+                      const SizedBox(
+                        height: 14,
                       ),
                     ],
                   ),
