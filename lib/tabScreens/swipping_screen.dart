@@ -36,6 +36,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
                 ),
                 child: Column(
                   children: [
+                    //filter icon button
                     Align(
                       alignment: Alignment.topRight,
                       child: Padding(
@@ -48,7 +49,26 @@ class _SwippingScreenState extends State<SwippingScreen> {
                           ),
                         ),
                       ),
-                    )
+                    ),
+
+                    //User data
+                    GestureDetector(
+                      onTap: () {},
+                      child: Column(
+                        children: [
+                          //name
+                          Text(
+                            eachProfileInfo.name.toString(),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              letterSpacing: 4,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               );
