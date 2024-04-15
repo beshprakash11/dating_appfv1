@@ -3,7 +3,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class UserDetailsScreen extends StatefulWidget {
-  const UserDetailsScreen({Key? key}) : super(key: key);
+  String? userID;
+  UserDetailsScreen({
+    super.key,
+    this.userID,
+  });
 
   @override
   _UserDetailsScreenState createState() => _UserDetailsScreenState();
