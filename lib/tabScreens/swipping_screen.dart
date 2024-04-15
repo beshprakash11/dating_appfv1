@@ -195,9 +195,18 @@ class _SwippingScreenState extends State<SwippingScreen> {
                               "images/favorite.png",
                               width: 60,
                             ),
-                          )
+                          ),
+
+                          //chat button
+                          GestureDetector(
+                            onTap: () {},
+                            child: Image.asset(
+                              "images/chat.png",
+                              width: 60,
+                            ),
+                          ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
