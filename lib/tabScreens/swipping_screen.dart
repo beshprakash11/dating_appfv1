@@ -102,6 +102,10 @@ class _SwippingScreenState extends State<SwippingScreen> {
                                 ),
                               ),
 
+                              const SizedBox(
+                                width: 10,
+                              ),
+
                               // religion
                               ElevatedButton(
                                 onPressed: () {},
