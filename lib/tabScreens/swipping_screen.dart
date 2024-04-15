@@ -20,7 +20,9 @@ class _SwippingScreenState extends State<SwippingScreen> {
         itemCount: profileController.allUsersProfileList.length,
         controller: PageController(initialPage: 0, viewportFraction: 1),
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {},
+        itemBuilder: (context, index) {
+          final eachProfileInfo = profileController.allUsersProfileList[index];
+        },
       ),
     );
   }
