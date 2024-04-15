@@ -70,7 +70,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           });
         }
         setState(() {
+          //personal info
           name = snapshot.data()!["name"];
+          age = snapshot.data()!["age"];
+          phoneNo = snapshot.data()!["phoneNo"];
+          city = snapshot.data()!["city"];
+          country = snapshot.data()!["country"];
+          profileHeading = snapshot.data()!["profileHeading"];
+          lookingForInaPartner = snapshot.data()!["lookingForInaPartner"];
         });
       }
     });
