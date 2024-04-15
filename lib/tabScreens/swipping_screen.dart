@@ -186,14 +186,14 @@ class _SwippingScreenState extends State<SwippingScreen> {
 
                       //image button - favorite - chat - like
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           //favorite button
                           GestureDetector(
                             onTap: () {},
                             child: Image.asset(
                               "images/favorite.png",
-                              width: 50,
+                              width: 60,
                             ),
                           ),
 
@@ -206,7 +206,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
                             onTap: () {},
                             child: Image.asset(
                               "images/chat.png",
-                              width: 50,
+                              width: 60,
                             ),
                           ),
 
@@ -219,7 +219,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
                             onTap: () {},
                             child: Image.asset(
                               "images/like.png",
-                              width: 50,
+                              width: 60,
                             ),
                           ),
                         ],
