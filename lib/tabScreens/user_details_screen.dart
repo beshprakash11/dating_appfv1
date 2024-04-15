@@ -78,6 +78,11 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           country = snapshot.data()!["country"];
           profileHeading = snapshot.data()!["profileHeading"];
           lookingForInaPartner = snapshot.data()!["lookingForInaPartner"];
+
+          //Appearance
+          height = snapshot.data()!["height"];
+          weight = snapshot.data()!["weight"];
+          bodyType = snapshot.data()!["bodyType"];
         });
       }
     });
