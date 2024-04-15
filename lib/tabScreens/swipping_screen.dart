@@ -65,7 +65,20 @@ class _SwippingScreenState extends State<SwippingScreen> {
                               letterSpacing: 4,
                               fontWeight: FontWeight.bold,
                             ),
-                          )
+                          ),
+
+                          //Age - city
+                          Text(
+                            eachProfileInfo.age.toString() +
+                                " ⦿ " +
+                                eachProfileInfo.city.toString(),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              letterSpacing: 4,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
                     ),
