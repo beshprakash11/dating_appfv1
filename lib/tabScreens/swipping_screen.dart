@@ -101,6 +101,24 @@ class _SwippingScreenState extends State<SwippingScreen> {
                                   ),
                                 ),
                               ),
+
+                              // religion
+                              ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white30,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
+                                child: Text(
+                                  eachProfileInfo.religion.toString(),
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
                             ],
                           )
                         ],
