@@ -117,6 +117,12 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    retrieveUserInfo();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
