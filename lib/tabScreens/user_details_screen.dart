@@ -41,6 +41,13 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   String willingToRelocate = "";
   String relationshipYouAreLookingFor = "";
 
+  //Background - Cultureal values
+  String nationality = "";
+  String education = "";
+  String languageSpoken = "";
+  String religion = "";
+  String ethnicity = "";
+
   //Slider images
   String urlImage1 =
       "https://firebasestorage.googleapis.com/v0/b/dating-app-eb8d5.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=83b4c24a-2204-4e85-ad1c-8d82308c76cc";
@@ -97,6 +104,13 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           willingToRelocate = snapshot.data()!["willingToRelocate"];
           relationshipYouAreLookingFor =
               snapshot.data()!["relationshipYouAreLookingFor"];
+
+          //Background - Cultureal values
+          nationality = snapshot.data()!["nationality"];
+          education = snapshot.data()!["education"];
+          languageSpoken = snapshot.data()!["languageSpoken"];
+          religion = snapshot.data()!["religion"];
+          ethnicity = snapshot.data()!["ethnicity"];
         });
       }
     });
