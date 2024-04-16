@@ -63,6 +63,12 @@ class _FavoriteSentFavoriteRecievedScreenState
           children: [
             TextButton(
               onPressed: () {
+                favoriteSentList.clear();
+                favoriteSentList = [];
+                favoriteReceivedtList.clear();
+                favoriteReceivedtList = [];
+                favoritesList.clear();
+                favoritesList = [];
                 setState(() {
                   isFavoriteSetnClicked = true;
                 });
@@ -79,7 +85,7 @@ class _FavoriteSentFavoriteRecievedScreenState
               ),
             ),
             const Text(
-              "   |   ",
+              "  |  ",
               style: TextStyle(
                 color: Colors.grey,
               ),
@@ -92,7 +98,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                 getFavoriteListKeys();
               },
               child: Text(
-                "I'm there Favorites!",
+                "I'm there Favorite!",
                 style: TextStyle(
                   color: isFavoriteSetnClicked ? Colors.white : Colors.grey,
                   fontWeight: isFavoriteSetnClicked
