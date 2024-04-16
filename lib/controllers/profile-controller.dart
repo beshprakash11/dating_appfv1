@@ -39,5 +39,16 @@ class ProfileController extends GetxController {
         .collection("favoriteReceived")
         .doc(currentUserID)
         .get();
+
+    //remove the favorite from database
+    if (document.exists) {
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(toUserID)
+          .collection("favoriteReceived")
+          .doc(currentUserID)
+          .delete();
+    } else //mark as favorite// add favorite in database
+    {}
   }
 }
