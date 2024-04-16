@@ -117,7 +117,36 @@ class _FavoriteSentFavoriteRecievedScreenState
         ),
         centerTitle: true,
       ),
-      body: _buildEmptyScreen(),
+      body: favoritesList.isEmpty
+          ? _buildEmptyScreen()
+          : GridView.count(
+              crossAxisCount: 2,
+              padding: const EdgeInsets.all(8),
+              children: List.generate(
+                favoritesList.length,
+                (index) {
+                  return GridTile(
+                    child: Card(
+                      color: Colors.blue.shade200,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                favoritesList[index]["imageProfile"],
+                              ),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Padding(padding: const EdgeInsets.all(8)),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
     );
   }
 
