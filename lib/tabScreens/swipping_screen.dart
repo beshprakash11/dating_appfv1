@@ -211,7 +211,12 @@ class _SwippingScreenState extends State<SwippingScreen> {
                         children: [
                           //favorite button
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              profileController.favoriteSentAndFavoriteReceived(
+                                eachProfileInfo.uid.toString(),
+                                senderName,
+                              );
+                            },
                             child: Image.asset(
                               "images/favorite.png",
                               width: 60,
