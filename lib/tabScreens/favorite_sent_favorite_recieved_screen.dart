@@ -56,7 +56,26 @@ class _FavoriteSentFavoriteRecievedScreenState
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                "My Favorites",
+                style: TextStyle(
+                  color: isFavoriteSetnClicked ? Colors.white : Colors.grey,
+                  fontWeight: isFavoriteSetnClicked
+                      ? FontWeight.bold
+                      : FontWeight.normal,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       body: Center(
         child: Text(
           "Favorite Sent Favorite Recieved",
