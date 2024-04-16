@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_image_slider/carousel.dart';
 
+// ignore: must_be_immutable
 class UserDetailsScreen extends StatefulWidget {
   String? userID;
   UserDetailsScreen({
@@ -12,6 +12,7 @@ class UserDetailsScreen extends StatefulWidget {
   });
 
   @override
+  // ignore: library_private_types_in_public_api
   _UserDetailsScreenState createState() => _UserDetailsScreenState();
 }
 
