@@ -235,6 +235,13 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                             color: Colors.white,
                             fontSize: 18,
                           ),
+                        ),
+                        Text(
+                          name,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                         )
                       ],
                     ),
