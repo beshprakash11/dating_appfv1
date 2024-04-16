@@ -242,6 +242,10 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     //City
                     _buildDataTableRow("City: ", city),
                     _buildTableRowspacing(),
+
+                    //Country
+                    _buildDataTableRow("Country: ", country),
+                    _buildTableRowspacing(),
                   ],
                 ),
               ),
