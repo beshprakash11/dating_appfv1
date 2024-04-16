@@ -226,6 +226,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 padding: const EdgeInsets.all(20),
                 child: Table(
                   children: [
+                    //Personal info
                     //name
                     _buildDataTableRow("Name: ", name),
                     _buildTableRowspacing(),
@@ -236,6 +237,10 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
 
                     //phone
                     _buildDataTableRow("PhoneNo: ", phoneNo),
+                    _buildTableRowspacing(),
+
+                    //City
+                    _buildDataTableRow("City: ", city),
                     _buildTableRowspacing(),
                   ],
                 ),
