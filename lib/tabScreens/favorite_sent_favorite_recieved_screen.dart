@@ -117,14 +117,16 @@ class _FavoriteSentFavoriteRecievedScreenState
         ),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          "Favorite Sent Favorite Recieved",
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 20,
-          ),
-        ),
+      body: _buildEmptyScreen(),
+    );
+  }
+
+  Center _buildEmptyScreen() {
+    return const Center(
+      child: Icon(
+        Icons.person_off_sharp,
+        color: Colors.white,
+        size: 60,
       ),
     );
   }
