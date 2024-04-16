@@ -73,6 +73,9 @@ class _FavoriteSentFavoriteRecievedScreenState
                 ),
               ),
             ),
+            const SizedBox(
+              width: 5,
+            ),
             TextButton(
               onPressed: () {},
               child: Text(
