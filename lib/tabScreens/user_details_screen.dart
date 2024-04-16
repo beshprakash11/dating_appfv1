@@ -225,7 +225,21 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 color: Colors.black,
                 padding: const EdgeInsets.all(20),
                 child: Table(
-                  children: [],
+                  children: [
+                    //start table row
+                    TableRow(
+                      children: [
+                        const Text(
+                          "Name: ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                        )
+                      ],
+                    ),
+                    //end table row
+                  ],
                 ),
               ),
               //end personal info table data
