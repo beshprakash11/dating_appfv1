@@ -222,7 +222,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     _buildDataTableRow("Age: ", age),
                     _buildTableRowspacing(),
 
-                    //phone
+                    //phone no
                     _buildDataTableRow("PhoneNo: ", phoneNo),
                     _buildTableRowspacing(),
 
@@ -234,11 +234,11 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     _buildDataTableRow("Country: ", country),
                     _buildTableRowspacing(),
 
-                    //City
+                    //Profile heading
                     _buildDataTableRow("Profile heading: ", profileHeading),
                     _buildTableRowspacing(),
 
-                    //City
+                    //looking for
                     _buildDataTableRow("Looking for: ", lookingForInaPartner),
                     _buildTableRowspacing(),
                   ],
@@ -260,16 +260,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 padding: const EdgeInsets.all(20),
                 child: Table(
                   children: [
-                    //Personal info
-                    //name
+                    //Height
                     _buildDataTableRow("Height: ", height),
                     _buildTableRowspacing(),
 
-                    //age
+                    //Weight
                     _buildDataTableRow("Weight: ", weight),
                     _buildTableRowspacing(),
 
-                    //phone
+                    //boy type
                     _buildDataTableRow("Body Type: ", bodyType),
                     _buildTableRowspacing(),
                   ],
@@ -291,16 +290,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 padding: const EdgeInsets.all(20),
                 child: Table(
                   children: [
-                    //Personal info
-                    //name
+                    //Drink
                     _buildDataTableRow("Drink: ", drink),
                     _buildTableRowspacing(),
 
-                    //age
+                    //Smoke
                     _buildDataTableRow("Smoke: ", smoke),
                     _buildTableRowspacing(),
 
-                    //phone
+                    //Married
                     _buildDataTableRow("Married: ", martialStatus),
                     _buildTableRowspacing(),
                   ],
