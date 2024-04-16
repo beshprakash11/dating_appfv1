@@ -301,6 +301,40 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     //Married
                     _buildDataTableRow("Married: ", martialStatus),
                     _buildTableRowspacing(),
+
+                    //Childresn
+                    _buildDataTableRow("Have Children: ", haveChildren),
+                    _buildTableRowspacing(),
+
+                    //Noof child
+                    _buildDataTableRow("No of Children: ", noOfChildren),
+                    _buildTableRowspacing(),
+
+                    //Profession
+                    _buildDataTableRow("Profession: ", profession),
+                    _buildTableRowspacing(),
+
+                    //empoyment
+                    _buildDataTableRow("Employment Status: ", employmentStatus),
+                    _buildTableRowspacing(),
+
+                    //income
+                    _buildDataTableRow("Income: ", income),
+                    _buildTableRowspacing(),
+
+                    //Living situation
+                    _buildDataTableRow("Living Situation: ", livingSituatin),
+                    _buildTableRowspacing(),
+
+                    //Willing to reloacate
+                    _buildDataTableRow(
+                        "Willing to Relocate: ", willingToRelocate),
+                    _buildTableRowspacing(),
+
+                    //looking relationship
+                    _buildDataTableRow(
+                        "Looking Relationship: ", relationshipYouAreLookingFor),
+                    _buildTableRowspacing(),
                   ],
                 ),
               ),
