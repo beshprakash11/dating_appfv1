@@ -245,6 +245,37 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 ),
               ),
               //end start personal info
+
+              //start Appearance
+              const SizedBox(
+                height: 30,
+              ),
+              _buildMainTitle("Appearance:"),
+              const Divider(
+                color: Colors.white,
+                thickness: 2,
+              ),
+              Container(
+                color: Colors.black,
+                padding: const EdgeInsets.all(20),
+                child: Table(
+                  children: [
+                    //Personal info
+                    //name
+                    _buildDataTableRow("Height: ", height),
+                    _buildTableRowspacing(),
+
+                    //age
+                    _buildDataTableRow("Weight: ", weight),
+                    _buildTableRowspacing(),
+
+                    //phone
+                    _buildDataTableRow("Body Type: ", bodyType),
+                    _buildTableRowspacing(),
+                  ],
+                ),
+              ),
+              //end Appearance
             ],
           ),
         ),
