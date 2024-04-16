@@ -92,6 +92,12 @@ class _FavoriteSentFavoriteRecievedScreenState
             ),
             TextButton(
               onPressed: () {
+                favoriteSentList.clear();
+                favoriteSentList = [];
+                favoriteReceivedtList.clear();
+                favoriteReceivedtList = [];
+                favoritesList.clear();
+                favoritesList = [];
                 setState(() {
                   isFavoriteSetnClicked = false;
                 });
