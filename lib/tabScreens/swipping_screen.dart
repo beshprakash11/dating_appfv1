@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/controllers/profile-controller.dart';
+import 'package:dating_appfv1/global.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +13,19 @@ class SwippingScreen extends StatefulWidget {
 
 class _SwippingScreenState extends State<SwippingScreen> {
   ProfileController profileController = Get.put(ProfileController());
+  String senderName = "";
+
+  readCurrentUserData() async {
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(currentUserID)
+        .get()
+        .then((dataSnapshot) {
+      setState(() {
+        senderName = dataSnapshot.data()!["name"].toString();
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
