@@ -73,6 +73,18 @@ class _FavoriteSentFavoriteRecievedScreenState
                 ),
               ),
             ),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                "I'm there Favorites!",
+                style: TextStyle(
+                  color: isFavoriteSetnClicked ? Colors.white : Colors.grey,
+                  fontWeight: isFavoriteSetnClicked
+                      ? FontWeight.bold
+                      : FontWeight.normal,
+                ),
+              ),
+            ),
           ],
         ),
       ),
