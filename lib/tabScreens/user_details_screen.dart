@@ -227,24 +227,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 child: Table(
                   children: [
                     //start name row
-                    TableRow(
-                      children: [
-                        const Text(
-                          "Name: ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        ),
-                        Text(
-                          name,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        )
-                      ],
-                    ),
+                    _buildDataTableRow(),
                     //end name row
 
                     _buildTableRowspacing(),
@@ -277,6 +260,27 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  TableRow _buildDataTableRow(String title, String data) {
+    return TableRow(
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+          ),
+        ),
+        Text(
+          data,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+          ),
+        )
+      ],
     );
   }
 
