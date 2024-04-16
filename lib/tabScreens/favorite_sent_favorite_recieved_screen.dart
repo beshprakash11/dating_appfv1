@@ -73,8 +73,11 @@ class _FavoriteSentFavoriteRecievedScreenState
                 ),
               ),
             ),
-            const SizedBox(
-              width: 5,
+            const Text(
+              "   |   ",
+              style: TextStyle(
+                color: Colors.grey,
+              ),
             ),
             TextButton(
               onPressed: () {},
