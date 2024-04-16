@@ -339,6 +339,44 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 ),
               ),
               //end Life style
+
+              //start Background - Cultureal values
+              const SizedBox(
+                height: 30,
+              ),
+              _buildMainTitle("Background - Cultureal values:"),
+              const Divider(
+                color: Colors.white,
+                thickness: 2,
+              ),
+              Container(
+                color: Colors.black,
+                padding: const EdgeInsets.all(20),
+                child: Table(
+                  children: [
+                    //Nationality
+                    _buildDataTableRow("Nationality: ", nationality),
+                    _buildTableRowspacing(),
+
+                    //Education
+                    _buildDataTableRow("Education: ", education),
+                    _buildTableRowspacing(),
+
+                    //Language Spoken
+                    _buildDataTableRow("Language Spoken: ", languageSpoken),
+                    _buildTableRowspacing(),
+
+                    //religion
+                    _buildDataTableRow("Religion: ", religion),
+                    _buildTableRowspacing(),
+
+                    //ethnicity
+                    _buildDataTableRow("Ethnicity: ", ethnicity),
+                    _buildTableRowspacing(),
+                  ],
+                ),
+              ),
+              //end Background - Cultureal values
             ],
           ),
         ),
