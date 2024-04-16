@@ -192,10 +192,28 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   ),
                 ),
               ),
+              //end of image slider
 
               const SizedBox(
-                height: 18,
+                height: 10,
               ),
+
+              //personal info
+              const SizedBox(
+                height: 30,
+              ),
+              const Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "Personal Info:",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              //end of personal info
             ],
           ),
         ),
