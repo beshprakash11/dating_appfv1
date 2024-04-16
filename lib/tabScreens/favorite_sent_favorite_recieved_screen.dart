@@ -1,7 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dating_appfv1/global.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteSentFavoriteRecievedScreen extends StatefulWidget {
-  const FavoriteSentFavoriteRecievedScreen({Key? key}) : super(key: key);
+  const FavoriteSentFavoriteRecievedScreen({super.key});
 
   @override
   _FavoriteSentFavoriteRecievedScreenState createState() =>
@@ -10,6 +12,14 @@ class FavoriteSentFavoriteRecievedScreen extends StatefulWidget {
 
 class _FavoriteSentFavoriteRecievedScreenState
     extends State<FavoriteSentFavoriteRecievedScreen> {
+  getFavoriteListKeys() async {
+    var favoriteSentDocument = await FirebaseFirestore.instance
+        .collection("users")
+        .doc(currentUserID.toString())
+        .collection("favoriteSent")
+        .get();
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
