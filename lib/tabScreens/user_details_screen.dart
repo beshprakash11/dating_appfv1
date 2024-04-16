@@ -198,7 +198,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 height: 10,
               ),
 
-              //personal info
+              //personal info title
               const SizedBox(
                 height: 30,
               ),
@@ -213,12 +213,22 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   ),
                 ),
               ),
+              //end personal info title
 
               const Divider(
                 color: Colors.white,
                 thickness: 2,
               ),
-              //end of personal info
+
+              //personal info table data
+              Container(
+                color: Colors.black,
+                padding: const EdgeInsets.all(20),
+                child: Table(
+                  children: [],
+                ),
+              ),
+              //end personal info table data
             ],
           ),
         ),
