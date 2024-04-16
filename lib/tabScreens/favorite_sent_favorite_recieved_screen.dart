@@ -115,6 +115,7 @@ class _FavoriteSentFavoriteRecievedScreenState
             ),
           ],
         ),
+        centerTitle: true,
       ),
       body: Center(
         child: Text(
