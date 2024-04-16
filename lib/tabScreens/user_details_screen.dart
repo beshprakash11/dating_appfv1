@@ -213,6 +213,11 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   ),
                 ),
               ),
+
+              const Divider(
+                color: Colors.white,
+                thickness: 2,
+              ),
               //end of personal info
             ],
           ),
