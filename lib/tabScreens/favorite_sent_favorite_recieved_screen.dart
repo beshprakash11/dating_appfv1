@@ -26,6 +26,7 @@ class _FavoriteSentFavoriteRecievedScreenState
       for (int i = 0; i < favoriteSentDocument.docs.length; i++) {
         favoriteSentList.add(favoriteSentDocument.docs[i].id);
       }
+      getKeysDataFromUsersCollection(favoriteSentList);
     } else {
       var favoriteReceivedDocument = await FirebaseFirestore.instance
           .collection("users")
@@ -35,11 +36,11 @@ class _FavoriteSentFavoriteRecievedScreenState
       for (int i = 0; i < favoriteReceivedDocument.docs.length; i++) {
         favoriteReceivedtList.add(favoriteReceivedDocument.docs[i].id);
       }
+      getKeysDataFromUsersCollection(favoriteReceivedtList);
     }
-    getKeysDataFromUsersCollection();
   }
 
-  getKeysDataFromUsersCollection() {}
+  getKeysDataFromUsersCollection(List<String> keysList) async {}
 
   @override
   Widget build(BuildContext context) {
