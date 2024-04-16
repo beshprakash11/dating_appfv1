@@ -47,7 +47,7 @@ class _FavoriteSentFavoriteRecievedScreenState
     return const Scaffold(
       body: Center(
         child: Text(
-          "FavoriteSentFavoriteRecievedScreen Screen",
+          "Favorite Sent Favorite Recieved",
           style: TextStyle(
             color: Colors.green,
             fontSize: 20,
