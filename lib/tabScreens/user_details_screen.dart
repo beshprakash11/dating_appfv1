@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_image_slider/carousel.dart';
 
 class UserDetailsScreen extends StatefulWidget {
@@ -198,29 +199,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 height: 10,
               ),
 
-              //personal info title
+              //start personal info
               const SizedBox(
                 height: 30,
               ),
-              const Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Personal Info:",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              //end personal info title
-
+              _buildMainTitle("Personal Info:"),
               const Divider(
                 color: Colors.white,
                 thickness: 2,
               ),
-
-              //personal info table data
               Container(
                 color: Colors.black,
                 padding: const EdgeInsets.all(20),
@@ -257,9 +244,23 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   ],
                 ),
               ),
-              //end personal info table data
+              //end start personal info
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Align _buildMainTitle(String title) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Text(
+        title,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
