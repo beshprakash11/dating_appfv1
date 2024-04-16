@@ -80,7 +80,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
         setState(() {
           //personal info
           name = snapshot.data()!["name"];
-          age = snapshot.data()!["age"];
+          age = snapshot.data()!["age"].toString();
           phoneNo = snapshot.data()!["phoneNo"];
           city = snapshot.data()!["city"];
           country = snapshot.data()!["country"];
@@ -247,14 +247,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ),
                     //end name row
 
-                    //start extra row
-                    const TableRow(
-                      children: [
-                        Text(""),
-                        Text(""),
-                      ],
-                    ),
-                    //end extra row
+                    _buildTableRowspacing(),
 
                     //start age row
                     TableRow(
@@ -284,6 +277,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  TableRow _buildTableRowspacing() {
+    return const TableRow(
+      children: [
+        Text(""),
+        Text(""),
+      ],
     );
   }
 }
