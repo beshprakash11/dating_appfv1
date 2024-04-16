@@ -28,4 +28,7 @@ class ProfileController extends GetxController {
       ), // user data
     );
   }
+
+  //FavoriteSentAndFavoriteReceived
+  favoriteSentAndFavoriteReceived(String toUserID, String senderName) async {}
 }
