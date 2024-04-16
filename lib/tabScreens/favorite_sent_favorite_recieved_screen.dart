@@ -62,7 +62,12 @@ class _FavoriteSentFavoriteRecievedScreenState
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  isFavoriteSetnClicked = true;
+                });
+                getFavoriteListKeys();
+              },
               child: Text(
                 "My Favorites",
                 style: TextStyle(
@@ -80,7 +85,12 @@ class _FavoriteSentFavoriteRecievedScreenState
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  isFavoriteSetnClicked = false;
+                });
+                getFavoriteListKeys();
+              },
               child: Text(
                 "I'm there Favorites!",
                 style: TextStyle(
