@@ -28,6 +28,12 @@ class _SwippingScreenState extends State<SwippingScreen> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    readCurrentUserData();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(
