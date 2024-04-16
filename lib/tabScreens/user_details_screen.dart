@@ -250,6 +250,10 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     //City
                     _buildDataTableRow("Profile heading: ", profileHeading),
                     _buildTableRowspacing(),
+
+                    //City
+                    _buildDataTableRow("Looking for: ", lookingForInaPartner),
+                    _buildTableRowspacing(),
                   ],
                 ),
               ),
