@@ -15,6 +15,7 @@ class _FavoriteSentFavoriteRecievedScreenState
   bool isFavoriteSetnClicked = true;
   List<String> favoriteSentList = [];
   List<String> favoriteReceivedtList = [];
+  List favoritesList = [];
 
   getFavoriteListKeys() async {
     if (isFavoriteSetnClicked) {
@@ -40,7 +41,18 @@ class _FavoriteSentFavoriteRecievedScreenState
     }
   }
 
-  getKeysDataFromUsersCollection(List<String> keysList) async {}
+  getKeysDataFromUsersCollection(List<String> keysList) async {
+    var allUsersDocument =
+        await FirebaseFirestore.instance.collection("users").get();
+    for (int i = 0; i < allUsersDocument.docs.length; i++) {
+      for (int k = 0; k < keysList.length; k++) {
+        if (((allUsersDocument.docs[i].data() as dynamic)["uid"]) ==
+            keysList[k]) {
+          favoritesList.add(allUsersDocument.docs[i].data());
+        }
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
