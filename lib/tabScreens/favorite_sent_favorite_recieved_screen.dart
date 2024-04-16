@@ -14,6 +14,7 @@ class _FavoriteSentFavoriteRecievedScreenState
     extends State<FavoriteSentFavoriteRecievedScreen> {
   bool isFavoriteSetnClicked = true;
   List<String> favoriteSentList = [];
+  List<String> favoriteReceivedtList = [];
 
   getFavoriteListKeys() async {
     if (isFavoriteSetnClicked) {
@@ -31,6 +32,9 @@ class _FavoriteSentFavoriteRecievedScreenState
           .doc(currentUserID.toString())
           .collection("favoriteReceived")
           .get();
+      for (int i = 0; i < favoriteReceivedDocument.docs.length; i++) {
+        favoriteReceivedtList.add(favoriteReceivedDocument.docs[i].id);
+      }
     }
   }
 
