@@ -159,7 +159,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     indicatorBarColor: Colors.black.withOpacity(0.3),
                     autoScrollDuration: const Duration(seconds: 2),
                     animationPageDuration: const Duration(milliseconds: 500),
-                    activateIndicatorColor: Colors.black,
+                    activateIndicatorColor: Colors.green,
                     animationPageCurve: Curves.easeIn,
                     indicatorBarHeight: 30,
                     indicatorHeight: 10,
@@ -191,7 +191,11 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ],
                   ),
                 ),
-              )
+              ),
+
+              const SizedBox(
+                height: 18,
+              ),
             ],
           ),
         ),
