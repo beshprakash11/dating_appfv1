@@ -226,32 +226,17 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 padding: const EdgeInsets.all(20),
                 child: Table(
                   children: [
-                    //start name row
-                    _buildDataTableRow(),
-                    //end name row
-
+                    //name
+                    _buildDataTableRow("Name: ", name),
                     _buildTableRowspacing(),
 
-                    //start age row
-                    TableRow(
-                      children: [
-                        const Text(
-                          "Age: ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        ),
-                        Text(
-                          age,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        )
-                      ],
-                    ),
-                    //end age row
+                    //age
+                    _buildDataTableRow("Age: ", age),
+                    _buildTableRowspacing(),
+
+                    //phone
+                    _buildDataTableRow("PhoneNo: ", phoneNo),
+                    _buildTableRowspacing(),
                   ],
                 ),
               ),
