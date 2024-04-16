@@ -12,17 +12,22 @@ class FavoriteSentFavoriteRecievedScreen extends StatefulWidget {
 
 class _FavoriteSentFavoriteRecievedScreenState
     extends State<FavoriteSentFavoriteRecievedScreen> {
+  bool isFavoriteSetnClicked = true;
+
   getFavoriteListKeys() async {
-    var favoriteSentDocument = await FirebaseFirestore.instance
-        .collection("users")
-        .doc(currentUserID.toString())
-        .collection("favoriteSent")
-        .get();
-    var favoriteReceivedDocument = await FirebaseFirestore.instance
-        .collection("users")
-        .doc(currentUserID.toString())
-        .collection("favoriteReceived")
-        .get();
+    if (isFavoriteSetnClicked) {
+      var favoriteSentDocument = await FirebaseFirestore.instance
+          .collection("users")
+          .doc(currentUserID.toString())
+          .collection("favoriteSent")
+          .get();
+    } else {
+      var favoriteReceivedDocument = await FirebaseFirestore.instance
+          .collection("users")
+          .doc(currentUserID.toString())
+          .collection("favoriteReceived")
+          .get();
+    }
   }
 
   @override
