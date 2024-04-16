@@ -276,6 +276,37 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 ),
               ),
               //end Appearance
+
+              //start Life style
+              const SizedBox(
+                height: 30,
+              ),
+              _buildMainTitle("Life style:"),
+              const Divider(
+                color: Colors.white,
+                thickness: 2,
+              ),
+              Container(
+                color: Colors.black,
+                padding: const EdgeInsets.all(20),
+                child: Table(
+                  children: [
+                    //Personal info
+                    //name
+                    _buildDataTableRow("Drink: ", drink),
+                    _buildTableRowspacing(),
+
+                    //age
+                    _buildDataTableRow("Smoke: ", smoke),
+                    _buildTableRowspacing(),
+
+                    //phone
+                    _buildDataTableRow("Married: ", martialStatus),
+                    _buildTableRowspacing(),
+                  ],
+                ),
+              ),
+              //end Life style
             ],
           ),
         ),
