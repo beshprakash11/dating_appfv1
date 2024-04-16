@@ -18,6 +18,11 @@ class _FavoriteSentFavoriteRecievedScreenState
         .doc(currentUserID.toString())
         .collection("favoriteSent")
         .get();
+    var favoriteReceivedDocument = await FirebaseFirestore.instance
+        .collection("users")
+        .doc(currentUserID.toString())
+        .collection("favoriteReceived")
+        .get();
   }
 
   @override
