@@ -246,6 +246,16 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                       ],
                     ),
                     //end table row
+
+                    //start extra row
+                    const TableRow(
+                      children: [
+                        Text(""),
+                        Text(""),
+                      ],
+                    ),
+
+                    //end extra row
                   ],
                 ),
               ),
