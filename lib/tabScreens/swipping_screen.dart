@@ -1,10 +1,9 @@
 import 'package:dating_appfv1/controllers/profile-controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class SwippingScreen extends StatefulWidget {
-  const SwippingScreen({Key? key}) : super(key: key);
+  const SwippingScreen({super.key});
 
   @override
   _SwippingScreenState createState() => _SwippingScreenState();
@@ -55,7 +54,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
 
                       const Spacer(),
 
-                      //User data
+                      // start User data
                       GestureDetector(
                         onTap: () {},
                         child: Column(
@@ -179,12 +178,13 @@ class _SwippingScreenState extends State<SwippingScreen> {
                           ],
                         ),
                       ),
+                      // end User data
 
                       const SizedBox(
                         height: 14,
                       ),
 
-                      //image button - favorite - chat - like
+                      //start image button - favorite - chat - like
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -224,6 +224,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
                           ),
                         ],
                       ),
+                      //end image button - favorite - chat - like
 
                       const SizedBox(
                         height: 14,
