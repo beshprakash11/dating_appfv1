@@ -60,6 +60,7 @@ class _FavoriteSentFavoriteRecievedScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -79,10 +80,11 @@ class _FavoriteSentFavoriteRecievedScreenState
               child: Text(
                 "My Favorites",
                 style: TextStyle(
-                  color: isFavoriteSetnClicked ? Colors.white : Colors.grey,
+                  color: isFavoriteSetnClicked ? Colors.grey : Colors.white,
                   fontWeight: isFavoriteSetnClicked
-                      ? FontWeight.bold
-                      : FontWeight.normal,
+                      ? FontWeight.normal
+                      : FontWeight.bold,
+                  fontSize: 14,
                 ),
               ),
             ),
