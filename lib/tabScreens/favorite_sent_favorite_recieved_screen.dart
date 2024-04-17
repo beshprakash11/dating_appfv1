@@ -150,6 +150,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                                     child: Text(
                                       "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
                                       style: const TextStyle(
+                                        overflow: TextOverflow.ellipsis,
                                         color: Colors.grey,
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
@@ -163,6 +164,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                                     child: Text(
                                       "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
                                       style: const TextStyle(
+                                        overflow: TextOverflow.ellipsis,
                                         color: Colors.grey,
                                         fontSize: 16,
                                       ),
