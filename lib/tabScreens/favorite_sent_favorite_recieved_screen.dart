@@ -149,6 +149,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                                   Expanded(
                                     child: Text(
                                       "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
+                                      maxLines: 2,
                                       style: const TextStyle(
                                         overflow: TextOverflow.ellipsis,
                                         color: Colors.grey,
@@ -163,6 +164,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                                   Expanded(
                                     child: Text(
                                       "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
+                                      maxLines: 2,
                                       style: const TextStyle(
                                         overflow: TextOverflow.ellipsis,
                                         color: Colors.grey,
