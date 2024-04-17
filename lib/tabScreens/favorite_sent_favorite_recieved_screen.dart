@@ -145,9 +145,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                               child: Column(
                                 children: [
                                   Text(
-                                    favoritesList[index]["name"].toString() +
-                                        " • " +
-                                        favoritesList[index]["age"].toString(),
+                                    "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
                                     style: const TextStyle(
                                       color: Colors.grey,
                                       fontSize: 16,
