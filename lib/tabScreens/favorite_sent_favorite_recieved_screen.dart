@@ -156,11 +156,10 @@ class _FavoriteSentFavoriteRecievedScreenState
                                     height: 4,
                                   ),
                                   Text(
-                                    "${favoritesList[index]["city"]} • ${favoritesList[index]["country"]}",
+                                    "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
                                     style: const TextStyle(
                                       color: Colors.grey,
                                       fontSize: 16,
-                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ],
