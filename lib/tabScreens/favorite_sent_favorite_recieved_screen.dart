@@ -152,6 +152,17 @@ class _FavoriteSentFavoriteRecievedScreenState
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
+                                  const SizedBox(
+                                    height: 4,
+                                  ),
+                                  Text(
+                                    "${favoritesList[index]["city"]} • ${favoritesList[index]["country"]}",
+                                    style: const TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
