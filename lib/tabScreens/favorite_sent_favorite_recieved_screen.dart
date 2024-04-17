@@ -139,7 +139,19 @@ class _FavoriteSentFavoriteRecievedScreenState
                               fit: BoxFit.cover,
                             ),
                           ),
-                          child: Padding(padding: const EdgeInsets.all(8)),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Center(
+                              child: Column(
+                                children: [
+                                  Text(
+                                    favoritesList[index]["name"].toString() +
+                                        "",
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ),
