@@ -54,6 +54,15 @@ class _FavoriteSentFavoriteRecievedScreenState
         }
       }
     }
+    setState(() {
+      favoritesList;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getFavoriteListKeys();
   }
 
   @override
@@ -147,7 +156,9 @@ class _FavoriteSentFavoriteRecievedScreenState
                             padding: const EdgeInsets.all(8),
                             child: Center(
                               child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                  const Spacer(),
                                   Expanded(
                                     child: Text(
                                       "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
