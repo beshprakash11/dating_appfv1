@@ -146,8 +146,14 @@ class _FavoriteSentFavoriteRecievedScreenState
                                 children: [
                                   Text(
                                     favoritesList[index]["name"].toString() +
-                                        "",
-                                  )
+                                        " • " +
+                                        favoritesList[index]["age"].toString(),
+                                    style: const TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
