@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/global.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class FavoriteSentFavoriteRecievedScreen extends StatefulWidget {
   const FavoriteSentFavoriteRecievedScreen({super.key});
@@ -144,22 +146,26 @@ class _FavoriteSentFavoriteRecievedScreenState
                             child: Center(
                               child: Column(
                                 children: [
-                                  Text(
-                                    "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
-                                    style: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
+                                  Expanded(
+                                    child: Text(
+                                      "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
+                                      style: const TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                   const SizedBox(
                                     height: 4,
                                   ),
-                                  Text(
-                                    "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
-                                    style: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 16,
+                                  Expanded(
+                                    child: Text(
+                                      "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
+                                      style: const TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 16,
+                                      ),
                                     ),
                                   ),
                                 ],
