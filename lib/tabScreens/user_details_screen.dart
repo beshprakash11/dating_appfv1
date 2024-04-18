@@ -3,6 +3,7 @@ import 'package:dating_appfv1/global.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slider/carousel.dart';
+import 'package:get/get.dart';
 
 // ignore: must_be_immutable
 class UserDetailsScreen extends StatefulWidget {
@@ -137,8 +138,18 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           ),
         ),
         centerTitle: true,
-        automaticallyImplyLeading:
-            widget.userID == currentUserID ? false : true,
+        //automaticallyImplyLeading: widget.userID == currentUserID ? false : true,
+        leading: widget.userID != currentUserID
+            ? IconButton(
+                onPressed: () {
+                  Get.back();
+                },
+                icon: const Icon(
+                  Icons.arrow_back_outlined,
+                  size: 30,
+                ),
+              )
+            : Container(),
         actions: [
           IconButton(
             onPressed: () => FirebaseAuth.instance.signOut(),
