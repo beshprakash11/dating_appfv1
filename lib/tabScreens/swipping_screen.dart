@@ -77,7 +77,13 @@ class _SwippingScreenState extends State<SwippingScreen> {
 
                       // start User data
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          profileController.viewSentAndViewReceived(
+                            eachProfileInfo.uid.toString(),
+                            senderName,
+                          );
+                          //send user to profile person userDetailScreen
+                        },
                         child: Column(
                           children: [
                             //name
