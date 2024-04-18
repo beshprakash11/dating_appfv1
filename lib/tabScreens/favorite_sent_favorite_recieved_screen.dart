@@ -159,12 +159,14 @@ class _FavoriteSentFavoriteRecievedScreenState
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const Spacer(),
+
+                                  //name - age
                                   Text(
                                     "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
                                     maxLines: 2,
                                     style: const TextStyle(
                                       overflow: TextOverflow.ellipsis,
-                                      color: Colors.grey,
+                                      color: Colors.blueAccent,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -172,6 +174,8 @@ class _FavoriteSentFavoriteRecievedScreenState
                                   const SizedBox(
                                     height: 4,
                                   ),
+
+                                  //city-country
                                   Row(
                                     children: [
                                       const Icon(
@@ -185,7 +189,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                                           maxLines: 2,
                                           style: const TextStyle(
                                             overflow: TextOverflow.ellipsis,
-                                            color: Colors.grey,
+                                            color: Colors.blueAccent,
                                             fontSize: 16,
                                           ),
                                         ),
