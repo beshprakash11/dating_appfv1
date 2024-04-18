@@ -55,22 +55,26 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
             ),
             itemBuilder: (context, index) {
               return index == 0
-                  ? Container(
-                      color: Colors.white30,
-                      child: Center(
-                        child: IconButton(
-                          onPressed: () {
-                            !uploading ? chooseImage() : null;
-                          },
-                          icon: const Icon(Icons.add),
-                        ),
-                      ),
-                    )
+                  ? _buildUploadImage()
                   : _buildImageDisplay(index);
             },
           ),
         ),
       ],
+    );
+  }
+
+  Container _buildUploadImage() {
+    return Container(
+      color: Colors.white30,
+      child: Center(
+        child: IconButton(
+          onPressed: () {
+            !uploading ? chooseImage() : null;
+          },
+          icon: const Icon(Icons.add),
+        ),
+      ),
     );
   }
 
