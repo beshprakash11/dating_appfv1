@@ -30,7 +30,7 @@ class ProfileController extends GetxController {
     );
   }
 
-  //FavoriteSentAndFavoriteReceived
+  // start FavoriteSentAndFavoriteReceived
   favoriteSentAndFavoriteReceived(String toUserID, String senderName) async {
     var document = await FirebaseFirestore.instance
         .collection("users")
@@ -78,4 +78,55 @@ class ProfileController extends GetxController {
     }
     update();
   }
+  // start FavoriteSentAndFavoriteReceived
+
+  // start likeSentAndFavoriteReceived
+  likeSentAndFavoriteReceived(String toUserID, String senderName) async {
+    var document = await FirebaseFirestore.instance
+        .collection("users")
+        .doc(toUserID)
+        .collection("favoriteReceived")
+        .doc(currentUserID)
+        .get();
+
+    //remove the favorite from database
+    if (document.exists) {
+      // remove currentUserID from the favoriteReceived list of that profile person [toUserID]
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(toUserID)
+          .collection("favoriteReceived")
+          .doc(currentUserID)
+          .delete();
+
+      // remove profile person [toUserID] from the favoriteSent list of the currentUser
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(currentUserID)
+          .collection("favoriteSent")
+          .doc(toUserID)
+          .delete();
+    } else //mark as favorite// add favorite in database
+    {
+      // add currentUserID to the favoriteReceived list of that profile person [toUserID]
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(toUserID)
+          .collection("favoriteReceived")
+          .doc(currentUserID)
+          .set({});
+
+      // add profile person [toUserID] to the favoriteSent list of the currentUser
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(currentUserID)
+          .collection("favoriteSent")
+          .doc(toUserID)
+          .set({});
+
+      //send notification
+    }
+    update();
+  }
+  // start likeSentAndFavoriteReceived
 }
