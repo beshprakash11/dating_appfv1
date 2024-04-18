@@ -37,9 +37,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                 ),
         ],
       ),
-      body: const Center(
-        child: Text("Account Setting Screen"),
-      ),
+      body: next ? SingleChildScrollView() : Stack(),
     );
   }
 }
