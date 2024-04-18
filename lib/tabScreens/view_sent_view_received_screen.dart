@@ -12,32 +12,32 @@ class ViewSentViewReceivedScreen extends StatefulWidget {
 
 class _ViewSentViewReceivedScreenState
     extends State<ViewSentViewReceivedScreen> {
-  bool isLikeSetnClicked = true;
-  List<String> likeSentList = [];
-  List<String> likeReceivedtList = [];
-  List likeList = [];
+  bool isViewSetnClicked = true;
+  List<String> viewSentList = [];
+  List<String> viewReceivedtList = [];
+  List viewList = [];
 
-  getLikeListKeys() async {
-    if (isLikeSetnClicked) {
-      var likeSentDocument = await FirebaseFirestore.instance
+  geViewListKeys() async {
+    if (isViewSetnClicked) {
+      var viewSentDocument = await FirebaseFirestore.instance
           .collection("users")
           .doc(currentUserID.toString())
-          .collection("likeSent")
+          .collection("viewSent")
           .get();
-      for (int i = 0; i < likeSentDocument.docs.length; i++) {
-        likeSentList.add(likeSentDocument.docs[i].id);
+      for (int i = 0; i < viewSentDocument.docs.length; i++) {
+        viewSentList.add(viewSentDocument.docs[i].id);
       }
-      getKeysDataFromUsersCollection(likeSentList);
+      getKeysDataFromUsersCollection(viewSentList);
     } else {
-      var likeReceivedDocument = await FirebaseFirestore.instance
+      var viewReceivedDocument = await FirebaseFirestore.instance
           .collection("users")
           .doc(currentUserID.toString())
-          .collection("likeReceived")
+          .collection("viewReceived")
           .get();
-      for (int i = 0; i < likeReceivedDocument.docs.length; i++) {
-        likeReceivedtList.add(likeReceivedDocument.docs[i].id);
+      for (int i = 0; i < viewReceivedDocument.docs.length; i++) {
+        viewReceivedtList.add(viewReceivedDocument.docs[i].id);
       }
-      getKeysDataFromUsersCollection(likeReceivedtList);
+      getKeysDataFromUsersCollection(viewReceivedtList);
     }
   }
 
@@ -48,19 +48,19 @@ class _ViewSentViewReceivedScreenState
       for (int k = 0; k < keysList.length; k++) {
         if (((allUsersDocument.docs[i].data() as dynamic)["uid"]) ==
             keysList[k]) {
-          likeList.add(allUsersDocument.docs[i].data());
+          viewList.add(allUsersDocument.docs[i].data());
         }
       }
     }
     setState(() {
-      likeList;
+      viewList;
     });
   }
 
   @override
   void initState() {
     super.initState();
-    getLikeListKeys();
+    geViewListKeys();
   }
 
   @override
@@ -73,23 +73,23 @@ class _ViewSentViewReceivedScreenState
           children: [
             TextButton(
               onPressed: () {
-                likeSentList.clear();
-                likeSentList = [];
-                likeReceivedtList.clear();
-                likeReceivedtList = [];
-                likeList.clear();
-                likeList = [];
+                viewSentList.clear();
+                viewSentList = [];
+                viewReceivedtList.clear();
+                viewReceivedtList = [];
+                viewList.clear();
+                viewList = [];
                 setState(() {
-                  isLikeSetnClicked = true;
+                  isViewSetnClicked = true;
                 });
-                getLikeListKeys();
+                geViewListKeys();
               },
               child: Text(
                 "My Likes",
                 style: TextStyle(
-                  color: isLikeSetnClicked ? Colors.grey : Colors.white,
+                  color: isViewSetnClicked ? Colors.grey : Colors.white,
                   fontWeight:
-                      isLikeSetnClicked ? FontWeight.normal : FontWeight.bold,
+                      isViewSetnClicked ? FontWeight.normal : FontWeight.bold,
                   fontSize: 14,
                 ),
               ),
@@ -102,23 +102,23 @@ class _ViewSentViewReceivedScreenState
             ),
             TextButton(
               onPressed: () {
-                likeSentList.clear();
-                likeSentList = [];
-                likeReceivedtList.clear();
-                likeReceivedtList = [];
-                likeList.clear();
-                likeList = [];
+                viewSentList.clear();
+                viewSentList = [];
+                viewReceivedtList.clear();
+                viewReceivedtList = [];
+                viewList.clear();
+                viewList = [];
                 setState(() {
-                  isLikeSetnClicked = false;
+                  isViewSetnClicked = false;
                 });
-                getLikeListKeys();
+                geViewListKeys();
               },
               child: Text(
                 "Who liked me!",
                 style: TextStyle(
-                  color: isLikeSetnClicked ? Colors.white : Colors.grey,
+                  color: isViewSetnClicked ? Colors.white : Colors.grey,
                   fontWeight:
-                      isLikeSetnClicked ? FontWeight.bold : FontWeight.normal,
+                      isViewSetnClicked ? FontWeight.bold : FontWeight.normal,
                 ),
               ),
             ),
@@ -126,13 +126,13 @@ class _ViewSentViewReceivedScreenState
         ),
         centerTitle: true,
       ),
-      body: likeList.isEmpty
+      body: viewList.isEmpty
           ? _buildEmptyScreen()
           : GridView.count(
               crossAxisCount: 2,
               padding: const EdgeInsets.all(8),
               children: List.generate(
-                likeList.length,
+                viewList.length,
                 (index) {
                   return GridTile(
                     child: Card(
@@ -146,7 +146,7 @@ class _ViewSentViewReceivedScreenState
                             ),
                             image: DecorationImage(
                               image: NetworkImage(
-                                likeList[index]["imageProfile"],
+                                viewList[index]["imageProfile"],
                               ),
                               fit: BoxFit.cover,
                             ),
@@ -161,7 +161,7 @@ class _ViewSentViewReceivedScreenState
 
                                   //name - age
                                   Text(
-                                    "${likeList[index]["name"]} • ${likeList[index]["age"]}",
+                                    "${viewList[index]["name"]} • ${viewList[index]["age"]}",
                                     maxLines: 2,
                                     style: const TextStyle(
                                       overflow: TextOverflow.ellipsis,
@@ -184,7 +184,7 @@ class _ViewSentViewReceivedScreenState
                                       ),
                                       Expanded(
                                         child: Text(
-                                          "${likeList[index]["city"]}, ${likeList[index]["country"]}",
+                                          "${viewList[index]["city"]}, ${viewList[index]["country"]}",
                                           maxLines: 2,
                                           style: const TextStyle(
                                             overflow: TextOverflow.ellipsis,
