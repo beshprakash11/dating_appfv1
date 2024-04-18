@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dating_appfv1/accountSettingScreen/account_settings_screen.dart';
 import 'package:dating_appfv1/global.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -155,7 +156,11 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
               ? Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(
+                          () => const AccountSettingsScreen(),
+                        );
+                      },
                       icon: const Icon(
                         Icons.settings,
                         size: 30,
