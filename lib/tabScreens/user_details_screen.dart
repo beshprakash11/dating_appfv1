@@ -151,13 +151,19 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
               )
             : Container(),
         actions: [
-          IconButton(
-            onPressed: () => FirebaseAuth.instance.signOut(),
-            icon: const Icon(
-              Icons.logout,
-              size: 30,
-            ),
-          ),
+          widget.userID == currentUserID
+              ? Row(
+                  children: [
+                    IconButton(
+                      onPressed: () => FirebaseAuth.instance.signOut(),
+                      icon: const Icon(
+                        Icons.logout,
+                        size: 30,
+                      ),
+                    ),
+                  ],
+                )
+              : Container(),
         ],
       ),
       body: SingleChildScrollView(
