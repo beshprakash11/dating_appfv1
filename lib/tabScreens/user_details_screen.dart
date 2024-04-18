@@ -155,6 +155,13 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
               ? Row(
                   children: [
                     IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.settings,
+                        size: 30,
+                      ),
+                    ),
+                    IconButton(
                       onPressed: () => FirebaseAuth.instance.signOut(),
                       icon: const Icon(
                         Icons.logout,
