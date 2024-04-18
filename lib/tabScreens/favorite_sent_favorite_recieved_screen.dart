@@ -145,6 +145,9 @@ class _FavoriteSentFavoriteRecievedScreenState
                         onTap: () {},
                         child: DecoratedBox(
                           decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(10),
+                            ),
                             image: DecorationImage(
                               image: NetworkImage(
                                 favoritesList[index]["imageProfile"],
@@ -166,7 +169,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                                     maxLines: 2,
                                     style: const TextStyle(
                                       overflow: TextOverflow.ellipsis,
-                                      color: Colors.blueAccent,
+                                      color: Colors.white,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -180,7 +183,7 @@ class _FavoriteSentFavoriteRecievedScreenState
                                     children: [
                                       const Icon(
                                         Icons.location_on_outlined,
-                                        color: Colors.grey,
+                                        color: Colors.white,
                                         size: 16,
                                       ),
                                       Expanded(
@@ -189,8 +192,8 @@ class _FavoriteSentFavoriteRecievedScreenState
                                           maxLines: 2,
                                           style: const TextStyle(
                                             overflow: TextOverflow.ellipsis,
-                                            color: Colors.blueAccent,
-                                            fontSize: 16,
+                                            color: Colors.white,
+                                            fontSize: 14,
                                           ),
                                         ),
                                       ),
