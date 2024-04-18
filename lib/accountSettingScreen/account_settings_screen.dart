@@ -25,6 +25,17 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
             fontSize: 22,
           ),
         ),
+        actions: [
+          next
+              ? Container()
+              : IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.navigate_next_outlined,
+                    size: 36,
+                  ),
+                ),
+        ],
       ),
       body: const Center(
         child: Text("Account Setting Screen"),
