@@ -129,4 +129,54 @@ class ProfileController extends GetxController {
     update();
   }
   // start likeSentAndLikeReceived
+
+  // start viewSentAndViewReceived
+  viewSentAndViewReceived(String toUserID, String senderName) async {
+    var document = await FirebaseFirestore.instance
+        .collection("users")
+        .doc(toUserID)
+        .collection("viewReceived")
+        .doc(currentUserID)
+        .get();
+
+    //remove the view from database
+    if (document.exists) {
+      // remove currentUserID from the viewReceived list of that profile person [toUserID]
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(toUserID)
+          .collection("viewReceived")
+          .doc(currentUserID)
+          .delete();
+
+      // remove profile person [toUserID] from the viewSent list of the currentUser
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(currentUserID)
+          .collection("viewSent")
+          .doc(toUserID)
+          .delete();
+    } else //mark as view// add view in database
+    {
+      // add currentUserID to the viewReceived list of that profile person [toUserID]
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(toUserID)
+          .collection("viewReceived")
+          .doc(currentUserID)
+          .set({});
+
+      // add profile person [toUserID] to the viewSent list of the currentUser
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(currentUserID)
+          .collection("viewSent")
+          .doc(toUserID)
+          .set({});
+
+      //send notification
+    }
+    update();
+  }
+  // start viewSentAndViewReceived
 }
