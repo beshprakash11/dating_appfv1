@@ -81,7 +81,7 @@ class ProfileController extends GetxController {
   // start FavoriteSentAndFavoriteReceived
 
   // start likeSentAndFavoriteReceived
-  likeSentAndFavoriteReceived(String toUserID, String senderName) async {
+  likeSentAndLikeReceived(String toUserID, String senderName) async {
     var document = await FirebaseFirestore.instance
         .collection("users")
         .doc(toUserID)
