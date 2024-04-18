@@ -176,6 +176,11 @@ class _FavoriteSentFavoriteRecievedScreenState
                                   ),
                                   Row(
                                     children: [
+                                      const Icon(
+                                        Icons.location_on_outlined,
+                                        color: Colors.grey,
+                                        size: 16,
+                                      ),
                                       Expanded(
                                         child: Text(
                                           "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
