@@ -85,42 +85,42 @@ class ProfileController extends GetxController {
     var document = await FirebaseFirestore.instance
         .collection("users")
         .doc(toUserID)
-        .collection("favoriteReceived")
+        .collection("likeReceived")
         .doc(currentUserID)
         .get();
 
-    //remove the favorite from database
+    //remove the like from database
     if (document.exists) {
-      // remove currentUserID from the favoriteReceived list of that profile person [toUserID]
+      // remove currentUserID from the likeReceived list of that profile person [toUserID]
       await FirebaseFirestore.instance
           .collection("users")
           .doc(toUserID)
-          .collection("favoriteReceived")
+          .collection("likeReceived")
           .doc(currentUserID)
           .delete();
 
-      // remove profile person [toUserID] from the favoriteSent list of the currentUser
+      // remove profile person [toUserID] from the likeSent list of the currentUser
       await FirebaseFirestore.instance
           .collection("users")
           .doc(currentUserID)
-          .collection("favoriteSent")
+          .collection("likeSent")
           .doc(toUserID)
           .delete();
-    } else //mark as favorite// add favorite in database
+    } else //mark as like// add like in database
     {
-      // add currentUserID to the favoriteReceived list of that profile person [toUserID]
+      // add currentUserID to the likeReceived list of that profile person [toUserID]
       await FirebaseFirestore.instance
           .collection("users")
           .doc(toUserID)
-          .collection("favoriteReceived")
+          .collection("likeReceived")
           .doc(currentUserID)
           .set({});
 
-      // add profile person [toUserID] to the favoriteSent list of the currentUser
+      // add profile person [toUserID] to the likeSent list of the currentUser
       await FirebaseFirestore.instance
           .collection("users")
           .doc(currentUserID)
-          .collection("favoriteSent")
+          .collection("likeSent")
           .doc(toUserID)
           .set({});
 
