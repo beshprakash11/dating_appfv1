@@ -37,7 +37,23 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                 ),
         ],
       ),
-      body: next ? SingleChildScrollView() : Stack(),
+      body: next ? SingleChildScrollView() : _buildStack(),
+    );
+  }
+
+  Stack _buildStack() {
+    return Stack(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(4),
+          child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+            ),
+            itemBuilder: (context, index) {},
+          ),
+        ),
+      ],
     );
   }
 }
