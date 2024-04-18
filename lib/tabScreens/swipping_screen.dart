@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/controllers/profile-controller.dart';
 import 'package:dating_appfv1/global.dart';
+import 'package:dating_appfv1/tabScreens/user_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -83,6 +84,11 @@ class _SwippingScreenState extends State<SwippingScreen> {
                             senderName,
                           );
                           //send user to profile person userDetailScreen
+                          Get.to(
+                            () => UserDetailsScreen(
+                              userID: eachProfileInfo.uid.toString(),
+                            ),
+                          );
                         },
                         child: Column(
                           children: [
