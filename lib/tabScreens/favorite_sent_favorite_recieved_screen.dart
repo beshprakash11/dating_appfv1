@@ -174,16 +174,20 @@ class _FavoriteSentFavoriteRecievedScreenState
                                   const SizedBox(
                                     height: 4,
                                   ),
-                                  Expanded(
-                                    child: Text(
-                                      "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
-                                      maxLines: 2,
-                                      style: const TextStyle(
-                                        overflow: TextOverflow.ellipsis,
-                                        color: Colors.grey,
-                                        fontSize: 16,
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
+                                          maxLines: 2,
+                                          style: const TextStyle(
+                                            overflow: TextOverflow.ellipsis,
+                                            color: Colors.grey,
+                                            fontSize: 16,
+                                          ),
+                                        ),
                                       ),
-                                    ),
+                                    ],
                                   ),
                                 ],
                               ),
