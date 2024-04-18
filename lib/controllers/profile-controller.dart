@@ -143,7 +143,7 @@ class ProfileController extends GetxController {
     if (document.exists) {
       //view list
       print("already in view list");
-    } else //mark as view// add view in database
+    } else //add new view in database
     {
       // add currentUserID to the viewReceived list of that profile person [toUserID]
       await FirebaseFirestore.instance
