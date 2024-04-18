@@ -11,32 +11,32 @@ class LikeSentLikeRecivedScreen extends StatefulWidget {
 }
 
 class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
-  bool isFavoriteSetnClicked = true;
-  List<String> favoriteSentList = [];
-  List<String> favoriteReceivedtList = [];
-  List favoritesList = [];
+  bool isLikeSetnClicked = true;
+  List<String> likeSentList = [];
+  List<String> likeReceivedtList = [];
+  List likeList = [];
 
-  getFavoriteListKeys() async {
-    if (isFavoriteSetnClicked) {
-      var favoriteSentDocument = await FirebaseFirestore.instance
+  getLikeListKeys() async {
+    if (isLikeSetnClicked) {
+      var likeSentDocument = await FirebaseFirestore.instance
           .collection("users")
           .doc(currentUserID.toString())
-          .collection("favoriteSent")
+          .collection("likeSent")
           .get();
-      for (int i = 0; i < favoriteSentDocument.docs.length; i++) {
-        favoriteSentList.add(favoriteSentDocument.docs[i].id);
+      for (int i = 0; i < likeSentDocument.docs.length; i++) {
+        likeSentList.add(likeSentDocument.docs[i].id);
       }
-      getKeysDataFromUsersCollection(favoriteSentList);
+      getKeysDataFromUsersCollection(likeSentList);
     } else {
-      var favoriteReceivedDocument = await FirebaseFirestore.instance
+      var likeReceivedDocument = await FirebaseFirestore.instance
           .collection("users")
           .doc(currentUserID.toString())
-          .collection("favoriteReceived")
+          .collection("likeReceived")
           .get();
-      for (int i = 0; i < favoriteReceivedDocument.docs.length; i++) {
-        favoriteReceivedtList.add(favoriteReceivedDocument.docs[i].id);
+      for (int i = 0; i < likeReceivedDocument.docs.length; i++) {
+        likeReceivedtList.add(likeReceivedDocument.docs[i].id);
       }
-      getKeysDataFromUsersCollection(favoriteReceivedtList);
+      getKeysDataFromUsersCollection(likeReceivedtList);
     }
   }
 
@@ -47,19 +47,19 @@ class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
       for (int k = 0; k < keysList.length; k++) {
         if (((allUsersDocument.docs[i].data() as dynamic)["uid"]) ==
             keysList[k]) {
-          favoritesList.add(allUsersDocument.docs[i].data());
+          likeList.add(allUsersDocument.docs[i].data());
         }
       }
     }
     setState(() {
-      favoritesList;
+      likeList;
     });
   }
 
   @override
   void initState() {
     super.initState();
-    getFavoriteListKeys();
+    getLikeListKeys();
   }
 
   @override
@@ -72,24 +72,23 @@ class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
           children: [
             TextButton(
               onPressed: () {
-                favoriteSentList.clear();
-                favoriteSentList = [];
-                favoriteReceivedtList.clear();
-                favoriteReceivedtList = [];
-                favoritesList.clear();
-                favoritesList = [];
+                likeSentList.clear();
+                likeSentList = [];
+                likeReceivedtList.clear();
+                likeReceivedtList = [];
+                likeList.clear();
+                likeList = [];
                 setState(() {
-                  isFavoriteSetnClicked = true;
+                  isLikeSetnClicked = true;
                 });
-                getFavoriteListKeys();
+                getLikeListKeys();
               },
               child: Text(
-                "My Favorites",
+                "My Likes",
                 style: TextStyle(
-                  color: isFavoriteSetnClicked ? Colors.grey : Colors.white,
-                  fontWeight: isFavoriteSetnClicked
-                      ? FontWeight.normal
-                      : FontWeight.bold,
+                  color: isLikeSetnClicked ? Colors.grey : Colors.white,
+                  fontWeight:
+                      isLikeSetnClicked ? FontWeight.normal : FontWeight.bold,
                   fontSize: 14,
                 ),
               ),
@@ -102,24 +101,23 @@ class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
             ),
             TextButton(
               onPressed: () {
-                favoriteSentList.clear();
-                favoriteSentList = [];
-                favoriteReceivedtList.clear();
-                favoriteReceivedtList = [];
-                favoritesList.clear();
-                favoritesList = [];
+                likeSentList.clear();
+                likeSentList = [];
+                likeReceivedtList.clear();
+                likeReceivedtList = [];
+                likeList.clear();
+                likeList = [];
                 setState(() {
-                  isFavoriteSetnClicked = false;
+                  isLikeSetnClicked = false;
                 });
-                getFavoriteListKeys();
+                getLikeListKeys();
               },
               child: Text(
-                "I'm there Favorite!",
+                "Who liked me!",
                 style: TextStyle(
-                  color: isFavoriteSetnClicked ? Colors.white : Colors.grey,
-                  fontWeight: isFavoriteSetnClicked
-                      ? FontWeight.bold
-                      : FontWeight.normal,
+                  color: isLikeSetnClicked ? Colors.white : Colors.grey,
+                  fontWeight:
+                      isLikeSetnClicked ? FontWeight.bold : FontWeight.normal,
                 ),
               ),
             ),
@@ -127,13 +125,13 @@ class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
         ),
         centerTitle: true,
       ),
-      body: favoritesList.isEmpty
+      body: likeList.isEmpty
           ? _buildEmptyScreen()
           : GridView.count(
               crossAxisCount: 2,
               padding: const EdgeInsets.all(8),
               children: List.generate(
-                favoritesList.length,
+                likeList.length,
                 (index) {
                   return GridTile(
                     child: Card(
@@ -147,7 +145,7 @@ class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
                             ),
                             image: DecorationImage(
                               image: NetworkImage(
-                                favoritesList[index]["imageProfile"],
+                                likeList[index]["imageProfile"],
                               ),
                               fit: BoxFit.cover,
                             ),
@@ -162,7 +160,7 @@ class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
 
                                   //name - age
                                   Text(
-                                    "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
+                                    "${likeList[index]["name"]} • ${likeList[index]["age"]}",
                                     maxLines: 2,
                                     style: const TextStyle(
                                       overflow: TextOverflow.ellipsis,
@@ -185,7 +183,7 @@ class _LikeSentLikeRecivedScreenState extends State<LikeSentLikeRecivedScreen> {
                                       ),
                                       Expanded(
                                         child: Text(
-                                          "${favoritesList[index]["city"]}, ${favoritesList[index]["country"]}",
+                                          "${likeList[index]["city"]}, ${likeList[index]["country"]}",
                                           maxLines: 2,
                                           style: const TextStyle(
                                             overflow: TextOverflow.ellipsis,
