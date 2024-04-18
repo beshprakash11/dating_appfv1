@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dating_appfv1/global.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slider/carousel.dart';
@@ -136,6 +137,8 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           ),
         ),
         centerTitle: true,
+        automaticallyImplyLeading:
+            widget.userID == currentUserID ? false : true,
         actions: [
           IconButton(
             onPressed: () => FirebaseAuth.instance.signOut(),
