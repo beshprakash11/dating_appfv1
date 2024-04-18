@@ -159,16 +159,14 @@ class _FavoriteSentFavoriteRecievedScreenState
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const Spacer(),
-                                  Expanded(
-                                    child: Text(
-                                      "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
-                                      maxLines: 2,
-                                      style: const TextStyle(
-                                        overflow: TextOverflow.ellipsis,
-                                        color: Colors.grey,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                  Text(
+                                    "${favoritesList[index]["name"]} • ${favoritesList[index]["age"]}",
+                                    maxLines: 2,
+                                    style: const TextStyle(
+                                      overflow: TextOverflow.ellipsis,
+                                      color: Colors.grey,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   const SizedBox(
