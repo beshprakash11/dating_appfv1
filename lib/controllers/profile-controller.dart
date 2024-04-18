@@ -141,21 +141,8 @@ class ProfileController extends GetxController {
 
     //remove the view from database
     if (document.exists) {
-      // remove currentUserID from the viewReceived list of that profile person [toUserID]
-      await FirebaseFirestore.instance
-          .collection("users")
-          .doc(toUserID)
-          .collection("viewReceived")
-          .doc(currentUserID)
-          .delete();
-
-      // remove profile person [toUserID] from the viewSent list of the currentUser
-      await FirebaseFirestore.instance
-          .collection("users")
-          .doc(currentUserID)
-          .collection("viewSent")
-          .doc(toUserID)
-          .delete();
+      //view list
+      print("already in view list");
     } else //mark as view// add view in database
     {
       // add currentUserID to the viewReceived list of that profile person [toUserID]
