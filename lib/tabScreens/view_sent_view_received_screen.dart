@@ -85,7 +85,7 @@ class _ViewSentViewReceivedScreenState
                 geViewListKeys();
               },
               child: Text(
-                "My Likes",
+                "My Views",
                 style: TextStyle(
                   color: isViewSetnClicked ? Colors.grey : Colors.white,
                   fontWeight:
@@ -114,7 +114,7 @@ class _ViewSentViewReceivedScreenState
                 geViewListKeys();
               },
               child: Text(
-                "Who liked me!",
+                "Who Viewed me!",
                 style: TextStyle(
                   color: isViewSetnClicked ? Colors.white : Colors.grey,
                   fontWeight:
