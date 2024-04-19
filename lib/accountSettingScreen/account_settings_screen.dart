@@ -367,6 +367,66 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
             const SizedBox(
               height: 24,
             ),
+
+            /**
+             * Appearance information field
+             */
+            const Text(
+              "Appearance:",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            //height
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: heightTextEditingController,
+                labelText: "Height",
+                iconData: Icons.insert_chart,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //weight
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: weightTextEditingController,
+                labelText: "Weight",
+                iconData: Icons.table_chart,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //bodyType
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: bodyTypeTextEditingController,
+                labelText: "Body Type",
+                iconData: Icons.type_specimen,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
           ],
         ),
       ),
