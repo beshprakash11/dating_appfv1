@@ -17,6 +17,94 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   List<String> urlList = [];
   double val = 0;
 
+  //Personal info
+  TextEditingController emailTextEditingController = TextEditingController();
+  TextEditingController passwordTextEditingController = TextEditingController();
+  TextEditingController nameTextEditingController = TextEditingController();
+  TextEditingController ageTextEditingController = TextEditingController();
+  TextEditingController phoneNoTextEditingController = TextEditingController();
+  TextEditingController cityTextEditingController = TextEditingController();
+  TextEditingController countryTextEditingController = TextEditingController();
+  TextEditingController profileHeadingTextEditingController =
+      TextEditingController();
+  TextEditingController lookingForInaPartnerTextEditingController =
+      TextEditingController();
+
+  //Appearance
+  TextEditingController heightTextEditingController = TextEditingController();
+  TextEditingController weightTextEditingController = TextEditingController();
+  TextEditingController bodyTypeTextEditingController = TextEditingController();
+
+  //Life style
+  TextEditingController drinkingTextEditingController = TextEditingController();
+  TextEditingController smokeTextEditingController = TextEditingController();
+  TextEditingController martilStatusTextEditingController =
+      TextEditingController();
+  TextEditingController haveChildrenTextEditingController =
+      TextEditingController();
+  TextEditingController noOfChildrenTextEditingController =
+      TextEditingController();
+  TextEditingController professionTextEditingController =
+      TextEditingController();
+  TextEditingController employmentStatusTextEditingController =
+      TextEditingController();
+  TextEditingController incomeTextEditingController = TextEditingController();
+  TextEditingController livingSituationTextEditingController =
+      TextEditingController();
+  TextEditingController willingToRelocateTextEditingController =
+      TextEditingController();
+  TextEditingController relationshipYouAreLookingForTextEditingController =
+      TextEditingController();
+
+  //Background - cultural values
+  TextEditingController nationalityTextEditingController =
+      TextEditingController();
+  TextEditingController educationTextEditingController =
+      TextEditingController();
+  TextEditingController languageSpokenTextEditingController =
+      TextEditingController();
+  TextEditingController religionTextEditingController = TextEditingController();
+  TextEditingController ethnicityTextEditingController =
+      TextEditingController();
+
+  //Personal info
+  String uid = "";
+  String imageProfile = "";
+  String email = "";
+  String password = "";
+  String name = "";
+  String age = "";
+  String phoneNo = "";
+  String city = "";
+  String country = "";
+  String profileHeading = "";
+  String lookingForInaPartner = "";
+
+  //Appearance
+  String height = "";
+  String weight = "";
+  String bodyType = "";
+
+  //Life style
+  String drink = "";
+  String smoke = "";
+  String martialStatus = "";
+  String haveChildren = "";
+  String noOfChildren = "";
+  String profession = "";
+  String employmentStatus = "";
+  String income = "";
+  String livingSituatin = "";
+  String willingToRelocate = "";
+  String relationshipYouAreLookingFor = "";
+
+  //Background - Cultureal values
+  String nationality = "";
+  String education = "";
+  String languageSpoken = "";
+  String religion = "";
+  String ethnicity = "";
+
   chooseImage() async {
     XFile? pickedFile =
         await ImagePicker().pickImage(source: ImageSource.gallery);

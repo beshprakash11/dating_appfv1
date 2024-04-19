@@ -1,16 +1,38 @@
-# dating_appfv1
+//Personal info
+  String uid= "";
+  String imageProfile= "";
+  String email= "";
+  String password= "";
+  String name= "";
+  int age= "";
+  String phoneNo= "";
+  String city= "";
+  String country= "";
+  String profileHeading= "";
+  String lookingForInaPartner= "";
+  int publishedDateTime= "";
 
-A new Flutter project.
+  //Appearance
+  String height= "";
+  String weight= "";
+  String bodyType= "";
 
-## Getting Started
+  //Life style
+  String drink= "";
+  String smoke= "";
+  String martialStatus= "";
+  String haveChildren= "";
+  String noOfChildren= "";
+  String profession= "";
+  String employmentStatus= "";
+  String income= "";
+  String livingSituatin= "";
+  String willingToRelocate= "";
+  String relationshipYouAreLookingFor= "";
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  //Background - Cultureal values
+  String nationality= "";
+  String education= "";
+  String languageSpoken= "";
+  String religion= "";
+  String ethnicity= "";
