@@ -31,7 +31,17 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       setState(() {
         val = i / _image.length;
       });
-      var refImages = FirebaseStorage.instance.ref().child("images/{}");
+      var refImages = FirebaseStorage.instance.ref().child(
+          "images/${DateTime.now().microsecondsSinceEpoch.toString()}.jpg");
+      await refImages.putFile(img).whenComplete(
+        () async {
+          await refImages.getDownloadURL().then(
+            (urlImage) {
+              urlList.add(urlImage);
+            },
+          );
+        },
+      );
     }
   }
 
