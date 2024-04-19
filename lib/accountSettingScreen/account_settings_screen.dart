@@ -713,6 +713,10 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                 isObscure: false,
               ),
             ),
+
+            const SizedBox(
+              height: 30,
+            ),
           ],
         ),
       ),
