@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -22,6 +23,16 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
     setState(() {
       _image.add(File(pickedFile!.path));
     });
+  }
+
+  uploadImages() async {
+    int i = 1;
+    for (var img in _image) {
+      setState(() {
+        val = i / _image.length;
+      });
+      var refImages = FirebaseStorage.instance.ref().child("images/{}");
+    }
   }
 
   @override
