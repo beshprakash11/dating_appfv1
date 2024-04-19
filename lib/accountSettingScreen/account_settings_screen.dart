@@ -294,48 +294,4 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       ),
     );
   }
-
-  Align _buildMainTitle(String title) {
-    return Align(
-      alignment: Alignment.topLeft,
-      child: Text(
-        title,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    );
-  }
-
-  TableRow _buildDataTableRow(String title, String data) {
-    return TableRow(
-      children: [
-        Text(
-          title,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-          ),
-        ),
-        Text(
-          data,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-          ),
-        )
-      ],
-    );
-  }
-
-  TableRow _buildTableRowspacing() {
-    return const TableRow(
-      children: [
-        Text(""),
-        Text(""),
-      ],
-    );
-  }
 }
