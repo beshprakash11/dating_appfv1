@@ -19,6 +19,9 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   chooseImage() async {
     XFile? pickedFile =
         await ImagePicker().pickImage(source: ImageSource.gallery);
+    setState(() {
+      _image.add(File(pickedFile!.path));
+    });
   }
 
   @override
