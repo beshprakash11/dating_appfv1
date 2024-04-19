@@ -38,6 +38,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
           await refImages.getDownloadURL().then(
             (urlImage) {
               urlList.add(urlImage);
+              i++;
             },
           );
         },
@@ -60,7 +61,25 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
           next
               ? Container()
               : IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return const Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(child: CircularProgressIndicator()),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text("Uloading images..."),
+                          ],
+                        );
+                      },
+                    );
+                    uploadImages();
+                  },
                   icon: const Icon(
                     Icons.navigate_next_outlined,
                     size: 36,
