@@ -148,6 +148,32 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
           country = snapshot.data()!["country"];
           profileHeading = snapshot.data()!["profileHeading"];
           lookingForInaPartner = snapshot.data()!["lookingForInaPartner"];
+
+          //Appearance
+          height = snapshot.data()!["height"];
+          weight = snapshot.data()!["weight"];
+          bodyType = snapshot.data()!["bodyType"];
+
+          //Life style
+          drink = snapshot.data()!["drink"];
+          smoke = snapshot.data()!["smoke"];
+          martialStatus = snapshot.data()!["martialStatus"];
+          haveChildren = snapshot.data()!["haveChildren"];
+          noOfChildren = snapshot.data()!["noOfChildren"];
+          profession = snapshot.data()!["profession"];
+          employmentStatus = snapshot.data()!["employmentStatus"];
+          income = snapshot.data()!["income"];
+          livingSituatin = snapshot.data()!["livingSituatin"];
+          willingToRelocate = snapshot.data()!["willingToRelocate"];
+          relationshipYouAreLookingFor =
+              snapshot.data()!["relationshipYouAreLookingFor"];
+
+          //Background - Cultureal values
+          nationality = snapshot.data()!["nationality"];
+          education = snapshot.data()!["education"];
+          languageSpoken = snapshot.data()!["languageSpoken"];
+          religion = snapshot.data()!["religion"];
+          ethnicity = snapshot.data()!["ethnicity"];
         });
       }
     });
