@@ -69,11 +69,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   TextEditingController ethnicityTextEditingController =
       TextEditingController();
 
-  //Personal info
-  String uid = "";
-  String imageProfile = "";
-  String email = "";
-  String password = "";
+  //personal info
   String name = "";
   String age = "";
   String phoneNo = "";
@@ -141,7 +137,20 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
         .collection("users")
         .doc(currentUserID)
         .get()
-        .then((snapshot) {});
+        .then((snapshot) {
+      if (snapshot.exists) {
+        setState(() {
+          //personal info
+          name = snapshot.data()!["name"];
+          age = snapshot.data()!["age"].toString();
+          phoneNo = snapshot.data()!["phoneNo"];
+          city = snapshot.data()!["city"];
+          country = snapshot.data()!["country"];
+          profileHeading = snapshot.data()!["profileHeading"];
+          lookingForInaPartner = snapshot.data()!["lookingForInaPartner"];
+        });
+      }
+    });
   }
 
   @override
