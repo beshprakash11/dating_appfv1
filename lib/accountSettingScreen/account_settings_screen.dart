@@ -87,7 +87,19 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                 ),
         ],
       ),
-      body: next ? SingleChildScrollView() : _buildStack(),
+      body: next ? _buildAccountEditingView() : _buildStack(),
+    );
+  }
+
+  SingleChildScrollView _buildAccountEditingView() {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(30),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [],
+        ),
+      ),
     );
   }
 
