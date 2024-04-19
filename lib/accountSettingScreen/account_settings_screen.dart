@@ -238,7 +238,18 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             const SizedBox(
-              height: 10,
+              height: 2,
+            ),
+            /**
+             * Personal information field
+             */
+            const Text(
+              "Personal Info:",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
