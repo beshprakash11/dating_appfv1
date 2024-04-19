@@ -272,22 +272,6 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
               height: 24,
             ),
 
-            //email field
-            SizedBox(
-              width: MediaQuery.of(context).size.width - 36,
-              height: 55,
-              child: CustomTextFieldWidget(
-                editingController: emailTextEditingController,
-                labelText: "Email",
-                iconData: Icons.email_outlined,
-                isObscure: false,
-              ),
-            ),
-
-            const SizedBox(
-              height: 24,
-            ),
-
             //age
             SizedBox(
               width: MediaQuery.of(context).size.width - 36,
