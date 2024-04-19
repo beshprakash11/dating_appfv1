@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/global.dart';
 import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -426,6 +427,291 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
 
             const SizedBox(
               height: 24,
+            ),
+
+            /**
+             * Life style field
+             */
+            const Text(
+              "Life Style:",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(
+              height: 12,
+            ),
+
+            //drink
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: drinkingTextEditingController,
+                labelText: "Drink",
+                iconData: Icons.local_drink_outlined,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //smoke
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: smokeTextEditingController,
+                labelText: "Smoke",
+                iconData: Icons.smoking_rooms,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //martialStatus
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: martilStatusTextEditingController,
+                labelText: "Martial Status",
+                iconData: CupertinoIcons.person_2,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //haveChildren
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: haveChildrenTextEditingController,
+                labelText: "Do you have Children?",
+                iconData: CupertinoIcons.person_3_fill,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //noOfChildren
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: noOfChildrenTextEditingController,
+                labelText: "Number of Children",
+                iconData: CupertinoIcons.person_3_fill,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //profession
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: professionTextEditingController,
+                labelText: "Profession",
+                iconData: Icons.business_center,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //employmentStatus
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: employmentStatusTextEditingController,
+                labelText: "Employment Status",
+                iconData: CupertinoIcons.rectangle_stack_person_crop_fill,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //income
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: incomeTextEditingController,
+                labelText: "Income",
+                iconData: CupertinoIcons.money_dollar_circle,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //livingSituation
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: livingSituationTextEditingController,
+                labelText: "Living Situation",
+                iconData: CupertinoIcons.person_2_square_stack,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //willingToRelocate
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: willingToRelocateTextEditingController,
+                labelText: "Are you willing to Relocate?",
+                iconData: CupertinoIcons.person_2,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //relationshipYouAreLookingFor
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController:
+                    relationshipYouAreLookingForTextEditingController,
+                labelText: "What relationship you are looking for?",
+                iconData: CupertinoIcons.person_2,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            /**
+             * Background - Cultural field
+             */
+            const Text(
+              "Background - Cultural Values:",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(
+              height: 12,
+            ),
+
+            //nationality
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: nationalityTextEditingController,
+                labelText: "Nationality",
+                iconData: Icons.flag_circle_outlined,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //education
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: educationTextEditingController,
+                labelText: "Education",
+                iconData: Icons.history_edu,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //languageSpoken
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: languageSpokenTextEditingController,
+                labelText: "Language Spoken",
+                iconData: CupertinoIcons.person_badge_plus_fill,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //religion
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: religionTextEditingController,
+                labelText: "Religion",
+                iconData: CupertinoIcons.checkmark_seal_fill,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //ethnicity
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: ethnicityTextEditingController,
+                labelText: "Ethnicity",
+                iconData: CupertinoIcons.eye,
+                isObscure: false,
+              ),
             ),
           ],
         ),
