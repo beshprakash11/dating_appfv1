@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dating_appfv1/global.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -132,6 +134,14 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
         },
       );
     }
+  }
+
+  retrieveUserData() async {
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(currentUserID)
+        .get()
+        .then((snapshot) {});
   }
 
   @override
