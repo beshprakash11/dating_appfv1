@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/global.dart';
+import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -250,6 +251,137 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+
+            //user name
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: nameTextEditingController,
+                labelText: "Name",
+                iconData: Icons.person_outline,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //email field
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: emailTextEditingController,
+                labelText: "Email",
+                iconData: Icons.email_outlined,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //age
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: ageTextEditingController,
+                labelText: "Age",
+                iconData: Icons.numbers,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //phoneNo
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: phoneNoTextEditingController,
+                labelText: "Phone",
+                iconData: Icons.phone,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //city
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: cityTextEditingController,
+                labelText: "City",
+                iconData: Icons.location_city,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //Country
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: countryTextEditingController,
+                labelText: "Country",
+                iconData: Icons.location_city,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //profileHeading
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: profileHeadingTextEditingController,
+                labelText: "Profile Heading",
+                iconData: Icons.text_fields,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //lookingForInaPartner
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: lookingForInaPartnerTextEditingController,
+                labelText: "Whar are you looking for in a Partner?",
+                iconData: Icons.face,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
             ),
           ],
         ),
