@@ -180,6 +180,12 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    retrieveUserData();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -230,7 +236,11 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
         padding: const EdgeInsets.all(30),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [],
+          children: [
+            const SizedBox(
+              height: 10,
+            ),
+          ],
         ),
       ),
     );
@@ -282,6 +292,50 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
           fit: BoxFit.cover,
         ),
       ),
+    );
+  }
+
+  Align _buildMainTitle(String title) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Text(
+        title,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+
+  TableRow _buildDataTableRow(String title, String data) {
+    return TableRow(
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+          ),
+        ),
+        Text(
+          data,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+          ),
+        )
+      ],
+    );
+  }
+
+  TableRow _buildTableRowspacing() {
+    return const TableRow(
+      children: [
+        Text(""),
+        Text(""),
+      ],
     );
   }
 }
