@@ -218,7 +218,26 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
     String languageSpoken,
     String religion,
     String ethnicity,
-  ) async {}
+  ) async {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(child: CircularProgressIndicator()),
+            SizedBox(
+              height: 10,
+            ),
+            Text("Uloading images..."),
+          ],
+        );
+      },
+    );
+    await uploadImages();
+  }
+
   @override
   void initState() {
     super.initState();
@@ -240,25 +259,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
           next
               ? Container()
               : IconButton(
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return const Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(child: CircularProgressIndicator()),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text("Uloading images..."),
-                          ],
-                        );
-                      },
-                    );
-                    uploadImages();
-                  },
+                  onPressed: () {},
                   icon: const Icon(
                     Icons.navigate_next_outlined,
                     size: 36,
