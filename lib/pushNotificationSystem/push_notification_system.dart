@@ -13,7 +13,7 @@ class PushNotificationSystem {
         .then((RemoteMessage? remoteMessage) {
       if (remoteMessage != null) {
         //open app and show notificaation data
-        openAppshowAndNotificationData(
+        openAppAndShowNotificationData(
           remoteMessage.data["userID"],
           remoteMessage.data["senderID"],
           context,
@@ -28,5 +28,5 @@ class PushNotificationSystem {
     //When the app is in the background and opened directly from the push notifications
   }
 
-  openAppshowAndNotificationData(receiverID, senderID, context) async {}
+  openAppAndShowNotificationData(receiverID, senderID, context) async {}
 }
