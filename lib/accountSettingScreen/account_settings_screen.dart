@@ -159,7 +159,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
           country = snapshot.data()!["country"];
           countryTextEditingController.text = country;
           profileHeading = snapshot.data()!["profileHeading"];
-          professionTextEditingController.text = profileHeading;
+          profileHeadingTextEditingController.text = profileHeading;
           lookingForInaPartner = snapshot.data()!["lookingForInaPartner"];
           lookingForInaPartnerTextEditingController.text = lookingForInaPartner;
 
