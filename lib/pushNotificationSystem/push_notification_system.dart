@@ -23,6 +23,16 @@ class PushNotificationSystem {
 
     //2. Foreground
     //When the app is open and it receive a push notification
+    FirebaseMessaging.onMessage.listen((RemoteMessage? remoteMessage) {
+      if (remoteMessage != null) {
+        //open app and show notificaation data
+        openAppAndShowNotificationData(
+          remoteMessage.data["userID"],
+          remoteMessage.data["senderID"],
+          context,
+        );
+      }
+    });
 
     //3. Background
     //When the app is in the background and opened directly from the push notifications
