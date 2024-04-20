@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
@@ -48,5 +49,18 @@ class PushNotificationSystem {
     });
   }
 
-  openAppAndShowNotificationData(receiverID, senderID, context) async {}
+  openAppAndShowNotificationData(receiverID, senderID, context) async {
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(senderID)
+        .get()
+        .then((snapshot) {
+      String profileImage = snapshot.data()!["imageProfile"].toString();
+      String name = snapshot.data()!["name"].toString();
+      String age = snapshot.data()!["age"].toString();
+      String phoneNo = snapshot.data()!["phoneNo"].toString();
+      String city = snapshot.data()!["city"].toString();
+      String country = snapshot.data()!["country"].toString();
+    });
+  }
 }
