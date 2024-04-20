@@ -1004,6 +1004,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
               setState(() {
                 uploading == true;
               });
+              Get.snackbar("5 Image choosen.", "5 Images Already selected!");
             }
           },
           icon: const Icon(Icons.add),
