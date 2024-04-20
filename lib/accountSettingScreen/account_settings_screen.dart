@@ -165,8 +165,11 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
 
           //Appearance
           height = snapshot.data()!["height"];
+          heightTextEditingController.text = height;
           weight = snapshot.data()!["weight"];
+          weightTextEditingController.text = weight;
           bodyType = snapshot.data()!["bodyType"];
+          bodyTypeTextEditingController.text = bodyType;
 
           //Life style
           drink = snapshot.data()!["drink"];
