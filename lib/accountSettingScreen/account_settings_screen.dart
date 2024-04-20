@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/controllers/authentication_controller.dart';
 import 'package:dating_appfv1/global.dart';
+import 'package:dating_appfv1/homeScreen/home_screen.dart';
 import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
@@ -284,6 +285,14 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
     });
 
     Get.snackbar("Updated", "Your account has been updated successfully.");
+
+    Get.to(() => const HomeScreen());
+
+    setState(() {
+      uploading = false;
+      _image.clear();
+      urlList.clear();
+    });
   }
 
   @override
