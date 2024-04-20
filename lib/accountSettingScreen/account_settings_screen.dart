@@ -149,12 +149,19 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
         setState(() {
           //personal info
           name = snapshot.data()!["name"];
+          nameTextEditingController.text = name;
           age = snapshot.data()!["age"].toString();
+          ageTextEditingController.text = age;
           phoneNo = snapshot.data()!["phoneNo"];
+          phoneNoTextEditingController.text = phoneNo;
           city = snapshot.data()!["city"];
+          cityTextEditingController.text = city;
           country = snapshot.data()!["country"];
+          countryTextEditingController.text = country;
           profileHeading = snapshot.data()!["profileHeading"];
+          professionTextEditingController.text = profileHeading;
           lookingForInaPartner = snapshot.data()!["lookingForInaPartner"];
+          lookingForInaPartnerTextEditingController.text = lookingForInaPartner;
 
           //Appearance
           height = snapshot.data()!["height"];
