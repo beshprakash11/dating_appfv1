@@ -187,6 +187,40 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
     });
   }
 
+  updateUserDataToFirestoreDatabase(
+    String name,
+    String age,
+    String phoneNo,
+    String city,
+    String country,
+    String profileHeading,
+    String lookingForInaPartner,
+
+    //Appearance
+    String height,
+    String weight,
+    String bodyType,
+
+    //Life style
+    String drink,
+    String smoke,
+    String martialStatus,
+    String haveChildren,
+    String noOfChildren,
+    String profession,
+    String employmentStatus,
+    String income,
+    String livingSituatin,
+    String willingToRelocate,
+    String relationshipYouAreLookingFor,
+
+    //Background - Cultureal values
+    String nationality,
+    String education,
+    String languageSpoken,
+    String religion,
+    String ethnicity,
+  ) async {}
   @override
   void initState() {
     super.initState();
@@ -737,11 +771,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                 onTap: () async {
                   if (
                       //Personal info
-                      emailTextEditingController.text.trim().isNotEmpty &&
-                          passwordTextEditingController.text
-                              .trim()
-                              .isNotEmpty &&
-                          nameTextEditingController.text.trim().isNotEmpty &&
+                      nameTextEditingController.text.trim().isNotEmpty &&
                           ageTextEditingController.text.trim().isNotEmpty &&
                           phoneNoTextEditingController.text.trim().isNotEmpty &&
                           cityTextEditingController.text.trim().isNotEmpty &&
@@ -807,14 +837,8 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                           ethnicityTextEditingController.text
                               .trim()
                               .isNotEmpty) {
-                    setState(() {
-                      showProgressBar = true;
-                    });
-                    await authController.createNewUserAccount(
+                    await updateUserDataToFirestoreDatabase(
                       //Personal info
-                      authController.profileImage!,
-                      emailTextEditingController.text.trim(),
-                      passwordTextEditingController.text.trim(),
                       nameTextEditingController.text.trim(),
                       ageTextEditingController.text.trim(),
                       phoneNoTextEditingController.text.trim(),
@@ -849,10 +873,6 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                       religionTextEditingController.text.trim(),
                       ethnicityTextEditingController.text.trim(),
                     );
-                    setState(() {
-                      showProgressBar = false;
-                      authController.imageFile = null;
-                    });
                   } else {
                     Get.snackbar(
                       "A field is Empty",
@@ -862,7 +882,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                 },
                 child: const Center(
                   child: Text(
-                    "Create Account",
+                    "Update",
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.black,
