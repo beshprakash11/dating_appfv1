@@ -199,10 +199,15 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
 
           //Background - Cultureal values
           nationality = snapshot.data()!["nationality"];
+          nationalityTextEditingController.text = nationality;
           education = snapshot.data()!["education"];
+          educationTextEditingController.text = education;
           languageSpoken = snapshot.data()!["languageSpoken"];
+          languageSpokenTextEditingController.text = languageSpoken;
           religion = snapshot.data()!["religion"];
+          religionTextEditingController.text = religion;
           ethnicity = snapshot.data()!["ethnicity"];
+          ethnicityTextEditingController.text = ethnicity;
         });
       }
     });
