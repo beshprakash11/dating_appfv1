@@ -998,7 +998,13 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       child: Center(
         child: IconButton(
           onPressed: () {
-            !uploading ? chooseImage() : null;
+            if (_image.length < 6) {
+              !uploading ? chooseImage() : null;
+            } else {
+              setState(() {
+                uploading == true;
+              });
+            }
           },
           icon: const Icon(Icons.add),
         ),
