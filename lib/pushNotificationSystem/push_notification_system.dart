@@ -61,6 +61,26 @@ class PushNotificationSystem {
       String phoneNo = snapshot.data()!["phoneNo"].toString();
       String city = snapshot.data()!["city"].toString();
       String country = snapshot.data()!["country"].toString();
+      String profession = snapshot.data()!["profession"].toString();
+
+      showDialog(
+        context: context,
+        builder: (context) {
+          return NotificationDialogBox(
+            senderID,
+            profileImage,
+            name,
+            age,
+            city,
+            country,
+            profession,
+            context,
+          );
+        },
+      );
     });
   }
+
+  NotificationDialogBox(senderID, String profileImage, String name, String age,
+      String city, String country, String profession, BuildContext context) {}
 }
