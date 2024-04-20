@@ -186,7 +186,6 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   }
 
   updateUserDataToFirestoreDatabase(
-    File imageProfile,
     String name,
     String age,
     String phoneNo,
@@ -838,7 +837,6 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                               .isNotEmpty) {
                     await updateUserDataToFirestoreDatabase(
                       //Personal info
-                      authController.profileImage!,
                       nameTextEditingController.text.trim(),
                       ageTextEditingController.text.trim(),
                       phoneNoTextEditingController.text.trim(),
