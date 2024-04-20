@@ -236,6 +236,54 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       },
     );
     await uploadImages();
+
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(currentUserID)
+        .update({
+      //Personal info
+      "name": name,
+      "age": int.parse(age),
+      "phoneNo": phoneNo,
+      "city": city,
+      "country": country,
+      "profileHeading": profileHeading,
+      "lookingForInaPartner": lookingForInaPartner,
+
+      //Appearance
+      "height": height,
+      "weight": weight,
+      "bodyType": bodyType,
+
+      //life style
+      "drink": drink,
+      "smoke": smoke,
+      "martialStatus": martialStatus,
+      "haveChildren": haveChildren,
+      "noOfChildren": noOfChildren,
+      "profession": profession,
+      "employmentStatus": employmentStatus,
+      "income": income,
+      "livingSituatin": livingSituatin,
+      "willingToRelocate": willingToRelocate,
+      "relationshipYouAreLookingFor": relationshipYouAreLookingFor,
+
+      //Background values
+      "nationality": nationality,
+      "education": education,
+      "languageSpoken": languageSpoken,
+      "religion": religion,
+      "ethnicity": ethnicity,
+
+      //images
+      "urlImage1": urlList[0].toString(),
+      "urlImage2": urlList[1].toString(),
+      "urlImage3": urlList[2].toString(),
+      "urlImage4": urlList[3].toString(),
+      "urlImage5": urlList[4].toString(),
+    });
+
+    Get.snackbar("Updated", "Your account has been updated successfully.");
   }
 
   @override
