@@ -319,7 +319,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                   onPressed: () {
                     if (_image.length == 5) {
                       setState(() {
-                        uploading = false;
+                        uploading = true;
                         next = true;
                       });
                     } else {
@@ -998,7 +998,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       child: Center(
         child: IconButton(
           onPressed: () {
-            if (_image.length < 6) {
+            if (_image.length < 5) {
               !uploading ? chooseImage() : null;
             } else {
               setState(() {
