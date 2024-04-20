@@ -36,6 +36,16 @@ class PushNotificationSystem {
 
     //3. Background
     //When the app is in the background and opened directly from the push notifications
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage? remoteMessage) {
+      if (remoteMessage != null) {
+        //open app and show notificaation data
+        openAppAndShowNotificationData(
+          remoteMessage.data["userID"],
+          remoteMessage.data["senderID"],
+          context,
+        );
+      }
+    });
   }
 
   openAppAndShowNotificationData(receiverID, senderID, context) async {}
