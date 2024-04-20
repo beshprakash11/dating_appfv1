@@ -893,42 +893,46 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                           ethnicityTextEditingController.text
                               .trim()
                               .isNotEmpty) {
-                    await updateUserDataToFirestoreDatabase(
-                      //Personal info
-                      nameTextEditingController.text.trim(),
-                      ageTextEditingController.text.trim(),
-                      phoneNoTextEditingController.text.trim(),
-                      cityTextEditingController.text.trim(),
-                      countryTextEditingController.text.trim(),
-                      profileHeadingTextEditingController.text.trim(),
-                      lookingForInaPartnerTextEditingController.text.trim(),
+                    _image.length > 0
+                        ? await updateUserDataToFirestoreDatabase(
+                            //Personal info
+                            nameTextEditingController.text.trim(),
+                            ageTextEditingController.text.trim(),
+                            phoneNoTextEditingController.text.trim(),
+                            cityTextEditingController.text.trim(),
+                            countryTextEditingController.text.trim(),
+                            profileHeadingTextEditingController.text.trim(),
+                            lookingForInaPartnerTextEditingController.text
+                                .trim(),
 
-                      //Appearance
-                      heightTextEditingController.text.trim(),
-                      weightTextEditingController.text.trim(),
-                      bodyTypeTextEditingController.text.trim(),
+                            //Appearance
+                            heightTextEditingController.text.trim(),
+                            weightTextEditingController.text.trim(),
+                            bodyTypeTextEditingController.text.trim(),
 
-                      //Life style
-                      drinkingTextEditingController.text.trim(),
-                      smokeTextEditingController.text.trim(),
-                      martilStatusTextEditingController.text.trim(),
-                      haveChildrenTextEditingController.text.trim(),
-                      noOfChildrenTextEditingController.text.trim(),
-                      professionTextEditingController.text.trim(),
-                      employmentStatusTextEditingController.text.trim(),
-                      incomeTextEditingController.text.trim(),
-                      livingSituationTextEditingController.text.trim(),
-                      willingToRelocateTextEditingController.text.trim(),
-                      relationshipYouAreLookingForTextEditingController.text
-                          .trim(),
+                            //Life style
+                            drinkingTextEditingController.text.trim(),
+                            smokeTextEditingController.text.trim(),
+                            martilStatusTextEditingController.text.trim(),
+                            haveChildrenTextEditingController.text.trim(),
+                            noOfChildrenTextEditingController.text.trim(),
+                            professionTextEditingController.text.trim(),
+                            employmentStatusTextEditingController.text.trim(),
+                            incomeTextEditingController.text.trim(),
+                            livingSituationTextEditingController.text.trim(),
+                            willingToRelocateTextEditingController.text.trim(),
+                            relationshipYouAreLookingForTextEditingController
+                                .text
+                                .trim(),
 
-                      //Background - cultural values
-                      nationalityTextEditingController.text.trim(),
-                      educationTextEditingController.text.trim(),
-                      languageSpokenTextEditingController.text.trim(),
-                      religionTextEditingController.text.trim(),
-                      ethnicityTextEditingController.text.trim(),
-                    );
+                            //Background - cultural values
+                            nationalityTextEditingController.text.trim(),
+                            educationTextEditingController.text.trim(),
+                            languageSpokenTextEditingController.text.trim(),
+                            religionTextEditingController.text.trim(),
+                            ethnicityTextEditingController.text.trim(),
+                          )
+                        : null;
                   } else {
                     Get.snackbar(
                       "A field is Empty",
