@@ -81,6 +81,6 @@ class PushNotificationSystem {
     });
   }
 
-  NotificationDialogBox(senderID, String profileImage, String name, String age,
-      String city, String country, String profession, BuildContext context) {}
+  NotificationDialogBox(
+      senderID, profileImage, name, age, city, country, profession, context) {}
 }
