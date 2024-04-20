@@ -173,17 +173,29 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
 
           //Life style
           drink = snapshot.data()!["drink"];
+          drinkingTextEditingController.text = drink;
           smoke = snapshot.data()!["smoke"];
+          smokeTextEditingController.text = smoke;
           martialStatus = snapshot.data()!["martialStatus"];
+          martilStatusTextEditingController.text = martialStatus;
           haveChildren = snapshot.data()!["haveChildren"];
+          haveChildrenTextEditingController.text = haveChildren;
           noOfChildren = snapshot.data()!["noOfChildren"];
+          noOfChildrenTextEditingController.text = noOfChildren;
           profession = snapshot.data()!["profession"];
+          professionTextEditingController.text = profession;
           employmentStatus = snapshot.data()!["employmentStatus"];
+          employmentStatusTextEditingController.text = employmentStatus;
           income = snapshot.data()!["income"];
+          incomeTextEditingController.text = income;
           livingSituatin = snapshot.data()!["livingSituatin"];
+          livingSituationTextEditingController.text = livingSituatin;
           willingToRelocate = snapshot.data()!["willingToRelocate"];
+          willingToRelocateTextEditingController.text = willingToRelocate;
           relationshipYouAreLookingFor =
               snapshot.data()!["relationshipYouAreLookingFor"];
+          relationshipYouAreLookingForTextEditingController.text =
+              relationshipYouAreLookingFor;
 
           //Background - Cultureal values
           nationality = snapshot.data()!["nationality"];
