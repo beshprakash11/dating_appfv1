@@ -250,16 +250,28 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
     showDialog(
       context: context,
       builder: (context) {
-        return const Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(child: CircularProgressIndicator()),
-            SizedBox(
-              height: 10,
+        return const AlertDialog(
+          content: SizedBox(
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Center(child: CircularProgressIndicator()),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "Uloading images...",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Text("Uloading images..."),
-          ],
+          ),
         );
       },
     );
