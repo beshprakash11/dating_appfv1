@@ -24,7 +24,15 @@ class _SwippingScreenState extends State<SwippingScreen> {
           title: const Text("Matching Filter"),
           content: Column(
             mainAxisSize: MainAxisSize.min,
-            children: [],
+            children: [
+              const Text("I am looking for a:"),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: DropdownButton<String>(
+                  hint: const Text("Select gender"),
+                ),
+              )
+            ],
           ),
         );
       },
