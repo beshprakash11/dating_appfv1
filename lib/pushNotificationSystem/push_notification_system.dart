@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dating_appfv1/tabScreens/user_details_screen.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -148,12 +149,18 @@ class PushNotificationSystem {
 
                         const Spacer(),
 
+                        // routing to user detail screen
                         Row(
                           children: [
                             Center(
                               child: ElevatedButton(
                                 onPressed: () {
                                   Get.back();
+                                  Get.to(
+                                    () => UserDetailsScreen(
+                                      userID: senderID,
+                                    ),
+                                  );
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.green,
