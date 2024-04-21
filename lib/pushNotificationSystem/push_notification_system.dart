@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/tabScreens/user_details_screen.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -62,7 +60,6 @@ class PushNotificationSystem {
       String profileImage = snapshot.data()!["imageProfile"].toString();
       String name = snapshot.data()!["name"].toString();
       String age = snapshot.data()!["age"].toString();
-      String phoneNo = snapshot.data()!["phoneNo"].toString();
       String city = snapshot.data()!["city"].toString();
       String country = snapshot.data()!["country"].toString();
       String profession = snapshot.data()!["profession"].toString();
@@ -70,7 +67,7 @@ class PushNotificationSystem {
       showDialog(
         context: context,
         builder: (context) {
-          return NotificationDialogBox(
+          return notificationDialogBox(
             senderID,
             profileImage,
             name,
@@ -85,7 +82,7 @@ class PushNotificationSystem {
     });
   }
 
-  NotificationDialogBox(
+  notificationDialogBox(
       senderID, profileImage, name, age, city, country, profession, context) {
     return Dialog(
       child: GridTile(
