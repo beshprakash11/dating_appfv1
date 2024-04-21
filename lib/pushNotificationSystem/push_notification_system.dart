@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PushNotificationSystem {
   FirebaseMessaging messaging = FirebaseMessaging.instance;
@@ -142,6 +143,24 @@ class PushNotificationSystem {
                                 ),
                               ),
                             ),
+                          ],
+                        ),
+
+                        const Spacer(),
+
+                        Row(
+                          children: [
+                            Center(
+                              child: ElevatedButton(
+                                onPressed: () => Get.back(),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.green,
+                                ),
+                                child: const Text(
+                                  "View Profile",
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       ],
