@@ -126,6 +126,19 @@ class PushNotificationSystem {
                               color: Colors.white,
                               size: 16,
                             ),
+                            const SizedBox(
+                              width: 2,
+                            ),
+                            Expanded(
+                              child: Text(
+                                city + ", " + country.toString(),
+                                maxLines: 4,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ],
