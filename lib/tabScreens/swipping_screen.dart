@@ -57,6 +57,43 @@ class _SwippingScreenState extends State<SwippingScreen> {
               ),
               const SizedBox(height: 20),
               //end gender selection
+
+              //start Country selection
+              const Text("who lives in:"),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: DropdownButton<String>(
+                  hint: const Text("Select country"),
+                  value: choosenGender,
+                  underline: Container(),
+                  items: [
+                    "France",
+                    "Germany",
+                    "UK",
+                    "USA",
+                    "Canda",
+                    "India",
+                    "Nepal",
+                  ].map((value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(
+                        value,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                  onChanged: (String? value) {
+                    setState(() {
+                      choosenCountry = value;
+                    });
+                  },
+                ),
+              ),
+              const SizedBox(height: 20),
+              //end Country selection
             ],
           ),
         );
