@@ -182,6 +182,23 @@ class ProfileController extends GetxController {
         userDeviceToken = snapshot.data()!["userDeviceToken"].toString();
       }
     });
+
+    notificationFormat(
+      userDeviceToken,
+      receiverID,
+      featureType,
+      senderName,
+    );
   }
+
   //end notificaion
+
+  //start notification format
+  void notificationFormat(
+    userDeviceToken,
+    receiverID,
+    featureType,
+    senderName,
+  ) {}
+  //end notification format
 }
