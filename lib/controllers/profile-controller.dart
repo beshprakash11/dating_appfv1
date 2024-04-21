@@ -199,6 +199,24 @@ class ProfileController extends GetxController {
     receiverID,
     featureType,
     senderName,
-  ) {}
+  ) {
+    Map<String, String> headerNotification = {
+      "Content-Type": "application/json",
+      "Authorization": fcmServerToken,
+    };
+    Map bodyNotification = {
+      "body":
+          "You have received a new $featureType from $senderName. Click to see.",
+      "title": "New $featureType",
+    };
+
+    Map dataMap = {
+      "click_action": "FLUTTER_NOTIFICATION_CLICK",
+      "id": "1",
+      "status": "done",
+      "userID": receiverID,
+      "senderID": currentUserID,
+    };
+  }
   //end notification format
 }
