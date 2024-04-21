@@ -131,6 +131,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
               actions: [
                 ElevatedButton(
                   onPressed: () {
+                    Get.back();
                     profileController.getResults();
                   },
                   child: const Text("Done"),
