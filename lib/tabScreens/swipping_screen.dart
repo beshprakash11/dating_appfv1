@@ -94,6 +94,36 @@ class _SwippingScreenState extends State<SwippingScreen> {
               ),
               const SizedBox(height: 20),
               //end Country selection
+
+              //start age selection
+              const Text("who's age is equal to or above:"),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: DropdownButton<String>(
+                  hint: const Text("Select age"),
+                  value: choosenGender,
+                  underline: Container(),
+                  items: ["18", "25", "30", "35", "40", "45", "50", "55"]
+                      .map((value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(
+                        value,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                  onChanged: (String? value) {
+                    setState(() {
+                      chooseAge = value;
+                    });
+                  },
+                ),
+              ),
+              const SizedBox(height: 20),
+              //end age selection
             ],
           ),
         );
