@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dating_appfv1/global.dart';
 import 'package:dating_appfv1/tabScreens/user_details_screen.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -196,5 +197,9 @@ class PushNotificationSystem {
 
   Future generateDeviceRegistrationToken() async {
     String? deviceToken = await messaging.getToken();
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(currentUserID)
+        .update({"userDeviceToken": deviceToken});
   }
 }
