@@ -82,5 +82,11 @@ class PushNotificationSystem {
   }
 
   NotificationDialogBox(
-      senderID, profileImage, name, age, city, country, profession, context) {}
+      senderID, profileImage, name, age, city, country, profession, context) {
+    return Dialog(
+      child: GridTile(
+        child: Column(),
+      ),
+    );
+  }
 }
