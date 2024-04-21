@@ -108,6 +108,7 @@ class PushNotificationSystem {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        // name and age
                         Text(
                           name + " - " + age.toString(),
                           style: const TextStyle(
@@ -119,6 +120,8 @@ class PushNotificationSystem {
                         const SizedBox(
                           height: 8,
                         ),
+
+                        // location
                         Row(
                           children: [
                             const Icon(
