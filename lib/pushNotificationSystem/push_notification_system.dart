@@ -85,7 +85,26 @@ class PushNotificationSystem {
       senderID, profileImage, name, age, city, country, profession, context) {
     return Dialog(
       child: GridTile(
-        child: Column(),
+        child: Padding(
+          padding: const EdgeInsets.all(2),
+          child: SizedBox(
+            height: 300,
+            child: Card(
+              color: Colors.blue.shade200,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      profileImage,
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Padding(padding: const EdgeInsets.all(2)),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
