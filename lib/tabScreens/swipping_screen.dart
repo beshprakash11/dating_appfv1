@@ -16,6 +16,21 @@ class _SwippingScreenState extends State<SwippingScreen> {
   ProfileController profileController = Get.put(ProfileController());
   String senderName = "";
 
+  applyFilter() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Matching Filter"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [],
+          ),
+        );
+      },
+    );
+  }
+
   readCurrentUserData() async {
     await FirebaseFirestore.instance
         .collection("users")
