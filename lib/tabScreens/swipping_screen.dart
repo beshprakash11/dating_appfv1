@@ -126,6 +126,12 @@ class _SwippingScreenState extends State<SwippingScreen> {
               //end age selection
             ],
           ),
+          actions: [
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text("Done"),
+            ),
+          ],
         );
       },
     );
