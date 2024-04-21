@@ -1,8 +1,11 @@
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/global.dart';
 import 'package:dating_appfv1/models/person.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 
 class ProfileController extends GetxController {
   final Rx<List<Person>> usersProfileList = Rx<List<Person>>([]);
@@ -224,6 +227,12 @@ class ProfileController extends GetxController {
       "priority": "high",
       "to": userDeviceToken,
     };
+
+    http.post(
+      Uri.parse("https://fcm.googleapis.com/fcm/send"),
+      headers: headerNotification,
+      body: jsonEncode(notificationOfficialFormat),
+    );
   }
   //end notification format
 }
