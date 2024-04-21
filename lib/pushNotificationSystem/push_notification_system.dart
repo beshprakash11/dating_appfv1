@@ -173,7 +173,7 @@ class PushNotificationSystem {
                             Center(
                               child: ElevatedButton(
                                 onPressed: () {
-                                  Navigator.pop(context);
+                                  Get.back();
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.redAccent,
