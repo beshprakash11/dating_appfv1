@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -100,7 +102,27 @@ class PushNotificationSystem {
                     fit: BoxFit.cover,
                   ),
                 ),
-                child: Padding(padding: const EdgeInsets.all(2)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          name + " - " + age.toString(),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
