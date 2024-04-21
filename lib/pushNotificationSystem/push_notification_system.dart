@@ -193,4 +193,8 @@ class PushNotificationSystem {
       ),
     );
   }
+
+  Future generateDeviceRegistrationToken() async {
+    String? deviceToken = await messaging.getToken();
+  }
 }
