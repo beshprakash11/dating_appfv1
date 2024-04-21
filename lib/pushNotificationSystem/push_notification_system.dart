@@ -119,6 +119,15 @@ class PushNotificationSystem {
                         const SizedBox(
                           height: 8,
                         ),
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.location_on_outlined,
+                              color: Colors.white,
+                              size: 16,
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
