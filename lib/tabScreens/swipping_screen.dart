@@ -26,6 +26,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               const Text("I am looking for a:"),
+              //start gender selection
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: DropdownButton<String>(
@@ -53,7 +54,8 @@ class _SwippingScreenState extends State<SwippingScreen> {
                     });
                   },
                 ),
-              )
+              ),
+              //end gender selection
             ],
           ),
         );
