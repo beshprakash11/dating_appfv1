@@ -185,7 +185,9 @@ class _SwippingScreenState extends State<SwippingScreen> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 8),
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              applyFilter();
+                            },
                             icon: const Icon(
                               Icons.filter_list,
                               size: 30,
