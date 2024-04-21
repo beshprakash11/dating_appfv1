@@ -126,6 +126,7 @@ class ProfileController extends GetxController {
           .set({});
 
       //send notification
+      sendNotificationToUser(toUserID, "Like", senderName);
     }
     update();
   }
