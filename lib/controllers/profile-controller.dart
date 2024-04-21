@@ -166,4 +166,8 @@ class ProfileController extends GetxController {
     update();
   }
   // start viewSentAndViewReceived
+
+  //start notificaion
+  sendNotificationToUser(receiverID, featureType, senderName) {}
+  //end notificaion
 }
