@@ -152,7 +152,9 @@ class PushNotificationSystem {
                           children: [
                             Center(
                               child: ElevatedButton(
-                                onPressed: () => Get.back(),
+                                onPressed: () {
+                                  Get.back();
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.green,
                                 ),
