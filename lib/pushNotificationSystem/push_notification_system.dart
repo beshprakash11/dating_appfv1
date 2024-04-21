@@ -169,6 +169,19 @@ class PushNotificationSystem {
                                   "View Profile",
                                 ),
                               ),
+                            ),
+                            Center(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.redAccent,
+                                ),
+                                child: const Text(
+                                  "Close",
+                                ),
+                              ),
                             )
                           ],
                         ),
