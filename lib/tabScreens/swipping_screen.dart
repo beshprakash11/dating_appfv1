@@ -56,6 +56,10 @@ class _SwippingScreenState extends State<SwippingScreen> {
                 ),
               ),
               //end gender selection
+
+              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
         );
