@@ -171,6 +171,17 @@ class ProfileController extends GetxController {
   // start viewSentAndViewReceived
 
   //start notificaion
-  sendNotificationToUser(receiverID, featureType, senderName) {}
+  sendNotificationToUser(receiverID, featureType, senderName) async {
+    String userDeviceToken = "";
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(receiverID)
+        .get()
+        .then((snapshot) {
+      if (snapshot.data()!["userDeviceToken"] != null) {
+        userDeviceToken = snapshot.data()!["userDeviceToken"].toString();
+      }
+    });
+  }
   //end notificaion
 }
