@@ -11,26 +11,52 @@ class ProfileController extends GetxController {
   final Rx<List<Person>> usersProfileList = Rx<List<Person>>([]);
   List<Person> get allUsersProfileList => usersProfileList.value;
 
+  getResults() {
+    onInit();
+  }
+
   @override
   void onInit() {
     super.onInit();
-    usersProfileList.bindStream(
-      FirebaseFirestore.instance
-          .collection("users")
-          .where("uid",
-              isNotEqualTo: FirebaseAuth
-                  .instance.currentUser!.uid) //does not take my own id
-          .snapshots()
-          .map(
-        (QuerySnapshot querySnapshot) {
-          List<Person> profliesList = [];
-          for (var eachProfile in querySnapshot.docs) {
-            profliesList.add(Person.formDataSnapshot(eachProfile));
-          }
-          return profliesList;
-        },
-      ), // user data
-    );
+
+    if (choosenGender == null || choosenCountry == null || chooseAge == null) {
+      usersProfileList.bindStream(
+        FirebaseFirestore.instance
+            .collection("users")
+            .where("uid",
+                isNotEqualTo: FirebaseAuth
+                    .instance.currentUser!.uid) //does not take my own id
+            .snapshots()
+            .map(
+          (QuerySnapshot querySnapshot) {
+            List<Person> profliesList = [];
+            for (var eachProfile in querySnapshot.docs) {
+              profliesList.add(Person.formDataSnapshot(eachProfile));
+            }
+            return profliesList;
+          },
+        ), // user data
+      );
+    } else {
+      usersProfileList.bindStream(
+        FirebaseFirestore.instance
+            .collection("users")
+            .where("gender", isEqualTo: choosenGender.toString())
+            .where("country", isEqualTo: choosenCountry.toString())
+            .where("age",
+                isGreaterThanOrEqualTo: int.parse(chooseAge.toString()))
+            .snapshots()
+            .map(
+          (QuerySnapshot querySnapshot) {
+            List<Person> profliesList = [];
+            for (var eachProfile in querySnapshot.docs) {
+              profliesList.add(Person.formDataSnapshot(eachProfile));
+            }
+            return profliesList;
+          },
+        ), // user data
+      );
+    }
   }
 
   // start FavoriteSentAndFavoriteReceived
