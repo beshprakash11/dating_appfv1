@@ -30,6 +30,28 @@ class _SwippingScreenState extends State<SwippingScreen> {
                 scrollDirection: Axis.horizontal,
                 child: DropdownButton<String>(
                   hint: const Text("Select gender"),
+                  value: choosenGender,
+                  underline: Container(),
+                  items: [
+                    "Male",
+                    "Female",
+                    "Others",
+                  ].map((value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(
+                        value,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                  onChanged: (String? value) {
+                    setState(() {
+                      choosenGender = value;
+                    });
+                  },
                 ),
               )
             ],
