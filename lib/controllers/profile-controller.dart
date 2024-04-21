@@ -217,6 +217,13 @@ class ProfileController extends GetxController {
       "userID": receiverID,
       "senderID": currentUserID,
     };
+
+    Map notificationOfficialFormat = {
+      "notification": bodyNotification,
+      "data": dataMap,
+      "priority": "high",
+      "to": userDeviceToken,
+    };
   }
   //end notification format
 }
