@@ -218,8 +218,10 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   }
 
   updateUserDataToFirestoreDatabase(
+    //personal info
     String name,
     String age,
+    String gender,
     String phoneNo,
     String city,
     String country,
