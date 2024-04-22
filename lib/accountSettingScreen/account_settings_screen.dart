@@ -444,7 +444,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
               child: CustomTextFieldWidget(
                 editingController: genderTextEditingController,
                 labelText: "Gender",
-                iconData: Icons.numbers,
+                iconData: Icons.person_pin,
                 isObscure: false,
               ),
             ),
