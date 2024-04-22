@@ -46,6 +46,7 @@ dependencies:
   flutter_image_slider:
   http:
   permission_handler: 
+  url_launcher:
 
 dev_dependencies:
   flutter_test:
