@@ -290,6 +290,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       //Personal info
       "name": name,
       "age": int.parse(age),
+      "gender": gender.toLowerCase(),
       "phoneNo": phoneNo,
       "city": city,
       "country": country,
@@ -899,6 +900,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                       //Personal info
                       nameTextEditingController.text.trim().isNotEmpty &&
                           ageTextEditingController.text.trim().isNotEmpty &&
+                          genderTextEditingController.text.trim().isNotEmpty &&
                           phoneNoTextEditingController.text.trim().isNotEmpty &&
                           cityTextEditingController.text.trim().isNotEmpty &&
                           countryTextEditingController.text.trim().isNotEmpty &&
@@ -968,6 +970,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
                             //Personal info
                             nameTextEditingController.text.trim(),
                             ageTextEditingController.text.trim(),
+                            genderTextEditingController.text.trim(),
                             phoneNoTextEditingController.text.trim(),
                             cityTextEditingController.text.trim(),
                             countryTextEditingController.text.trim(),
