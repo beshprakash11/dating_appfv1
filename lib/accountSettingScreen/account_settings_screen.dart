@@ -25,9 +25,9 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   double val = 0;
 
   //Personal info
-  TextEditingController genderTextEditingController = TextEditingController();
   TextEditingController nameTextEditingController = TextEditingController();
   TextEditingController ageTextEditingController = TextEditingController();
+  TextEditingController genderTextEditingController = TextEditingController();
   TextEditingController phoneNoTextEditingController = TextEditingController();
   TextEditingController cityTextEditingController = TextEditingController();
   TextEditingController countryTextEditingController = TextEditingController();
@@ -74,9 +74,9 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       TextEditingController();
 
   //personal info
-  String gender = "";
   String name = "";
   String age = "";
+  String gender = "";
   String phoneNo = "";
   String city = "";
   String country = "";
@@ -150,12 +150,12 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       if (snapshot.exists) {
         setState(() {
           //personal info
-          //name = snapshot.data()!["gender"];
-          //genderTextEditingController.text = gender;
           name = snapshot.data()!["name"];
           nameTextEditingController.text = name;
           age = snapshot.data()!["age"].toString();
           ageTextEditingController.text = age;
+          gender = snapshot.data()!["gender"];
+          genderTextEditingController.text = gender;
           phoneNo = snapshot.data()!["phoneNo"];
           phoneNoTextEditingController.text = phoneNo;
           city = snapshot.data()!["city"];
