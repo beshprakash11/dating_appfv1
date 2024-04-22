@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dating_appfv1/controllers/profile-controller.dart';
 import 'package:dating_appfv1/global.dart';
 import 'package:dating_appfv1/tabScreens/user_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SwippingScreen extends StatefulWidget {
   const SwippingScreen({super.key});
@@ -16,13 +19,19 @@ class _SwippingScreenState extends State<SwippingScreen> {
   ProfileController profileController = Get.put(ProfileController());
   String senderName = "";
 
-  startChattingInWhatsApp(String receiverPhoneNummber) {
+  startChattingInWhatsApp(String receiverPhoneNummber) async {
     var amdrpodUrl =
         "whatsapp://send?phone=$receiverPhoneNummber&text=Hi, I found your profile on dating app.";
     var iosUrl =
         "https://wa.me/$receiverPhoneNummber?text=${Uri.parse("Hi, I found your profile on dating app.")}";
 
-    try {} on Exception {
+    try {
+      if (Platform.isIOS) {
+        await launchUrl((Uri.parse(iosUrl)));
+      } else {
+        await launchUrl((Uri.parse(amdrpodUrl)));
+      }
+    } on Exception {
       showDialog(
           context: context,
           builder: (BuildContext conttext) {
