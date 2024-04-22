@@ -33,19 +33,20 @@ class _SwippingScreenState extends State<SwippingScreen> {
       }
     } on Exception {
       showDialog(
-          context: context,
-          builder: (BuildContext conttext) {
-            return AlertDialog(
-              title: const Text("WhatsApp Not found"),
-              content: const Text("WhatsApp is not installed"),
-              actions: [
-                TextButton(
-                  onPressed: () => Get.back(),
-                  child: const Text("Ok"),
-                )
-              ],
-            );
-          });
+        context: context,
+        builder: (BuildContext conttext) {
+          return AlertDialog(
+            title: const Text("WhatsApp Not found"),
+            content: const Text("WhatsApp is not installed"),
+            actions: [
+              TextButton(
+                onPressed: () => Get.back(),
+                child: const Text("Ok"),
+              )
+            ],
+          );
+        },
+      );
     }
   }
 
