@@ -16,7 +16,12 @@ class _SwippingScreenState extends State<SwippingScreen> {
   ProfileController profileController = Get.put(ProfileController());
   String senderName = "";
 
-  startChattingInWhatsApp(String userPhoneNummber) {}
+  startChattingInWhatsApp(String receiverPhoneNummber) {
+    var amdrpodUrl =
+        "whatsapp://send?phone=$receiverPhoneNummber&text=Hi, I found your profile on dating app.";
+    var iosUrl =
+        "https://wa.me/$receiverPhoneNummber?text=Hi, I found your profile on dating app.";
+  }
 
   applyFilter() {
     showDialog(
