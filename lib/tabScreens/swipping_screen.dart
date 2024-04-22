@@ -16,6 +16,8 @@ class _SwippingScreenState extends State<SwippingScreen> {
   ProfileController profileController = Get.put(ProfileController());
   String senderName = "";
 
+  startChattingInWhatsApp(String userPhoneNummber) {}
+
   applyFilter() {
     showDialog(
       context: context,
