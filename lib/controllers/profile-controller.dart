@@ -41,7 +41,7 @@ class ProfileController extends GetxController {
       usersProfileList.bindStream(
         FirebaseFirestore.instance
             .collection("users")
-            .where("gender", isEqualTo: choosenGender.toString())
+            .where("gender", isEqualTo: choosenGender.toString().toLowerCase())
             .where("country", isEqualTo: choosenCountry.toString())
             .where("age",
                 isGreaterThanOrEqualTo: int.parse(chooseAge.toString()))
