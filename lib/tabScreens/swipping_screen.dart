@@ -20,7 +20,24 @@ class _SwippingScreenState extends State<SwippingScreen> {
     var amdrpodUrl =
         "whatsapp://send?phone=$receiverPhoneNummber&text=Hi, I found your profile on dating app.";
     var iosUrl =
-        "https://wa.me/$receiverPhoneNummber?text=Hi, I found your profile on dating app.";
+        "https://wa.me/$receiverPhoneNummber?text=${Uri.parse("Hi, I found your profile on dating app.")}";
+
+    try {} on Exception {
+      showDialog(
+          context: context,
+          builder: (BuildContext conttext) {
+            return AlertDialog(
+              title: const Text("WhatsApp Not found"),
+              content: const Text("WhatsApp is not installed"),
+              actions: [
+                TextButton(
+                  onPressed: () => Get.back(),
+                  child: const Text("Ok"),
+                )
+              ],
+            );
+          });
+    }
   }
 
   applyFilter() {
