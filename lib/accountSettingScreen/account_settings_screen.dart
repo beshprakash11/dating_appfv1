@@ -25,6 +25,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
   double val = 0;
 
   //Personal info
+  TextEditingController genderTextEditingController = TextEditingController();
   TextEditingController nameTextEditingController = TextEditingController();
   TextEditingController ageTextEditingController = TextEditingController();
   TextEditingController phoneNoTextEditingController = TextEditingController();
@@ -73,6 +74,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       TextEditingController();
 
   //personal info
+  String gender = "";
   String name = "";
   String age = "";
   String phoneNo = "";
@@ -148,6 +150,8 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
       if (snapshot.exists) {
         setState(() {
           //personal info
+          //name = snapshot.data()!["gender"];
+          //genderTextEditingController.text = gender;
           name = snapshot.data()!["name"];
           nameTextEditingController.text = name;
           age = snapshot.data()!["age"].toString();
@@ -424,6 +428,22 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
               child: CustomTextFieldWidget(
                 editingController: ageTextEditingController,
                 labelText: "Age",
+                iconData: Icons.numbers,
+                isObscure: false,
+              ),
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+
+            //gender
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 36,
+              height: 55,
+              child: CustomTextFieldWidget(
+                editingController: genderTextEditingController,
+                labelText: "Gender",
                 iconData: Icons.numbers,
                 isObscure: false,
               ),
