@@ -23,6 +23,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   //personal info
   String name = "";
   String age = "";
+  String gender = "";
   String phoneNo = "";
   String city = "";
   String country = "";
@@ -86,6 +87,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
           //personal info
           name = snapshot.data()!["name"];
           age = snapshot.data()!["age"].toString();
+          gender = snapshot.data()!["gender"];
           phoneNo = snapshot.data()!["phoneNo"];
           city = snapshot.data()!["city"];
           country = snapshot.data()!["country"];
@@ -253,6 +255,10 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
 
                     //age
                     _buildDataTableRow("Age: ", age),
+                    _buildTableRowspacing(),
+
+                    //gender
+                    _buildDataTableRow("Gender: ", gender),
                     _buildTableRowspacing(),
 
                     //phone no
