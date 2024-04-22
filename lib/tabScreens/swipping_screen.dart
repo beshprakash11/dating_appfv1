@@ -405,7 +405,11 @@ class _SwippingScreenState extends State<SwippingScreen> {
 
                           //chat button
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              startChattingInWhatsApp(
+                                eachProfileInfo.phoneNo.toString(),
+                              );
+                            },
                             child: Image.asset(
                               "images/chat.png",
                               width: 60,
