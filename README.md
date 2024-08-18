@@ -36,3 +36,9 @@
   String languageSpoken= "";
   String religion= "";
   String ethnicity= "";
+
+## Key Properties
+storePassword=sujatabesh3593779
+keyPassword=sujatabesh3593779yogi
+keyAlias=upload
+storeFile=<keystore-file-location>
