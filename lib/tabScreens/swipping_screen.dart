@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dating_appfv1/controllers/profile-controller.dart';
-import 'package:dating_appfv1/global.dart';
-import 'package:dating_appfv1/tabScreens/user_details_screen.dart';
+import 'package:xSBDate/controllers/profile-controller.dart';
+import 'package:xSBDate/global.dart';
+import 'package:xSBDate/tabScreens/user_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';

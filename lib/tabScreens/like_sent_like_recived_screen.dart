@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dating_appfv1/global.dart';
+import 'package:xSBDate/global.dart';
 import 'package:flutter/material.dart';
 
 class LikeSentLikeRecivedScreen extends StatefulWidget {

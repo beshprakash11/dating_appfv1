@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dating_appfv1/accountSettingScreen/account_settings_screen.dart';
-import 'package:dating_appfv1/global.dart';
+import 'package:xSBDate/accountSettingScreen/account_settings_screen.dart';
+import 'package:xSBDate/global.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slider/carousel.dart';
