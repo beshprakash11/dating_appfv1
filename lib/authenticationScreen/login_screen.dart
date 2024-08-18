@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 120,
             ),
             Image.asset(
-              "images/logo.png",
+              "images/xlogo.png",
               width: 300,
             ),
             const Text(
