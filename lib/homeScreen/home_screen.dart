@@ -1,9 +1,9 @@
-import 'package:dating_appfv1/pushNotificationSystem/push_notification_system.dart';
-import 'package:dating_appfv1/tabScreens/favorite_sent_favorite_recieved_screen.dart';
-import 'package:dating_appfv1/tabScreens/like_sent_like_recived_screen.dart';
-import 'package:dating_appfv1/tabScreens/swipping_screen.dart';
-import 'package:dating_appfv1/tabScreens/user_details_screen.dart';
-import 'package:dating_appfv1/tabScreens/view_sent_view_received_screen.dart';
+import 'package:xSBDate/pushNotificationSystem/push_notification_system.dart';
+import 'package:xSBDate/tabScreens/favorite_sent_favorite_recieved_screen.dart';
+import 'package:xSBDate/tabScreens/like_sent_like_recived_screen.dart';
+import 'package:xSBDate/tabScreens/swipping_screen.dart';
+import 'package:xSBDate/tabScreens/user_details_screen.dart';
+import 'package:xSBDate/tabScreens/view_sent_view_received_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
