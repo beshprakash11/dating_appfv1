@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dating_appfv1/global.dart';
-import 'package:dating_appfv1/tabScreens/user_details_screen.dart';
+import 'package:xSBDate/global.dart';
+import 'package:xSBDate/tabScreens/user_details_screen.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
