@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:dating_appfv1/controllers/authentication_controller.dart';
-import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:xSBDate/controllers/authentication_controller.dart';
+import 'package:xSBDate/widgets/custom_text_field_widget.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);

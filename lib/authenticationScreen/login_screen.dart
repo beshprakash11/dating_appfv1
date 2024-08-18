@@ -1,8 +1,8 @@
-import 'package:dating_appfv1/authenticationScreen/registration_screen.dart';
-import 'package:dating_appfv1/controllers/authentication_controller.dart';
-import 'package:dating_appfv1/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:xSBDate/authenticationScreen/registration_screen.dart';
+import 'package:xSBDate/controllers/authentication_controller.dart';
+import 'package:xSBDate/widgets/custom_text_field_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
