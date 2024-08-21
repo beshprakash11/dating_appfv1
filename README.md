@@ -46,4 +46,6 @@ storeFile=<keystore-file-location>
 ## Deployment flutter app
 keytool -genkey -v -keystore $env:USERPROFILE\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 - keytool -genkey -v -keystore "C:\Users\beshp\Documents\Keys\upload-keystore.jks" -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload 
-- tutorial:- https://www.youtube.com/watch?v=ZxjgV1YaOcQ
+- tutorial:- 3:29 https://www.youtube.com/watch?v=ZxjgV1YaOcQ
+
+- develop apk:- flutter build appbundle --release
