@@ -39,7 +39,7 @@
 
 ## Key Properties
 storePassword=sujatabesh3593779
-keyPassword=sujatabesh3593779yogi
+keyPassword=sujatabesh3593779
 keyAlias=upload
 storeFile=<keystore-file-location>
 
