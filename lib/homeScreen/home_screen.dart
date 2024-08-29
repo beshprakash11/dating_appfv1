@@ -1,5 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:xbsdating/pushNotificationSystem/push_notification_system.dart';
+import 'package:xbsdating/tabScreens/favorite_sent_favorite_recieved_screen.dart';
+import 'package:xbsdating/tabScreens/like_sent_like_recived_screen.dart';
+import 'package:xbsdating/tabScreens/swipping_screen.dart';
+import 'package:xbsdating/tabScreens/user_details_screen.dart';
+import 'package:xbsdating/tabScreens/view_sent_view_received_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
