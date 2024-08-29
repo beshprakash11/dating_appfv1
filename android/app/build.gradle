@@ -30,7 +30,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.beshpd.datingAppfv1"
+    namespace "com.beshpd.xsbdating"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
