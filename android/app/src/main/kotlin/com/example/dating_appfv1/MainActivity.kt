@@ -1,4 +1,4 @@
-package com.beshpd.datingAppfv1
+package com.beshpd.xbsdating
 
 import io.flutter.embedding.android.FlutterActivity
 
