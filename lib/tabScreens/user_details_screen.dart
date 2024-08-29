@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slider/carousel.dart';
 import 'package:get/get.dart';
+import 'package:xbsdating/accountSettingScreen/account_settings_screen.dart';
+import 'package:xbsdating/global.dart';
 
 // ignore: must_be_immutable
 class UserDetailsScreen extends StatefulWidget {
