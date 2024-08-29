@@ -8,8 +8,6 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import "package:xsbdating/models/person.dart" as personModel;
-import 'package:xsbdating/authenticationScreen/login_screen.dart';
-import 'package:xsbdating/homeScreen/home_screen.dart';
 
 class AuthenticationController extends GetxController {
   static AuthenticationController authController = Get.find();

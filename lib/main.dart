@@ -1,9 +1,9 @@
-import 'package:xsbdating/authenticationScreen/login_screen.dart';
-import 'package:xsbdating/controllers/authentication_controller.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:xbsdating/authenticationScreen/login_screen.dart';
+import 'package:xbsdating/controllers/authentication_controller.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -6,10 +6,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:xsbdating/controllers/authentication_controller.dart';
-import 'package:xsbdating/global.dart';
-import 'package:xsbdating/homeScreen/home_screen.dart';
-import 'package:xsbdating/widgets/custom_text_field_widget.dart';
 
 class AccountSettingsScreen extends StatefulWidget {
   const AccountSettingsScreen({Key? key}) : super(key: key);

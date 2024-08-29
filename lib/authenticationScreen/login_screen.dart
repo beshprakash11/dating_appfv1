@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xsbdating/authenticationScreen/registration_screen.dart';
-import 'package:xsbdating/controllers/authentication_controller.dart';
-import 'package:xsbdating/widgets/custom_text_field_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

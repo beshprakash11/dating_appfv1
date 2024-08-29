@@ -1,9 +1,3 @@
-import 'package:xsbdating/pushNotificationSystem/push_notification_system.dart';
-import 'package:xsbdating/tabScreens/favorite_sent_favorite_recieved_screen.dart';
-import 'package:xsbdating/tabScreens/like_sent_like_recived_screen.dart';
-import 'package:xsbdating/tabScreens/swipping_screen.dart';
-import 'package:xsbdating/tabScreens/user_details_screen.dart';
-import 'package:xsbdating/tabScreens/view_sent_view_received_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
