@@ -6,8 +6,10 @@ import 'package:image_picker/image_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:xbsdating/authenticationScreen/login_screen.dart';
+import 'package:xbsdating/homeScreen/home_screen.dart';
 
-import "package:xsbdating/models/person.dart" as personModel;
+import "package:xbsdating/models/person.dart" as personModel;
 
 class AuthenticationController extends GetxController {
   static AuthenticationController authController = Get.find();
